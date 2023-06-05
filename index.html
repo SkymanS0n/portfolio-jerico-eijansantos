@@ -13,7 +13,7 @@
             <header>
                 <div class="nav-section">
                     <a href="index.html">
-                        <img src="images/my-logo-light.png" alt="logo">
+                        <img src="images/my-logo1.svg" alt="logo">
                     </a>
                     <nav>
                         <ul>
@@ -25,11 +25,14 @@
                 </div>
             </header>
             <main>
-                <div class="hero-page">
-                    <div class="hero">
+                <section class="hero-section">
+                    <div class="hero-container">
                         <p>Hello there! I'm Jerico &#x1F44B;</p>
                         <h1>Full stack web developer</h1>
                         <h2>I create end-to-end web solutions by handling both front-end and back-end development, ensuring seamless functionality and a user-friendly experience.</h2>
+                        <div class="hero-img">
+                            <img src="images/profile-photo-2.png" alt="Jerico's profile photo">
+                        </div>
                         <button class="view-work" onclick="location.href= '#projects' ">
                             View my work
                         </button>
@@ -37,105 +40,116 @@
                             More about me
                         </button>
                     </div>
-                    <div class="hero-img">
-                        <img src="images/profile-photo-2.png" alt="Jerico's profile photo">
+                </section>
+                <section id = "projects" class="projects-section">
+                    <h3>PROJECTS</h3>
+                    <h4> Some of my latest works.</h4>
+                    <div class="featured-projects">
+                        <div class="project-a">
+                            <img src="images/project-aa.png" alt="">
+                            <p>
+                                Discover Zalora: Lagos' premier e-commerce hub for farmers and agricultural developers. Shop high-quality agricultural products online with ease.
+                            </p>
+                            <div class="buttons-a">
+                                <button class="view-project">
+                                    View Project
+                                </button>
+                                <button class="source-code">
+                                    Source Code
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-b">
+                            <img src="images/project-bb.png" alt="">
+                            <p>
+                                Discover Zalora: Lagos' premier e-commerce hub for farmers and agricultural developers. Shop high-quality agricultural products online with ease.
+                            </p>
+                            <div class="buttons-b">
+                                <button class="view-project">
+                                    View Project
+                                </button>
+                                <button class="source-code">
+                                    Source Code
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-c">
+                            <img src="images/project-cc.png" alt="">
+                            <p>
+                                Discover Zalora: Lagos' premier e-commerce hub for farmers and agricultural developers. Shop high-quality agricultural products online with ease.
+                            </p>
+                            <div class="buttons-c">
+                                <button class="view-project">
+                                    View Project
+                                </button>
+                                <button class="source-code">
+                                    Source Code
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
+                <section class="skills">
+                    <h3>SKILLS & TOOLS</h3>
+                    <h4>I may have what you're looking for.</h4>
+                    <div class="tech-skills-a">
+                        <div class="group-a">
+                            <div class="html"><img src="images/html-logo-greyscale.svg" alt=""></div>
+                            <div class="css"><img src="images/css-logo-greyscale.svg" alt=""></div>
+                            <div class="javascript"><img src="images/javascript-logo-greyscale.svg" alt=""></div>
+                            <div class="bootstrap"><img src="images/bootstrap-logo-greyscale.svg" alt=""></div>
+                        </div>
+                        <div class="group-b">
+                            <div class="sass"><img src="images/sass-logo-greyscale.svg" alt=""></div>
+                            <div class="reactjs"><img src="images/react-logo-greyscale.svg" alt=""></div>
+                            <div class="php"><img src="images/php-logo-greyscale.svg" alt=""></div>
+                            <div class="codeigniter"><img src="images/codeigniter-logo-greyscale.svg" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="tech-skills-b">
+                        <div class="group-c">
+                            <div class="laravel"><img src="images/laravel-logo-greyscale.svg" alt=""></div>
+                            <div class="sql"><img src="images/sql-logo-greyscale.svg" alt=""></div>
+                            <div class="mysql"><img src="images/mysql-logo-greyscale.svg" alt=""></div>
+                            <div class="postman"><img src="images/postman-logo-greyscale.svg" alt=""></div>
+                        </div>
+                        <div class="group-d">
+                            <div class="vscode"><img src="images/vscode-logo-greyscale.svg" alt=""></div>
+                            <div class="selenium"><img src="images/selenium-logo-greyscale.svg" alt=""></div>
+                            <div class="adobe-express"><img src="images/adobeexpress-logo-greyscale.svg" alt=""></div>
+                            <div class="figma"><img src="images/figma-logo-greyscale.svg" alt=""></div>
+                        </div>
+                    </div>
+                </section>
+                <section id = "aboutmyself" class="aboutmyself">
+                    <h3>ABOUT ME</h3>
+                    <h4>The short version</h4>
+                    <div class="about">
+                        <p>Hi there, I'm Jerico and I'm a web developer based in the Philippines. When I'm not glued to my computer screen, you can find me binge-watching Netflix, eating my favorite “Adobo”, and playing with my dogs Sola, Luna, Snoopy and Barkley. But don’t let my love for my doggies fool you - I’m passionate about creating websites and web applications that are both functional and beautiful.</p>
+                        <div class="dogs">
+                            <img src="images/my-dogs.png" alt="picture-of-my-dogs">
+                        </div>
+                    </div>
+                    <h4>The somewhat long version</h4>
+                    <p>In January 2023, I embarked on an exciting journey to delve into the world of web development. To accelerate my learning, I enrolled in a comprehensive bootcamp that spanned four months. Equipped with the knowledge and skills gained from the bootcamp, I continued my web development journey through self-study starting in May 2023.</p>
+                    <a href = "https://skymans0n.notion.site/My-Web-Development-Journey-6e979fca1455470f8a4ec24f5e71b810?pvs=4" class = "read-more">Read More</a>
+                    <h4>The downloadable version</h4>
+                    <a href="https://example.com/resume.pdf" class="resume-link">Resume</a>
+                </section>
+                <section id = "contact" class="contact">
+                    
+                        <div class="contact-me">
+                            <h3>Are you looking for a developer?</h3>
+                            <h4>I'm currently available for work.</h4>
+                            <button class="send-message" onclick="location.href='mailto:jerico@developer.com?subject=Inquiry'">Send a message
+                            </button>
+                        </div>
+                        <div class="contact-details">
+                            <p><a href = "tel:+639279448803">+63 927-944-8803</a></p>
+                            <p><a href = "mailto:jerico@developer.com?subject=Inquiry">jerico@developer.com</a></p>
+                        </div>
+                </section>
             </main>
-            <section id = "projects" class="projects">
-                <h3>PROJECTS</h3>
-                <h4> Some of my latest works.</h4>
-                <div class="featured-projects">
-                    <div class="project-a">
-                        <img src="images/project-aa.png" alt="">
-                        <div class="buttons-a">
-                            <button class="view-project">
-                                View Project
-                            </button>
-                            <button class="inspect-code">
-                                Inspect Code
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-b">
-                        <img src="images/project-bb.png" alt="">
-                        <div class="buttons-b">
-                            <button class="view-project">
-                                View Project
-                            </button>
-                            <button class="inspect-code">
-                                Inspect Code
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-c">
-                        <img src="images/project-cc.png" alt="">
-                        <div class="buttons-c">
-                            <button class="view-project">
-                                View Project
-                            </button>
-                            <button class="inspect-code">
-                                Inspect Code
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="skills">
-                <h3>SKILLS & TOOLS</h3>
-                <h4>I may have what looking for.</h4>
-                <div class="tech-skills-a">
-                    <div class="group-a">
-                        <div class="html"><img src="images/html-logo-greyscale.svg" alt=""></div>
-                        <div class="css"><img src="images/css-logo-greyscale.svg" alt=""></div>
-                        <div class="javascript"><img src="images/javascript-logo-greyscale.svg" alt=""></div>
-                        <div class="bootstrap"><img src="images/bootstrap-logo-greyscale.svg" alt=""></div>
-                    </div>
-                    <div class="group-b">
-                        <div class="sass"><img src="images/sass-logo-greyscale.svg" alt=""></div>
-                        <div class="reactjs"><img src="images/react-logo-greyscale.svg" alt=""></div>
-                        <div class="php"><img src="images/php-logo-greyscale.svg" alt=""></div>
-                        <div class="codeigniter"><img src="images/codeigniter-logo-greyscale.svg" alt=""></div>
-                    </div>
-                </div>
-                <div class="tech-skills-b">
-                    <div class="group-c">
-                        <div class="laravel"><img src="images/laravel-logo-greyscale.svg" alt=""></div>
-                        <div class="sql"><img src="images/sql-logo-greyscale.svg" alt=""></div>
-                        <div class="mysql"><img src="images/mysql-logo-greyscale.svg" alt=""></div>
-                        <div class="postman"><img src="images/postman-logo-greyscale.svg" alt=""></div>
-                    </div>
-                    <div class="group-d">
-                        <div class="vscode"><img src="images/vscode-logo-greyscale.svg" alt=""></div>
-                        <div class="selenium"><img src="images/selenium-logo-greyscale.svg" alt=""></div>
-                        <div class="adobe-express"><img src="images/adobeexpress-logo-greyscale.svg" alt=""></div>
-                        <div class="figma"><img src="images/figma-logo-greyscale.svg" alt=""></div>
-                    </div>
-                </div>
-            </section>
-            <section id = "aboutmyself" class="aboutmyself">
-                <h3>ABOUT ME</h3>
-                <div class="about">
-                    <h4>Hi there, I'm Jerico and I'm a web developer based in the Philippines. When I'm not glued to my computer screen, you can find me binge-watching Netflix, eating my favorite “Adobo”, and playing with my dogs Sola, Luna, Snoopy and Barkley. But don’t let my love for my doggies fool you - I’m passionate about creating websites and web applications that are both functional and beautiful.</h4>
-                    <div class="dogs">
-                        <img src="images/my-dogs.png" alt="picture-of-my-dogs">
-                    </div>
-                </div>
-            </section>
-            <section id = "contact" class="contact">
-                <div class="contact-info">
-                    <div class="contact-me">
-                        <h3>Are you looking for a developer?</h3>
-                        <h4>I'm currently available for work.</h4>
-                        <button class="send-message" onclick="location.href='mailto:jerico@developer.com?subject=Inquiry'">Send a message
-                        </button>
-                    </div>
-                    <div class="contact-details">
-                        <p><a href = "tel:+639279448803">+63 927-944-8803</a></p>
-                        <p><a href = "mailto:jerico@developer.com?subject=Inquiry">jerico@developer.com</a></p>
-                    </div>
-                </div>
-            </section>
             <footer>
                 <div class="footer-container">
                     <address class="address">

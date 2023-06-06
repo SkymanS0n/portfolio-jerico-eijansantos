@@ -29,16 +29,64 @@ html {
             margin: auto;
             display: flex;
             justify-content: space-between;
+            color: #efefef;
             align-items: center;
         }
 
             .nav-section a {
-                display: flex;
+                height: 30px;
+                width: 30px;
             }
 
-            nav {
-                display: none;
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 25px;
+                width: 30px;
+                z-index: 9999;
             }
+
+                .hamburger span {
+                    height: 4px;
+                    width: 100%;
+                    color: #efefef;
+                    background-color: #FBBF00;
+                }
+
+                .slide-menu {
+                    position: fixed;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    width: 100%;
+                    height: 100vh;
+                    top: 2.5em;
+                    right: -100%;
+                    font-size: 2rem;
+                    background-color: rgba(66, 70, 75, 0.95);
+                    transition: 0.4s ease-in-out;
+                }
+
+                        .slide-menu ul {
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                        }
+                        
+                        .slide-menu li {
+                        padding: 10px;
+                        }
+                        
+                        .slide-menu a {
+                        color: #fff;
+                        text-decoration: none;
+                        }
+            
+            #menu-toggle:checked ~ .slide-menu {
+                right: 0;
+            }
+
 
     /* End of Header */
 
@@ -265,6 +313,10 @@ html {
         padding-bottom: 6em;
     }
 
+        .contact-me h3 {
+            font-weight: 600;
+        }
+
         .contact-me h4 {
             font-size: 2rem;
             margin-top: 1em;
@@ -281,7 +333,7 @@ html {
         }
 
         .contact-details {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 600;
         }
 

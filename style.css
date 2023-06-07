@@ -28,7 +28,6 @@ html {
             display: flex;
             justify-content: space-between;
             color: #efefef;
-            align-items: center;
         }
 
             .nav-section a {
@@ -79,7 +78,7 @@ html {
                                 padding-top: 4em;
                             }
 
-                            .nav-bar-links .send-message {
+                            .nav-bar-links, .menu-send-message {
                                 margin-top: 5em;
                             }
                         
@@ -138,7 +137,12 @@ html {
                 margin: auto;
             }
 
-            .view-work, .view-project, .send-message {
+            .buttons {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .view-work, .view-project, .menu-send-message, .send-message, .about-me, .source-code {
                 width: 180px;
                 align-self: center;
                 font-weight: 600;
@@ -150,8 +154,24 @@ html {
                 margin-top: 2.5em;
             }
 
+            .source-code {
+                margin-top: 0em;
+                background-color: transparent;
+                box-shadow: none;
+            }
+
+            .menu-send-message {
+                width: fit-content;
+                font-size: 2.5rem;
+            }
+
+
             .about-me {
                 margin-bottom: 1em;
+                margin-top: 0em;
+                background-color: transparent;
+                color: white;
+                box-shadow: none;
             }
 
     /* Start of Hero Section */
@@ -166,7 +186,7 @@ html {
             flex-direction: column;
             align-items: center;
             background-color: #efefef;
-        }
+        } 
 
             .projects-section h3, .skills h3, .aboutmyself h3, .contact-me h3 {
                 font-size: 4rem;
@@ -187,12 +207,12 @@ html {
                 padding-bottom: 4em;
             }
 
-            .project-c {
-                padding-bottom: 0em;
+            .project-b {
+                background-color: #ffffff;
             }
 
-            .project-b {
-                background-color: white;
+            .project-c {
+                padding-bottom: 0em;
             }
 
                 .project-a p, .project-b p, .project-c p {
@@ -406,3 +426,173 @@ html {
                 width: 2.5em;
                 margin: auto;
             }
+
+
+    /* End of Footer Section */
+
+    /* Start of Tablet media query*/ 
+
+    @media screen and (min-width:431px) and (max-width:800px) {
+
+    html {
+        font-size: 62.5%;
+        font-family: 'Poppins', sans-serif;
+    }
+
+        .hero-container h2 {
+            width: 80%;
+            align-self: center;
+        }
+
+        .hamburger, .hamburger span {
+            display: none;
+        }
+
+        .slide-menu {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            height: 0vh;
+            top: 0em;
+            right: 0;
+            font-size: 2rem;
+            font-weight: 100;
+            background-color: rgba(66, 70, 75, 0.95);
+            transition: 0s;
+        }
+
+                .nav-bar-links {
+                    display: flex;
+                    color: white;
+                }
+
+                .menu-send-message {
+                    display: none;
+                }
+
+                .slide-menu li:first-child {
+                    padding-top: 0em;
+                }
+
+                .nav-bar-links .send-message {
+                    margin-top: 0em;
+                }
+               
+
+                .slide-menu li {
+                    padding: 0em;
+                    margin-left: 1.5em;
+                }
+
+                .buttons {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    margin-top: 3.5em;
+                    margin-bottom: 2em;
+                }
+
+                .view-work {
+                    margin-right: 0.7em;
+                    margin-top: 0em;
+                    margin-bottom: 0em;
+                }
+                
+                .about-me {
+                    margin-left: 0.7em;
+                    margin-bottom: 0em;
+                }
+
+                .project-b {
+                    background-color: #efefef;
+                }
+
+                .project-c {
+                    padding-bottom: 4em;
+                }
+
+                .project-a p, .project-b p, .project-c p {
+                    width: 50%;
+                }
+
+                .buttons-a, .buttons-b, .buttons-c {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    margin-top: 4.66em;
+                    margin-bottom: 2.66em;
+                }
+
+                .aboutmyself p {
+                    width: 80%;
+                    margin: auto;
+                    line-height: 1.5;
+                    font-size: 1.3rem;
+                }
+
+                    .view-project {
+                        font-size: 2rem;
+                        margin-top: 0em;
+                    }
+
+                    .source-code {
+                        font-size: 2rem;
+                        margin-bottom: 0em;
+                        margin-left: 1em;
+                    }
+
+                    .view-project {
+                        margin-bottom: 0em;
+                        margin-right: 1em;
+                    }
+
+                    .featured-projects {
+                        width: 100%;
+                        overflow: hidden;
+                        position: relative;
+                    }
+
+                    .project.project-a, .project.project-b, .project.project-c {
+                        padding-bottom: 0em;
+                        padding-top: 0em;
+                    }
+
+                    .carousel {
+                        display: flex;
+                        overflow-x: auto;
+                        scroll-snap-type: x mandatory;
+                        -webkit-overflow-scrolling: touch;
+                        scroll-behavior: smooth;
+                        scrollbar-width: none;
+                        -ms-overflow-style: none;
+                    }
+                      
+                    .carousel::-webkit-scrollbar {
+                        display: none;
+                    }
+                      
+                    .project {
+                        flex: 0 0 100%;
+                        scroll-snap-align: start;
+                        /* Additional styling for project containers */
+                    }
+                      
+                    .indicators {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 10px;
+                    }
+                      
+                    .indicator {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: gray;
+                        margin: 0 5px;
+                    }
+                      
+                    .indicator.active {
+                        background-color: black;
+                    }
+
+    }

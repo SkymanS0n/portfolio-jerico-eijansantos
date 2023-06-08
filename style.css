@@ -28,9 +28,18 @@ html {
             display: flex;
             justify-content: space-between;
             color: #efefef;
+            align-items: center;
         }
 
             .nav-section a {
+                height: 30px;
+                width: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .nav-section img {
                 height: 30px;
                 width: 30px;
             }
@@ -39,8 +48,10 @@ html {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                height: 25px;
-                width: 30px;
+                align-self: center;
+                align-items: center;
+                height: 20px;
+                width: 25px;
             }
 
                 .hamburger span {
@@ -57,9 +68,9 @@ html {
                     text-align: center;
                     width: 100%;
                     height: 100vh;
-                    top: 1.65em;
+                    top: 2.5em;
                     right: -100%;
-                    font-size: 3rem;
+                    font-size: 2rem;
                     background-color: rgba(66, 70, 75, 0.95);
                     transition: 0.4s ease-in-out;
                 }
@@ -71,7 +82,7 @@ html {
                         }
                         
                         .slide-menu li {
-                        padding: 0.5em;
+                            padding: 0.5em;
                         }
 
                             .slide-menu li:first-child {
@@ -80,6 +91,12 @@ html {
 
                             .nav-bar-links, .menu-send-message {
                                 margin-top: 5em;
+                            }
+
+                            .nav-bar-links {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
                             }
                         
                         .slide-menu a {
@@ -111,7 +128,7 @@ html {
             display: flex;
             flex-direction: column;
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
             padding-bottom: 3em;
             font-weight: 300;
             color: white;
@@ -128,7 +145,7 @@ html {
             }
 
             .hero-container h1 {
-                font-size: 3.5rem;
+                font-size: 3rem;
                 font-weight: 600;
                 margin-bottom: 0.3em;
             }
@@ -143,12 +160,12 @@ html {
             }
 
             .view-work, .view-project, .menu-send-message, .send-message, .about-me, .source-code {
-                width: 180px;
+                width: fit-content;
                 align-self: center;
                 font-weight: 600;
                 background-color: #FBBF00;
                 color: #000000;
-                padding: 0.5em;
+                padding: 0.5em 1em;
                 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
                 margin-bottom: 1.5em;
                 margin-top: 2.5em;
@@ -158,13 +175,13 @@ html {
                 margin-top: 0em;
                 background-color: transparent;
                 box-shadow: none;
+                font-size: 1.5rem;
+                margin-bottom: 1em;
             }
 
             .menu-send-message {
-                width: fit-content;
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
-
 
             .about-me {
                 margin-bottom: 1em;
@@ -189,7 +206,7 @@ html {
         } 
 
             .projects-section h3, .skills h3, .aboutmyself h3, .contact-me h3 {
-                font-size: 4rem;
+                font-size: 3rem;
             }
 
             .projects-section h4, .skills h4, .aboutmyself h4, .contact-me h4, .aboutmyself h4 {
@@ -197,6 +214,10 @@ html {
                 width: 100%;
                 text-align: center;
                 margin-top: 0.5em;
+            }
+
+            .project.project-a, .project.project-b, .project.project-c {
+                padding: 0em;
             }
 
             .project-a, .project-b, .project-c {
@@ -226,16 +247,12 @@ html {
                 }
 
                     .view-project {
-                        font-size: 2rem;
+                        font-size: 1.5rem;
                         margin-top: 2.5em;
                     }
 
                     .source-code {
-                        font-size: 2rem;
-                    }
-
-                    .source-code {
-                        font-weight: 600;
+                        font-size: 1.5rem;
                         margin-bottom: 1em;
                     }
 
@@ -304,7 +321,12 @@ html {
             width: 90%;
             margin: auto;
             line-height: 1.5;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .aboutmyself h4:last-of-type {
+            margin-top: 4.5em;
         }
 
         .resume-link, .read-more {
@@ -324,6 +346,11 @@ html {
             width: 90%;
             align-self: center;
             color: #efefef;
+        }
+
+        .about p {
+            width: 100%;
+            margin: 0;
         }
 
             .about img {
@@ -355,8 +382,7 @@ html {
         }
 
         .send-message {
-            font-size: 2rem;
-            width: fit-content;
+            font-size: 1.5rem;
             margin-top: 1.5em;
             margin-bottom: 2em;
         }
@@ -434,165 +460,295 @@ html {
 
     @media screen and (min-width:431px) and (max-width:800px) {
 
-    html {
-        font-size: 62.5%;
-        font-family: 'Poppins', sans-serif;
-    }
+        .nav-section a {
+            height: 30px;
+            width: 30px;
+        } 
+    
+            .hero-container {
+                padding-top: 7.5em;
+            }
 
-        .hero-container h2 {
-            width: 80%;
-            align-self: center;
-        }
+            .hero-container h1, .projects-section.projects-section h3, .skills h3, .aboutmyself h3, .contact.contact h3 {
+                font-size: 4rem;
+            }
 
-        .hamburger, .hamburger span {
-            display: none;
-        }
-
-        .slide-menu {
-            position: relative;
-            display: flex;
-            justify-content: flex-end;
-            height: 0vh;
-            top: 0em;
-            right: 0;
-            font-size: 2rem;
-            font-weight: 100;
-            background-color: rgba(66, 70, 75, 0.95);
-            transition: 0s;
-        }
-
-                .nav-bar-links {
-                    display: flex;
-                    color: white;
-                }
-
-                .menu-send-message {
-                    display: none;
-                }
-
-                .slide-menu li:first-child {
-                    padding-top: 0em;
-                }
-
-                .nav-bar-links .send-message {
-                    margin-top: 0em;
-                }
-               
-
-                .slide-menu li {
-                    padding: 0em;
-                    margin-left: 1.5em;
-                }
-
-                .buttons {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    margin-top: 3.5em;
-                    margin-bottom: 2em;
-                }
-
-                .view-work {
-                    margin-right: 0.7em;
-                    margin-top: 0em;
-                    margin-bottom: 0em;
-                }
-                
-                .about-me {
-                    margin-left: 0.7em;
-                    margin-bottom: 0em;
-                }
-
-                .project-b {
-                    background-color: #efefef;
-                }
-
-                .project-c {
-                    padding-bottom: 4em;
-                }
-
-                .project-a p, .project-b p, .project-c p {
-                    width: 50%;
-                }
-
-                .buttons-a, .buttons-b, .buttons-c {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    margin-top: 4.66em;
-                    margin-bottom: 2.66em;
-                }
-
-                .aboutmyself p {
-                    width: 80%;
-                    margin: auto;
-                    line-height: 1.5;
-                    font-size: 1.3rem;
-                }
-
-                    .view-project {
-                        font-size: 2rem;
-                        margin-top: 0em;
-                    }
-
-                    .source-code {
-                        font-size: 2rem;
-                        margin-bottom: 0em;
-                        margin-left: 1em;
-                    }
-
-                    .view-project {
-                        margin-bottom: 0em;
-                        margin-right: 1em;
-                    }
-
-                    .featured-projects {
-                        width: 100%;
-                        overflow: hidden;
-                        position: relative;
-                    }
-
-                    .project.project-a, .project.project-b, .project.project-c {
-                        padding-bottom: 0em;
-                        padding-top: 0em;
-                    }
-
-                    .carousel {
+            .hero-container h2, .hero-container p {
+                font-size: 2rem;
+            }
+    
+            .hero-container h1, .hero-container p {
+                margin-bottom: 1em;
+            }
+    
+            .hero-container h2, .hero-container p {
+                width: 80%;
+                align-self: center;
+            }
+    
+            .projects-section.projects-section, .skills, .contact.contact, .aboutmyself.aboutmyself {
+                padding-top: 10em;
+                padding-bottom: 10em;
+            }
+    
+            .hamburger, .hamburger span {
+                display: none;
+            }
+    
+            .slide-menu {
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                height: 0vh;
+                top: 0em;
+                right: 0;
+                font-size: 2rem;
+                font-weight: 100;
+                background-color: rgba(66, 70, 75, 0.95);
+                transition: 0s;
+            }
+    
+                    .nav-bar-links {
                         display: flex;
-                        overflow-x: auto;
-                        scroll-snap-type: x mandatory;
-                        -webkit-overflow-scrolling: touch;
-                        scroll-behavior: smooth;
-                        scrollbar-width: none;
-                        -ms-overflow-style: none;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        color: white;
                     }
-                      
-                    .carousel::-webkit-scrollbar {
+
+                    .nav-bar-links li {
+                        margin-right: 2em;
+                    }
+    
+                    .menu-send-message {
                         display: none;
                     }
-                      
-                    .project {
-                        flex: 0 0 100%;
-                        scroll-snap-align: start;
-                        /* Additional styling for project containers */
+    
+                    .slide-menu li:first-child {
+                        padding-top: 0em;
                     }
-                      
-                    .indicators {
+    
+                    .nav-bar-links .send-message {
+                        margin-top: 0em;
+                    }
+    
+                    .slide-menu li {
+                        padding: 0em;
+                        margin-left: 1.5em;
+                    }
+    
+                    .buttons {
                         display: flex;
+                        flex-direction: row;
                         justify-content: center;
-                        margin-top: 10px;
+                        margin-top: 3.5em;
+                        margin-bottom: 2em;
                     }
-                      
+    
+                    .view-work {
+                        margin-right: 0.7em;
+                        margin-top: 0em;
+                        margin-bottom: 0em;
+                        font-size: 2.5rem;
+                    }
+                    
+                    .about-me {
+                        margin-left: 0.7em;
+                        margin-bottom: 0em;
+                        font-size: 2.5rem;
+                    }
+    
+                    .project.project-a {
+                        margin-bottom: 0em;
+                    }
+    
                     .indicator {
-                        width: 10px;
-                        height: 10px;
-                        border-radius: 50%;
-                        background-color: gray;
-                        margin: 0 5px;
+                        margin-top: 0em;
                     }
-                      
-                    .indicator.active {
-                        background-color: black;
+    
+                    .project-b {
+                        background-color: #efefef;
                     }
+    
+                    .project-c, .project-a, .project-b {
+                        padding-bottom: 2em;
+                    }
+    
+                    .project-a p, .project-b p, .project-c p, .aboutmyself.aboutmyself p {
+                        width: 50%;
+                        font-size: 2rem;
+                        text-align: justify;
+                    }
+    
+                    .aboutmyself.aboutmyself p {
+                        width: 80%;
+                        text-align: justify;
+                    }
+    
+                    .about-me p {
+                        width: 100%;
+                    }
+    
+                    .resume-link {
+                        font-size: 2rem;
+                    }
+    
+                    a.read-more {
+                        font-size: 2rem;
+                    }
+    
+                    .aboutmyself h4:last-of-type {
+                        margin-top: 4em;
+                    }
+    
+                    .about p:first-of-type {
+                        width: 90%;
+                    }
+                    
+    
+                    .projects-section h4, .skills h4, .aboutmyself h4 {
+                        font-size: 2rem;
+                    }
+    
+                    .buttons-a, .buttons-b, .buttons-c {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        margin-top: 4.66em;
+                        margin-bottom: 2.66em;
+                    }
+    
+                    .aboutmyself p {
+                        width: 80%;
+                        margin: auto;
+                        line-height: 1.5;
+                        font-size: 1.3rem;
+                    }
+    
+                        .view-project {
+                            font-size: 2.5rem;
+                            margin-top: 0em;
+                        }
+    
+                        .source-code {
+                            font-size: 2.5rem;
+                            margin-bottom: 0em;
+                            margin-left: 0.5em;
+                        }
+    
+                        .view-project {
+                            margin-bottom: 0em;
+                            margin-right: 0.5em;
+                        }
+    
+                        .featured-projects {
+                            width: 100%;
+                            overflow: hidden;
+                            position: relative;
+                        }
+    
+                        .project.project-a, .project.project-b, .project.project-c {
+                            padding-bottom: 0em;
+                            padding-top: 0em;
+                        }
+    
+                        .carousel {
+                            display: flex;
+                            overflow-x: auto;
+                            scroll-snap-type: x mandatory;
+                            -webkit-overflow-scrolling: touch;
+                            scroll-behavior: smooth;
+                            scrollbar-width: none;
+                            -ms-overflow-style: none;
+                        }
+                          
+                        .carousel::-webkit-scrollbar {
+                            display: none;
+                        }
+                          
+                        .project {
+                            flex: 0 0 100%;
+                            scroll-snap-align: start;
+                        }
+                          
+                        .indicators {
+                            display: flex;
+                            justify-content: center;
+                            margin-top: 10px;
+                        }
+                          
+                        .indicator {
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            background-color: gray;
+                            margin: 0 5px;
+                        }
+                          
+                        .indicator.active {
+                            background-color: black;
+                        }
 
-    }
+                        .send-message {
+                            font-size: 2rem;
+                        }
+
+                        .contact-details {
+                            font-size: 2rem;
+                        }
+    
+                        footer {
+                            background-color: #16181a;
+                        }
+    
+                        .footer-container {
+                            width: 90%;
+                            margin: auto;
+                            font-size: 1.2rem;
+                            display: flex;
+                            flex-direction: row;
+                            padding: 0.5em 0em 0.5em;
+                            color: #efefef;
+                            background-color: #16181a;
+                            justify-content: space-between;
+                        }
+                    
+                            .address.address {
+                                display: flex;
+                                flex-direction: column;
+                                text-align: left;
+                                width: 33%;
+                                margin: 0;
+                                margin-bottom: 0em;
+                            }
+                    
+                                .address p, .legal-regulations {
+                                    font-size: 1em;
+                                }
+                    
+                                strong {
+                                    color: #FBBF00;
+                                }
+                    
+                            .legal-regulations {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                text-align: center;
+                                align-items: center;
+                                margin: 0;
+                                width: 33%;
+                                margin-bottom: 0em;
+                            }
+                    
+                            .social-links {
+                                width: 33%;
+                                justify-content: flex-end;
+                                margin: 0;
+                            }
+                    
+                                .social-links a {
+                                    margin: 0;
+                                    margin-right: 1em;
+                                }
+    
+        }

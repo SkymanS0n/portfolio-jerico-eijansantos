@@ -52,6 +52,7 @@ html {
                 align-items: center;
                 height: 20px;
                 width: 25px;
+                
             }
 
                 .hamburger span {
@@ -59,6 +60,7 @@ html {
                     width: 100%;
                     color: #efefef;
                     background-color: #FBBF00;
+                    z-index: 9999;
                 }
 
                 .slide-menu {
@@ -73,6 +75,7 @@ html {
                     font-size: 2rem;
                     background-color: rgba(66, 70, 75, 0.95);
                     transition: 0.4s ease-in-out;
+                    
                 }
 
                         .slide-menu ul {
@@ -120,16 +123,16 @@ html {
     .hero-section {
         width: 100%;
         background: linear-gradient(to right, #42464B,  #16181a);
+        padding-bottom: 6em;
     }
 
         .hero-container {
-            padding-top: 5em;
+            padding-top: 7em;
             width: 90%;
             display: flex;
             flex-direction: column;
             text-align: center;
             font-size: 1.5rem;
-            padding-bottom: 3em;
             font-weight: 300;
             color: white;
             margin: auto;
@@ -142,6 +145,10 @@ html {
 
             .hero-container h2 {
                 margin-bottom: 2.5em;
+            }
+
+            .hero-container #classimg {
+                display: none;
             }
 
             .hero-container h1 {
@@ -184,6 +191,7 @@ html {
             }
 
             .about-me {
+                font-size: 1em;
                 margin-bottom: 1em;
                 margin-top: 0em;
                 background-color: transparent;
@@ -191,7 +199,7 @@ html {
                 box-shadow: none;
             }
 
-    /* Start of Hero Section */
+    /* End of Hero Section */
 
     /* Start of Projects Section */
 
@@ -330,10 +338,11 @@ html {
         }
 
         .resume-link, .read-more {
-            font-size: 1.7rem;
+            font-size: 1.5rem;
             color: #FBBF00;
             margin-bottom: 0em;
             text-decoration: underline;
+            margin-bottom: 1em;
         }
 
         .read-more {
@@ -460,14 +469,27 @@ html {
 
     @media screen and (min-width:431px) and (max-width:800px) {
 
+        
+
         .nav-section a {
             height: 30px;
             width: 30px;
         } 
     
             .hero-container {
-                padding-top: 7.5em;
+                padding-top: 8em;
             }
+
+            .hero-section {
+                padding-bottom: 10em;
+            }
+
+            .hero-details {
+                display: flex;
+                flex-direction: column;
+            }
+
+            
 
             .hero-container h1, .projects-section.projects-section h3, .skills h3, .aboutmyself h3, .contact.contact h3 {
                 font-size: 4rem;
@@ -480,10 +502,19 @@ html {
             .hero-container h1, .hero-container p {
                 margin-bottom: 1em;
             }
+
+            .hero-container h1 {
+                margin-bottom: 0.5em;
+            }
     
-            .hero-container h2, .hero-container p {
-                width: 80%;
+            .hero-container h2, .hero-container p,  .hero-container h1 {
+                width: 100%;
                 align-self: center;
+                text-align: center;
+            }
+
+            .hero-details h2 {
+                width: 80%;
             }
     
             .projects-section.projects-section, .skills, .contact.contact, .aboutmyself.aboutmyself {
@@ -540,7 +571,7 @@ html {
                         display: flex;
                         flex-direction: row;
                         justify-content: center;
-                        margin-top: 3.5em;
+                        margin-top: 4.66em;
                         margin-bottom: 2em;
                     }
     
@@ -576,12 +607,12 @@ html {
                     .project-a p, .project-b p, .project-c p, .aboutmyself.aboutmyself p {
                         width: 50%;
                         font-size: 2rem;
-                        text-align: justify;
+                        text-align: center;
                     }
     
                     .aboutmyself.aboutmyself p {
                         width: 80%;
-                        text-align: justify;
+                        text-align: center;
                     }
     
                     .about-me p {
@@ -751,4 +782,117 @@ html {
                                     margin-right: 1em;
                                 }
     
+        }
+
+        @media screen and (min-width:801px) {
+
+
+            .nav-section {
+                width: 70%;
+            }
+            .nav-section a {
+                height: 30px;
+                width: 30px;
+            } 
+        
+                .hero-container {
+                    padding-top: 7.5em;
+                    width: 70%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
+                .hero-details {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    width: 50%;
+                    padding-top: 2.5em;
+                }
+
+                .hero-container .hero-img {
+                    display: none;
+                }
+
+                .hero-container #classimg {
+                    display: block;
+                }
+    
+                .hero-container h1, .projects-section.projects-section h3, .skills h3, .aboutmyself h3, .contact.contact h3 {
+                    font-size: 4rem;
+                }
+    
+                .hero-container h2, .hero-container p {
+                    font-size: 2rem;
+                }
+        
+                .hero-container h1 {
+                    margin-bottom: 0.25em;
+                }
+        
+                .hero-container h2, .hero-container p {
+                    align-self: left;
+                }
+
+                .hero-img {
+                    width: 40%;
+                    margin: 0;
+                }
+
+                
+
+                    .view-work, .about-me {
+                        margin: 0;
+                    }
+        
+                .projects-section.projects-section, .skills, .contact.contact, .aboutmyself.aboutmyself {
+                    padding-top: 10em;
+                    padding-bottom: 10em;
+                }
+        
+                .hamburger, .hamburger span {
+                    display: none;
+                }
+        
+                .slide-menu {
+                    position: relative;
+                    display: flex;
+                    justify-content: flex-end;
+                    height: 0vh;
+                    top: 0em;
+                    right: 0;
+                    font-size: 2rem;
+                    font-weight: 100;
+                    background-color: rgba(66, 70, 75, 0.95);
+                    transition: 0s;
+                }
+                
+                        .nav-bar-links {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            color: white;
+                        }
+    
+                        .nav-bar-links li {
+                            margin-right: 2em;
+                        }
+        
+                        .menu-send-message {
+                            display: none;
+                        }
+        
+                        .slide-menu li:first-child {
+                            padding-top: 0em;
+                        }
+        
+                        .nav-bar-links .send-message {
+                            margin-top: 0em;
+                        }
+        
+                        .slide-menu li {
+                            padding: 0em;
+                            margin-left: 1.5em;
+                        }
         }

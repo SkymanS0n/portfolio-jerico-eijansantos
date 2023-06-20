@@ -100,6 +100,7 @@ header {
 
 /* Start of Hero Section */
 
+
 .hero-section {
     background: linear-gradient(to right, #42464B,  #16181a);
     padding-bottom: 8em;
@@ -163,7 +164,8 @@ header {
     
 /* Start of Project Section */
 
-$carouselWidth: 100%; // Adjust the width of each carousel item as needed
+
+$carouselWidth: 100%;
 
 #projects.projects-section {
   background-color: #eaeaea;
@@ -272,175 +274,181 @@ $carouselWidth: 100%; // Adjust the width of each carousel item as needed
 /* End of Project Section */
 
     
-    /* Start of Skills Section */
+/* Start of Skills Section */
     
-    .skills {
-        padding: 8em 0em 8em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h3 {
-            font-size: $h3;
-        }
-        h4 {
-            width: 90%;
+
+.skills {
+    padding: 8em 0em 8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+        font-size: $h3;
+    }
+    h4 {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 4em;
+    }
+    .tech-skills-a {
+        .group-a, .group-b {
+            width: 80%;
+            display: flex;
             margin: auto;
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 4em;
-        }
-        .tech-skills-a {
-            .group-a, .group-b {
-                width: 80%;
-                display: flex;
-                margin: auto;
-            }
-        }
-        .tech-skills-b {
-            .group-c, .group-d {
-                width: 80%;
-                display: flex;
-                margin: auto;
-            }
         }
     }
-    
-    /* End of Skills Section */
-    
-    /* Start of About Section */
-    
-    #aboutmyself.aboutmyself {
-        text-align: center;
-        background-color: #303030;
-        color: #efefef;
-        padding-top: 8em;
-        padding-bottom: 8em;
-        background: linear-gradient(to bottom, #42464B,  #16181a);
-        h3 {
-            font-size: $h3;
-        }
-        h4 {
-            width: 90%;
+    .tech-skills-b {
+        .group-c, .group-d {
+            width: 80%;
+            display: flex;
             margin: auto;
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 4em;
         }
-        .short-version {
-            .about {
-                p {
-                    font-size: 1.5rem;
-                    width: 90%;
-                    margin: auto;
-                    margin-bottom: 2em;
-                    line-height: 2;
-                }
-                .dogs {
-                    img {
-                        margin-bottom: 7em;
-                    }
-                }
-            }
-        }
-        .other-versions {
+    }
+}
+
+
+/* End of Skills Section */
+
+/* Start of About Section */
+
+
+#aboutmyself.aboutmyself {
+    text-align: center;
+    background-color: #303030;
+    color: #efefef;
+    padding-top: 8em;
+    padding-bottom: 8em;
+    background: linear-gradient(to bottom, #42464B,  #16181a);
+    h3 {
+        font-size: $h3;
+    }
+    h4 {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 4em;
+    }
+    .short-version {
+        .about {
             p {
                 font-size: 1.5rem;
                 width: 90%;
                 margin: auto;
-                margin-bottom: 5em;
+                margin-bottom: 2em;
                 line-height: 2;
             }
-            .read-more {
-                color: #FBBF00;
-                font-weight: 600;
-            }
-            img {
-                display: none;
+            .dogs {
+                img {
+                    margin-bottom: 7em;
+                }
             }
         }
-        a {
+    }
+    .other-versions {
+        p {
             font-size: 1.5rem;
+            width: 90%;
+            margin: auto;
+            margin-bottom: 5em;
+            line-height: 2;
+        }
+        .read-more {
             color: #FBBF00;
             font-weight: 600;
         }
+        img {
+            display: none;
+        }
     }
-    
-    /* End of About Section */
-    
-    /* Start of Contact Section */
-    
-    
-    #contact.contact{
-        padding: 8em 0em;
-        .contact-me {
+    a {
+        font-size: 1.5rem;
+        color: #FBBF00;
+        font-weight: 600;
+    }
+}
+
+
+/* End of About Section */
+
+/* Start of Contact Section */
+
+
+#contact.contact{
+    padding: 8em 0em;
+    .contact-me {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        h3 {
+            font-size: $h3;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+        }
+        h4 {
             width: 90%;
             margin: auto;
             text-align: center;
-            h3 {
-                font-size: $h3;
-                margin-bottom: 0.5em;
-                font-weight: 600;
-            }
-            h4 {
-                width: 90%;
-                margin: auto;
-                text-align: center;
-                font-size: 2rem;
-                margin-bottom: 3em;
-            }
-            .send-message {
-                font-size: 2rem;
-                padding: 0.5em;
-                @each $property, $value in $btn {
-                    #{$property}: $value;
-                }
-            }
+            font-size: 2rem;
+            margin-bottom: 3em;
         }
-        .contact-details {
-            font-size: 1.5rem;
-            font-weight: 600;
-            text-align: center;
-            margin-top: 3em;
+        .send-message {
+            font-size: 2rem;
+            padding: 0.5em;
+            @each $property, $value in $btn {
+                #{$property}: $value;
+            }
         }
     }
-    
-    /* End of Contact Section */
-    
-    /* Start of Footer */
-    
-    footer {
-        background-color: #16181a;
-        color: #efefef;
-        padding: 0em 1.5em;
-        .footer-container {
-            padding: 2em 0em;
+    .contact-details {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 3em;
+    }
+}
+
+
+/* End of Contact Section */
+
+/* Start of Footer */
+
+
+footer {
+    background-color: #16181a;
+    color: #efefef;
+    padding: 0em 1.5em;
+    .footer-container {
+        padding: 2em 0em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        address, .legal-regulations {
+            font-size: 0.8rem;
+            text-align: center;
+            margin-bottom: 1.5em;
+            strong {
+                color: #FBBF00;
+                font-weight: 600;
+            }
+        }
+        .social-links {
             display: flex;
-            flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            address, .legal-regulations {
-                font-size: 0.8rem;
-                text-align: center;
-                margin-bottom: 1.5em;
-                strong {
-                    color: #FBBF00;
-                    font-weight: 600;
-                }
-            }
-            .social-links {
+            a {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                a {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    height: 2.5em;
-                    width: 2.5em;
-                }
+                height: 2.5em;
+                width: 2.5em;
             }
         }
     }
-    
-    }
-    /* End of Footer */
+}
+
+}
+/* End of Footer */

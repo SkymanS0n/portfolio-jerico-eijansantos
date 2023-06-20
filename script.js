@@ -9,13 +9,11 @@ menuLinks.forEach((link) => {
   });
 });
 
-
 const carousel = document.querySelector('.carousel');
-const indicators = document.querySelectorAll('.indicator');
+const indicators = document.querySelectorAll('.indicators .indicator');
 
 carousel.addEventListener('scroll', () => {
-  const projects = document.querySelectorAll('.project');
-  const projectWidth = projects[0].offsetWidth;
+  const projectWidth = carousel.offsetWidth;
   const currentProjectIndex = Math.round(carousel.scrollLeft / projectWidth);
 
   indicators.forEach((indicator, index) => {
@@ -26,3 +24,4 @@ carousel.addEventListener('scroll', () => {
     }
   });
 });
+

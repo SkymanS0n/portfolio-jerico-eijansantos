@@ -1,0 +1,446 @@
+/* Start of header */
+
+@media screen and (min-width:451px) and (max-width:800px) {
+
+header {
+    align-items: center;
+    background-color: $hdr-ftr-bg;
+    box-shadow: 0px 2px 4px rgba(87, 87, 87, 0.4);
+    padding: 1em 0 1em 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    .nav-section {
+        align-items: center;
+        color: #efefef;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: $mobile-width;
+        z-index: 2;
+        a {
+            align-items: center;
+            display: flex;
+            height: auto;
+            justify-content: center;
+            width: 30px;
+            z-index: 2;
+        }
+        #menu-toggle {
+            display: none;
+            z-index: 1;
+            &:checked ~ .slide-menu {
+                left: 0;
+                top: 2.5em;
+                transition: 0s;
+                z-index: -1;
+            }
+            &:not(:checked) ~ .slide-menu {
+                background-color: transparent;
+                left: 0;
+                top: -100%;
+                transition: 0s;
+                z-index: -1;
+            }
+        }
+        
+        .hamburger {
+            align-self: center;
+            display: none;
+            flex-direction: column;
+            height: 20px;
+            justify-content: space-between;
+            width: 25px;
+            z-index: 2;
+            span {
+                background-color: #FBBF00;
+                color: #efefef;
+                height: 4px;
+                width: 100%;
+            }
+        }
+        .slide-menu {
+            background-color: transparent;
+            display: flex;
+            font-size: 2rem;
+            height: 0;
+            justify-content: flex-end;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            z-index: -1;
+            .nav-bar-links {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding-top: 0em;
+                z-index: -1;
+                li {
+                    padding: 0.5em;
+                    z-index: -1;
+                    a {
+                        width: 100%;
+                    }
+                }
+                .menu-send-message {
+                    display: none;
+                    margin-top: 5em;
+                    @each $property, $value in $btn {
+                        #{$property}: $value;
+                        }
+                }
+            }
+        }
+    }
+}
+    
+
+/* End of Header Section */
+
+/* Start of Hero Section */
+
+.hero-section {
+    background: linear-gradient(to right, #42464B,  #16181a);
+    padding-bottom: 8em;
+    .hero-container {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        font-size: $mobile-font;
+        font-weight: 300;
+        margin: auto;
+        padding-top: 5em;
+        text-align: center;
+        width: $mobile-width;
+        .hero-details {
+            width: 100%;
+            p, h2 {
+                line-height: 1.7em;
+                margin-bottom: 0.5em;
+
+                &:is(h2) {
+                    font-size: 1.5rem;
+                }
+            }
+            h1 {
+                font-size: 4rem;
+                font-weight: 600;
+                margin-bottom: 0.3em;
+            }
+            .hero-img {
+                margin-top: 2em;
+                margin-bottom: 4em;
+                width: 100%;
+                height: auto;
+            }
+            .buttons {
+                margin-top: 2em;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .view-work, .about-me {
+                    width: 10em;
+                    @each $property, $value in $btn {
+                        #{$property}: $value;
+                    }
+                    &:is(.about-me) {
+                        background-color: transparent;
+                        color: #FBBF00;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+    #classimg {
+        display: none;
+    }
+}
+    
+
+/* End of Hero Section */
+    
+/* Start of Project Section */
+
+$carouselWidth: 100%; // Adjust the width of each carousel item as needed
+
+#projects.projects-section {
+  background-color: #eaeaea;
+  padding-top: 8em;
+  padding-bottom: 8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    font-size: $h3;
+  }
+
+  h4 {
+    font-size: 2rem;
+    margin-bottom: 4em;
+  }
+
+  .featured-projects {
+    position: relative;
+    overflow: hidden;
+
+    .carousel {
+      display: flex;
+      width: $carouselWidth;
+      scroll-behavior: smooth;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .project-a,
+      .project-b,
+      .project-c {
+        flex: 0 0 $carouselWidth;
+        scroll-snap-align: start;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        img {
+          max-width: 100%;
+          height: auto;
+          margin-bottom: 1em;
+        }
+
+        p {
+          font-size: 1.5rem;
+          margin-bottom: 4em;
+          margin-top: 2em;
+          width: 50%;
+        }
+
+        .buttons-a,
+        .buttons-b,
+        .buttons-c {
+          display: flex;
+          justify-content: center;
+          .source-code {
+            font-size: 2rem;
+            font-weight: 600;
+          }
+          .view-project {
+            @each $property, $value in $btn {
+                #{$property}: $value;
+                font-size: 2rem;
+            }
+          }
+
+          button {
+            margin: 0 0.5em;
+            font-size: 1rem;
+            padding: 0.5em 1em;
+          }
+        }
+      }
+    }
+
+    .indicators {
+      display: flex;
+      justify-content: center;
+      margin-top: 5em;
+
+      .indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: gray;
+        margin: 0 5px;
+
+        &.active {
+          background-color: black;
+        }
+      }
+    }
+  }
+}
+
+
+/* End of Project Section */
+
+    
+    /* Start of Skills Section */
+    
+    .skills {
+        padding: 8em 0em 8em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+            font-size: $h3;
+        }
+        h4 {
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 4em;
+        }
+        .tech-skills-a {
+            .group-a, .group-b {
+                width: 80%;
+                display: flex;
+                margin: auto;
+            }
+        }
+        .tech-skills-b {
+            .group-c, .group-d {
+                width: 80%;
+                display: flex;
+                margin: auto;
+            }
+        }
+    }
+    
+    /* End of Skills Section */
+    
+    /* Start of About Section */
+    
+    #aboutmyself.aboutmyself {
+        text-align: center;
+        background-color: #303030;
+        color: #efefef;
+        padding-top: 8em;
+        padding-bottom: 8em;
+        background: linear-gradient(to bottom, #42464B,  #16181a);
+        h3 {
+            font-size: $h3;
+        }
+        h4 {
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 4em;
+        }
+        .short-version {
+            .about {
+                p {
+                    font-size: 1.5rem;
+                    width: 90%;
+                    margin: auto;
+                    margin-bottom: 2em;
+                    line-height: 2;
+                }
+                .dogs {
+                    img {
+                        margin-bottom: 7em;
+                    }
+                }
+            }
+        }
+        .other-versions {
+            p {
+                font-size: 1.5rem;
+                width: 90%;
+                margin: auto;
+                margin-bottom: 5em;
+                line-height: 2;
+            }
+            .read-more {
+                color: #FBBF00;
+                font-weight: 600;
+            }
+            img {
+                display: none;
+            }
+        }
+        a {
+            font-size: 1.5rem;
+            color: #FBBF00;
+            font-weight: 600;
+        }
+    }
+    
+    /* End of About Section */
+    
+    /* Start of Contact Section */
+    
+    
+    #contact.contact{
+        padding: 8em 0em;
+        .contact-me {
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            h3 {
+                font-size: $h3;
+                margin-bottom: 0.5em;
+                font-weight: 600;
+            }
+            h4 {
+                width: 90%;
+                margin: auto;
+                text-align: center;
+                font-size: 2rem;
+                margin-bottom: 3em;
+            }
+            .send-message {
+                font-size: 2rem;
+                padding: 0.5em;
+                @each $property, $value in $btn {
+                    #{$property}: $value;
+                }
+            }
+        }
+        .contact-details {
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 3em;
+        }
+    }
+    
+    /* End of Contact Section */
+    
+    /* Start of Footer */
+    
+    footer {
+        background-color: #16181a;
+        color: #efefef;
+        padding: 0em 1.5em;
+        .footer-container {
+            padding: 2em 0em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            address, .legal-regulations {
+                font-size: 0.8rem;
+                text-align: center;
+                margin-bottom: 1.5em;
+                strong {
+                    color: #FBBF00;
+                    font-weight: 600;
+                }
+            }
+            .social-links {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                a {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 2.5em;
+                    width: 2.5em;
+                }
+            }
+        }
+    }
+    
+    }
+    /* End of Footer */

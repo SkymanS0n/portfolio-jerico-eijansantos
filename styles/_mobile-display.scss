@@ -8,6 +8,7 @@ header {
     box-shadow: 0px 2px 4px rgba(87, 87, 87, 0.4);
     padding: 1em 0 1em 0;
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 2;
     .nav-section {
@@ -112,6 +113,8 @@ header {
         width: $mobile-width;
         .hero-details {
             width: 100%;
+            display: flex;
+            flex-direction: column;
             p, h2 {
                 line-height: 1.7em;
                 margin-bottom: 0.5em;
@@ -125,33 +128,34 @@ header {
                 font-weight: 600;
                 margin-bottom: 0.3em;
             }
-            .hero-img {
-                margin-top: 2em;
-                margin-bottom: 4em;
-                width: 100%;
-                height: auto;
-            }
             .buttons {
-                margin-top: 2em;
-                display: flex;
-                flex-direction: column;
-                .view-work, .about-me {
-                    width: 10em;
-                    @each $property, $value in $btn {
-                        #{$property}: $value;
-                    }
-                    &:is(.about-me) {
-                        margin-top: 1em;
-                        background-color: transparent;
-                        color: #FBBF00;
-                        box-shadow: none;
-                    }
-                }
+                display: none;
             }
         }
+        .hero-img {
+            margin-top: 2em;
+            margin-bottom: 4em;
+            width: 100%;
+            height: auto;
+        }
     }
-    #classimg {
-        display: none;
+    #buttons2 {
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        .view-work, .about-me {
+            width: 10em;
+            font-size: 2rem;
+            @each $property, $value in $btn {
+                #{$property}: $value;
+            }
+            &:is(.about-me) {
+                margin-top: 1em;
+                background-color: transparent;
+                color: #FBBF00;
+                box-shadow: none;
+            }
+        }
     }
 }
 
@@ -160,7 +164,8 @@ header {
 /* Start of Project Section */
 
 #projects.projects-section {
-    padding-top: 8em;
+    background-color: #eaeaea;
+    padding: 8em 0em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -177,76 +182,54 @@ header {
             display: flex;
             flex-direction: column;
             align-items: center;
-            .project-project-a, .project-project-c {
+            .project-a, .project-c, .project-b {
                 width: 90%;
+                margin: auto;
                 margin-bottom: 8em;
-                .project-a, .project-c {
-                    align-items: center;
-                    img {
-                        margin-bottom: 2em;
-                    }
-                    p {
-                        font-size: 1.5em;
-                        text-align: center;
-                        width: 80%;
-                        margin: auto;
-                        margin-bottom: 3em;
-                    }
-                    .buttons-a, .buttons-c {
-                        text-align: center;
-                        .view-project, .source-code {
-                            font-size: 1.5rem;
-                            width: 8.5em;
-                            padding: 0.5em;
-                            @each $property, $value in $btn {
+                text-align: center;
+                margin: auto;
+                &:is(.project-a) {
+                    padding-bottom: 8em;
+                }
+                &:is(.project-c) {
+                    padding-top: 8em;
+                }
+                img {
+                    margin-bottom: 2em;
+                }
+                p {
+                    font-size: 1.5em;
+                    text-align: center;
+                    width: 90%;
+                    margin: auto;
+                    margin-bottom: 3em;
+                }
+                .buttons-a, .buttons-c, .buttons-b {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    margin: auto;
+                    .view-project, .source-code {
+                        display: flex;
+                        justify-content: center;
+                        font-size: 1.5rem;
+                        width: 8.5em;
+                        padding: 0.5em;
+                        @each $property, $value in $btn {
+                            #{$property}: $value;
+                        }
+                        &:is(.source-code) {
+                            @each $property, $value in $btn-single {
                                 #{$property}: $value;
-                            }
-                            &:is(.source-code) {
-                                margin-top: 1em;
-                                @each $property, $value in $btn-single {
-                                    #{$property}: $value;
-                                }
                             }
                         }
                     }
                 }
             }
-            .project-project-b {
-                background-color: #eaeaea;
-                padding-top: 8em;
-                margin-bottom: 8em;
-                padding-bottom: 8em;
-                .project-b {
-                    width: 90%;
-                    margin: auto;
-                    img {
-                        margin-bottom: 2em;
-                    }
-                    p {
-                        font-size: 1.5em;
-                        text-align: center;
-                        width: 80%;
-                        margin: auto;
-                        margin-bottom: 3em;
-                    }
-                    .buttons-b {
-                        text-align: center;
-                        .view-project, .source-code {
-                            font-size: 1.5rem;
-                            width: 8.5em;
-                            padding: 0.5em;
-                            @each $property, $value in $btn {
-                                #{$property}: $value;
-                            }
-                            &:is(.source-code) {
-                                margin-top: 1em;
-                                @each $property, $value in $btn-single {
-                                    #{$property}: $value;
-                                }
-                            }
-                        }
-                    }
-                }
+            .project-b {
+                padding: 8em 0em;
+                background-color: #ffffff;
+                width: 100%;
             }
         }
     }

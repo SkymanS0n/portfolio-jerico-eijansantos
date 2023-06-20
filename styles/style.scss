@@ -8,6 +8,7 @@ $hdr-ftr-bg: #16181a;
 $mobile-width: 90%;
 $btn: (
   align-self: center,
+  text-align: center,
   background-color: #FBBF00,
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4),
   color: #000000,
@@ -32,3 +33,4 @@ html {
 
 @import 'mobile-display';
 @import 'tablet-display';
+@import 'laptop-displays';

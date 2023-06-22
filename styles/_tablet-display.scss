@@ -363,6 +363,10 @@ $carouselWidth: 100%;
         font-size: 1.5rem;
         color: #FBBF00;
         font-weight: 600;
+        &:is(.resume-link) {
+            font-size: 3rem;
+            text-decoration: underline;
+        }
     }
 }
 

@@ -1,6 +1,6 @@
 /* Start of header */
 
-@media screen and (min-width:801px) and (max-width:1080px) {
+@media screen and (min-width:1081px) and (max-width:1440px) {
 
     header {
         align-items: center;
@@ -17,7 +17,7 @@
             display: flex;
             justify-content: space-between;
             margin: auto;
-            width: $mobile-width;
+            width: 80%;
             a {
                 align-items: center;
                 display: flex;
@@ -115,7 +115,7 @@
             margin: auto;
             padding-top: 5em;
             text-align: center;
-            width: $mobile-width;
+            width: 80%;
             .hero-details {
                 width: 60%;
                 display: flex;
@@ -126,19 +126,16 @@
                     line-height: 1.7em;
                     margin-bottom: 0.5em;
                     text-align: left;
-    
-                    &:is(h2) {
-                        font-size: 1.5rem;
-                    }
+                    font-size: 2rem;
                 }
                 h1 {
-                    font-size: 4rem;
+                    font-size: 5rem;
                     font-weight: 600;
                     margin-bottom: 0.3em;
                     text-align: left;
                 }
                 .buttons {
-                    margin-top: 2.5em;
+                    margin-top: 3em;
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
@@ -166,7 +163,7 @@
             .hero-img {
                 margin-top: 2em;
                 margin-bottom: 4em;
-                max-width: 40%;
+                max-width: 35%;
                 height: auto;
             }
         }
@@ -235,7 +232,7 @@
             }
     
             p {
-              font-size: 1.5rem;
+              font-size: 2rem;
               margin-bottom: 4em;
               margin-top: 2em;
               width: 50%;
@@ -364,7 +361,7 @@
         .short-version {
             .about {
                 p {
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                     width: 90%;
                     margin: auto;
                     margin-bottom: 2em;
@@ -379,7 +376,7 @@
         }
         .other-versions {
             p {
-                font-size: 1.5rem;
+                font-size: 2rem;
                 width: 90%;
                 margin: auto;
                 margin-bottom: 5em;
@@ -394,14 +391,14 @@
             }
         }
         a {
-            font-size: 1.5rem;
+            font-size: 2rem;
             color: #FBBF00;
             font-weight: 600;
             &:hover {
                 cursor: pointer;
             }
             &:is(.resume-link) {
-                font-size: 3rem;
+                font-size: 4rem;
                 text-decoration: underline;
             }
         }

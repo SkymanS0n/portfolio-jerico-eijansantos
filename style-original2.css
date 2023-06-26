@@ -803,7 +803,7 @@ html {
         }
 
         /* Start of Laptop Screens upto 1440p monitors media query*/ 
-
+            
         @media screen and (min-width:801px) and (max-width: 1080px) {
 
 

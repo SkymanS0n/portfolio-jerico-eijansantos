@@ -77,12 +77,16 @@
                     padding-top: 0em;
                     li {
                         padding: 0.5em;
+                        margin-left: 1.5em;
                         :hover {
                             cursor: pointer;
-                            color: #FBBF00;
+                            color: #FBBF00;     
                         }
                         a {
                             width: 100%;
+                            &:focus {
+                                outline: 2px solid blue;
+                            }
                         }
                     }
                     .menu-send-message {
@@ -200,24 +204,15 @@
       .featured-projects {
         position: relative;
         overflow: hidden;
+        width: 80%;
     
         .carousel {
           display: flex;
           width: $carouselWidth;
-          scroll-behavior: smooth;
-          overflow-x: auto;
-          -webkit-overflow-scrolling: touch;
-          scroll-snap-type: x mandatory;
-          scrollbar-width: none;
-          &::-webkit-scrollbar {
-            display: none;
-          }
     
           .project-a,
           .project-b,
           .project-c {
-            flex: 0 0 $carouselWidth;
-            scroll-snap-align: start;
             padding: 1em;
             display: flex;
             flex-direction: column;
@@ -226,7 +221,7 @@
             text-align: center;
     
             img {
-              max-width: 100%;
+              max-width: 90%;
               height: auto;
               margin-bottom: 1em;
             }
@@ -235,7 +230,7 @@
               font-size: 2rem;
               margin-bottom: 4em;
               margin-top: 2em;
-              width: 50%;
+              width: 80%;
             }
     
             .buttons-a,
@@ -244,7 +239,7 @@
               display: flex;
               justify-content: center;
               .source-code {
-                font-size: 2rem;
+                font-size: 1.9rem;
                 font-weight: 600;
                 &:hover {
                     color: #FBBF00;
@@ -254,7 +249,7 @@
               .view-project {
                 @each $property, $value in $btn {
                     #{$property}: $value;
-                    font-size: 2rem;
+                    font-size: 1.9rem;
                 }
                 &:hover {
                     background-color: #ffaa00;
@@ -267,24 +262,6 @@
                 font-size: 1rem;
                 padding: 0.5em 1em;
               }
-            }
-          }
-        }
-    
-        .indicators {
-          display: flex;
-          justify-content: center;
-          margin-top: 5em;
-    
-          .indicator {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: gray;
-            margin: 0 5px;
-    
-            &.active {
-              background-color: black;
             }
           }
         }
@@ -444,10 +421,23 @@
         .contact-details {
             font-size: 1.5rem;
             font-weight: 600;
+            width: fit-content;
             text-align: center;
+            margin: auto;
             margin-top: 3em;
-            &:hover {
-                cursor: pointer;
+            p:first-of-type {
+                transition: transform 0.3s ease-in-out;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.2);
+                }
+            }
+            p:last-of-type {
+                transition: transform 0.3s ease-in-out;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.2);
+                }
             }
         }
     }
@@ -461,7 +451,6 @@
     footer {
         background-color: #16181a;
         color: #efefef;
-        padding: 0em 1.5em;
         .footer-container {
             padding: 2em 0em;
             display: flex;
@@ -471,7 +460,7 @@
             width: 70%;
             margin: auto;
             address, .legal-regulations {
-                font-size: 1rem;
+                font-size: 1.5rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -481,13 +470,14 @@
                     font-weight: 600;
                     &:hover {
                         cursor: pointer;
+                        color: #ffaa00;
                     }
                 }
                 &:is(address) {
                     text-align: left;
                 }
                 &:is(.legal-regulations) {
-                    margin-right: 5em;
+                    margin-right: 7em;
                 }
             }
             .social-links {

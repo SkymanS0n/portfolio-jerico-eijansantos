@@ -77,6 +77,7 @@
                     padding-top: 0em;
                     li {
                         padding: 0.5em;
+                        margin-left: 1.5em;
                         :hover {
                             cursor: pointer;
                             color: #FBBF00;
@@ -138,7 +139,7 @@
                     margin-top: 3em;
                     display: flex;
                     flex-direction: row;
-                    justify-content: center;
+                    justify-content: flex-start;
                     button {
                         width: 10em;
                         font-size: 2rem;
@@ -204,20 +205,10 @@
         .carousel {
           display: flex;
           width: $carouselWidth;
-          scroll-behavior: smooth;
-          overflow-x: auto;
-          -webkit-overflow-scrolling: touch;
-          scroll-snap-type: x mandatory;
-          scrollbar-width: none;
-          &::-webkit-scrollbar {
-            display: none;
-          }
     
           .project-a,
           .project-b,
           .project-c {
-            flex: 0 0 $carouselWidth;
-            scroll-snap-align: start;
             padding: 1em;
             display: flex;
             flex-direction: column;
@@ -226,16 +217,16 @@
             text-align: center;
     
             img {
-              max-width: 100%;
+              max-width: 90%;
               height: auto;
               margin-bottom: 1em;
             }
     
             p {
-              font-size: 2rem;
+              font-size: 1.8rem;
               margin-bottom: 4em;
               margin-top: 2em;
-              width: 50%;
+              width: 80%;
             }
     
             .buttons-a,
@@ -244,7 +235,7 @@
               display: flex;
               justify-content: center;
               .source-code {
-                font-size: 2rem;
+                font-size: 1.8rem;
                 font-weight: 600;
                 &:hover {
                     color: #FBBF00;
@@ -254,7 +245,7 @@
               .view-project {
                 @each $property, $value in $btn {
                     #{$property}: $value;
-                    font-size: 2rem;
+                    font-size: 1.8rem;
                 }
                 &:hover {
                     background-color: #ffaa00;
@@ -267,24 +258,6 @@
                 font-size: 1rem;
                 padding: 0.5em 1em;
               }
-            }
-          }
-        }
-    
-        .indicators {
-          display: flex;
-          justify-content: center;
-          margin-top: 5em;
-    
-          .indicator {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: gray;
-            margin: 0 5px;
-    
-            &.active {
-              background-color: black;
             }
           }
         }
@@ -461,7 +434,6 @@
     footer {
         background-color: #16181a;
         color: #efefef;
-        padding: 0em 1.5em;
         .footer-container {
             padding: 2em 0em;
             display: flex;
@@ -471,7 +443,7 @@
             width: 90%;
             margin: auto;
             address, .legal-regulations {
-                font-size: 0.8rem;
+                font-size: 1.2rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -485,6 +457,9 @@
                 }
                 &:is(address) {
                     text-align: left;
+                }
+                &:is(.legal-regulations) {
+                    margin-right: 6em;
                 }
             }
             .social-links {

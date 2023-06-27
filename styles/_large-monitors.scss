@@ -389,8 +389,22 @@
     
     
     #contact.contact {
-        background-image: url('images/Mati1.jpg');
-        background-size: cover;
+        background-color: #FBBF00;
+        align-self: center;
+        
+        h3 {
+            font-size: $h3;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+            text-align: Center;
+        }
+        h4 {
+            width: 90%;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3em;
+        }
+        
         .contact-container {
             display: flex;
             width: 100%;
@@ -400,7 +414,9 @@
                 width: 50%;
                 text-align: left;
                 padding: 8em 5em 8em 29em;
+                background-image: url("images/send-message.png");
                 h3 {
+                    display: none;
                     font-size: $h3;
                     margin-bottom: 0.5em;
                     font-weight: 600;
@@ -410,9 +426,12 @@
                     width: 90%;
                     text-align: left;
                     font-size: 2rem;
+                    margin: auto;
                     margin-bottom: 3em;
+                    display: none;
                 }
                 .send-message {
+                    display: none;
                     font-size: 2rem;
                     padding: 0.5em;
                     text-align: left;
@@ -424,25 +443,80 @@
                         cursor: pointer;
                     }
                 }
+                .business-email, .business-phone {
+                    display: flex;
+                    font-size: 2rem;
+                    padding: 1em;
+                    img {
+                        display: flex;
+                        align-items: center;
+                        padding: 0em 1.5em 0em 0em;
+                    }
+                    p {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+                .address2 {
+                    display: flex;
+                    font-size: 2rem;
+                    padding: 0em 1em 1em 1em;
+                    strong {
+                        color: #FBBF00;
+                        font-weight: 600;
+                        transition: margin-left 0.3s ease-in-out;
+                        &:hover {
+                            cursor: pointer;
+                            margin-left: 1em;
+                        }
+                    }
+                    .address-icon {
+                        display: flex;
+                        align-items: center;
+                        padding: 0em 1.5em 0em 0em;
+                    }
+                }
                 .contact-details {
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                     font-weight: 600;
                     width: fit-content;
                     text-align: left;
                     margin-top: 3em;
                     p:first-of-type {
-                        transition: transform 0.3s ease-in-out;
+                        transition: margin-left 0.3s ease-in-out;
                         &:hover {
                             cursor: pointer;
-                            transform: scale(1.2);
+                            margin-left: 1em;
                         }
                     }
-                    p:last-of-type {
-                        transition: transform 0.3s ease-in-out;
-                        &:hover {
-                            cursor: pointer;
-                            transform: scale(1.2);
+                }
+                .social-links2 {
+                    display: flex;
+                    font-size: 2rem;
+                    margin-bottom: 3em;
+                    padding: 0em 1em 1em 1em;
+                    .social-icon {
+                        display: flex;
+                        align-items: center;
+                        a:first-of-type, a:last-of-type {
+                            margin-right: 0.5em;
+                            display: flex;
+                            align-items: center;
+                            transition: scale 0.2s ease-in-out;
+                            &:hover {
+                                cursor: pointer;
+                                scale: 1.15;
+                            }
+                            img {
+                                width: 60%;
+                                height: auto;
+                            }
                         }
+                    }
+                    .chat-icon {
+                        display: flex;
+                        align-items: center;
+                        padding: 0em 1.5em 0em 0em;
                     }
                 }
             }
@@ -450,10 +524,9 @@
                 display: none;
             }
             .contact-form {
-                background-color: rgba(235, 235, 235, 0.8);
-                backdrop-filter: blur(8px);
                 width: 50%;
                 padding: 8em 29em 8em 5em;
+                background-color: #f1f1f1;
                 form {
                     font-size: 2rem;
                     display: flex;
@@ -496,16 +569,14 @@
         .footer-container {
             padding: 2em 0em;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
             width: 70%;
             margin: auto;
-            address, .legal-regulations {
+            justify-content: center;
+            address {
+                display: none;
+            }
+            .legal-regulations {
                 font-size: 1.5rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
                 text-align: center;
                 strong {
                     color: #FBBF00;
@@ -515,28 +586,9 @@
                         color: #ffaa00;
                     }
                 }
-                &:is(address) {
-                    text-align: left;
-                }
-                &:is(.legal-regulations) {
-                    margin-right: 7em;
-                }
             }
             .social-links {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                a {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    height: 2.5em;
-                    width: 2.5em;
-                    margin-left: 1.5em;
-                }
-                &:hover {
-                    cursor: pointer;
-                }
+                display: none;
             }
         }
     }

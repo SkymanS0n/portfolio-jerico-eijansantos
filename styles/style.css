@@ -2268,8 +2268,20 @@ html {
   /* End of About Section */
   /* Start of Contact Section */
   #contact.contact {
-    background-image: url("images/Mati1.jpg");
-    background-size: cover;
+    background-color: #FBBF00;
+    align-self: center;
+  }
+  #contact.contact h3 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    text-align: Center;
+  }
+  #contact.contact h4 {
+    width: 90%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3em;
   }
   #contact.contact .contact-container {
     display: flex;
@@ -2281,8 +2293,10 @@ html {
     width: 50%;
     text-align: left;
     padding: 8em 5em 8em 29em;
+    background-image: url("images/send-message.png");
   }
   #contact.contact .contact-container .contact-me h3 {
+    display: none;
     font-size: 3rem;
     margin-bottom: 0.5em;
     font-weight: 600;
@@ -2292,9 +2306,12 @@ html {
     width: 90%;
     text-align: left;
     font-size: 2rem;
+    margin: auto;
     margin-bottom: 3em;
+    display: none;
   }
   #contact.contact .contact-container .contact-me .send-message {
+    display: none;
     font-size: 2rem;
     padding: 0.5em;
     text-align: left;
@@ -2310,8 +2327,41 @@ html {
     background-color: #ffaa00;
     cursor: pointer;
   }
+  #contact.contact .contact-container .contact-me .business-email, #contact.contact .contact-container .contact-me .business-phone {
+    display: flex;
+    font-size: 2rem;
+    padding: 1em;
+  }
+  #contact.contact .contact-container .contact-me .business-email img, #contact.contact .contact-container .contact-me .business-phone img {
+    display: flex;
+    align-items: center;
+    padding: 0em 1.5em 0em 0em;
+  }
+  #contact.contact .contact-container .contact-me .business-email p, #contact.contact .contact-container .contact-me .business-phone p {
+    display: flex;
+    align-items: center;
+  }
+  #contact.contact .contact-container .contact-me .address2 {
+    display: flex;
+    font-size: 2rem;
+    padding: 0em 1em 1em 1em;
+  }
+  #contact.contact .contact-container .contact-me .address2 strong {
+    color: #FBBF00;
+    font-weight: 600;
+    transition: margin-left 0.3s ease-in-out;
+  }
+  #contact.contact .contact-container .contact-me .address2 strong:hover {
+    cursor: pointer;
+    margin-left: 1em;
+  }
+  #contact.contact .contact-container .contact-me .address2 .address-icon {
+    display: flex;
+    align-items: center;
+    padding: 0em 1.5em 0em 0em;
+  }
   #contact.contact .contact-container .contact-me .contact-details {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     width: -moz-fit-content;
     width: fit-content;
@@ -2319,28 +2369,48 @@ html {
     margin-top: 3em;
   }
   #contact.contact .contact-container .contact-me .contact-details p:first-of-type {
-    transition: transform 0.3s ease-in-out;
+    transition: margin-left 0.3s ease-in-out;
   }
   #contact.contact .contact-container .contact-me .contact-details p:first-of-type:hover {
     cursor: pointer;
-    transform: scale(1.2);
+    margin-left: 1em;
   }
-  #contact.contact .contact-container .contact-me .contact-details p:last-of-type {
-    transition: transform 0.3s ease-in-out;
+  #contact.contact .contact-container .contact-me .social-links2 {
+    display: flex;
+    font-size: 2rem;
+    margin-bottom: 3em;
+    padding: 0em 1em 1em 1em;
   }
-  #contact.contact .contact-container .contact-me .contact-details p:last-of-type:hover {
+  #contact.contact .contact-container .contact-me .social-links2 .social-icon {
+    display: flex;
+    align-items: center;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .social-icon a:first-of-type, #contact.contact .contact-container .contact-me .social-links2 .social-icon a:last-of-type {
+    margin-right: 0.5em;
+    display: flex;
+    align-items: center;
+    transition: scale 0.2s ease-in-out;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .social-icon a:first-of-type:hover, #contact.contact .contact-container .contact-me .social-links2 .social-icon a:last-of-type:hover {
     cursor: pointer;
-    transform: scale(1.2);
+    scale: 1.15;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .social-icon a:first-of-type img, #contact.contact .contact-container .contact-me .social-links2 .social-icon a:last-of-type img {
+    width: 60%;
+    height: auto;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .chat-icon {
+    display: flex;
+    align-items: center;
+    padding: 0em 1.5em 0em 0em;
   }
   #contact.contact .contact-container .contact-details2 {
     display: none;
   }
   #contact.contact .contact-container .contact-form {
-    background-color: rgba(235, 235, 235, 0.8);
-    -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
     width: 50%;
     padding: 8em 29em 8em 5em;
+    background-color: #f1f1f1;
   }
   #contact.contact .contact-container .contact-form form {
     font-size: 2rem;
@@ -2377,48 +2447,27 @@ html {
   footer .footer-container {
     padding: 2em 0em;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     width: 70%;
     margin: auto;
-  }
-  footer .footer-container address, footer .footer-container .legal-regulations {
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
+  }
+  footer .footer-container address {
+    display: none;
+  }
+  footer .footer-container .legal-regulations {
+    font-size: 1.5rem;
     text-align: center;
   }
-  footer .footer-container address strong, footer .footer-container .legal-regulations strong {
+  footer .footer-container .legal-regulations strong {
     color: #FBBF00;
     font-weight: 600;
   }
-  footer .footer-container address strong:hover, footer .footer-container .legal-regulations strong:hover {
+  footer .footer-container .legal-regulations strong:hover {
     cursor: pointer;
     color: #ffaa00;
   }
-  footer .footer-container address:is(address), footer .footer-container .legal-regulations:is(address) {
-    text-align: left;
-  }
-  footer .footer-container address:is(.legal-regulations), footer .footer-container .legal-regulations:is(.legal-regulations) {
-    margin-right: 7em;
-  }
   footer .footer-container .social-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  footer .footer-container .social-links a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 2.5em;
-    width: 2.5em;
-    margin-left: 1.5em;
-  }
-  footer .footer-container .social-links:hover {
-    cursor: pointer;
+    display: none;
   }
 }
 /* End of Footer */

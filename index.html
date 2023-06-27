@@ -176,16 +176,40 @@
                     <a href="Technical  Resume.pdf" class="resume-link">Resume</a>
                 </section>
                 <section id = "contact" class="contact">
+                    
+                    <div class="contact-container">
                         <div class="contact-me">
                             <h3>Are you looking for a developer?</h3>
                             <h4>I'm currently available for work.</h4>
                             <button class="send-message" onclick="location.href='mailto:jerico@developer.com?subject=Inquiry'">Send a message
                             </button>
+                            <div class="contact-details">
+                                <p><a href = "tel:+639279448803">+63 927-944-8803</a></p>
+                                <p><a href = "mailto:jerico@developer.com?subject=Inquiry">jerico@developer.com</a></p>
+                            </div>
                         </div>
-                        <div class="contact-details">
+                        <div class="contact-details2">
                             <p><a href = "tel:+639279448803">+63 927-944-8803</a></p>
                             <p><a href = "mailto:jerico@developer.com?subject=Inquiry">jerico@developer.com</a></p>
                         </div>
+                        <div class="contact-form">
+                            <form action="/submit-contact-form" method="POST">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+
+                                <label for="name">Company Name:</label>
+                                <input type="text" id="company-name" name="name" required>
+                                
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                                
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                                
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
                 </section>
             </main>
             <footer>

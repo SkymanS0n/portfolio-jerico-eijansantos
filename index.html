@@ -11,6 +11,7 @@
         <meta property="og:type" content="website">
         <meta property="fb:app_id" content="270193152282911">
         <title>Jerico Eijansantos Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="./styles/style.css">
     </head>
@@ -19,8 +20,8 @@
         <div class="container">
             <header>
                 <div class="nav-section">
-                    <a href="index.html">
-                        <img src="images/my-logo.svg" alt="Jerico Eijansantos logo">
+                    <a id = "logo" href="index.html">
+                        <img src="images/my-logo.png" alt="Jerico Eijansantos logo">
                     </a>
                     <input type="checkbox" id = "menu-toggle">
                     <label for="menu-toggle" class="hamburger">
@@ -80,11 +81,16 @@
                                 </p>
                                 <div class="buttons-a">
                                     <button class="view-project">
-                                    View Project
+                                    View Live Site
                                     </button>
                                     <button class="source-code">
-                                    Source Code
+                                    Documentation
                                     </button>
+                                </div>
+                                <div class="doc-options">
+                                    <a href="#">Source Code</a>
+                                    <a href="#">Design Documentation</a>
+                                    <a href="#">System Documentation</a>
                                 </div>
                             </div>
                             <div class="project-b">
@@ -94,12 +100,19 @@
                                 </p>
                                 <div class="buttons-b">
                                     <button class="view-project">
-                                    View Project
+                                    View Live Site
                                     </button>
                                     <button class="source-code">
-                                    Source Code
+                                    Documentation
                                     </button>
+                                    
                                 </div>
+                                <div class="doc-options">
+                                    <a href="#">Source Code</a>
+                                    <a href="#">Design Documentation</a>
+                                    <a href="#">System Documentation</a>
+                                </div>
+                                
                             </div>
                             <div class="project-c">
                                 <img src="images/project-cc.png" alt="Mockup of the Orthodox website design displayed on a computer monitor.">
@@ -108,11 +121,16 @@
                                 </p>
                                 <div class="buttons-c">
                                     <button class="view-project">
-                                    View Project
+                                    View Live Site
                                     </button>
                                     <button class="source-code">
-                                    Source Code
+                                    Documentation
                                     </button>
+                                </div>
+                                <div class="doc-options">
+                                    <a href="#">Source Code</a>
+                                    <a href="#">Design Documentation</a>
+                                    <a href="#">System Documentation</a>
                                 </div>
                             </div>
                         </div>
@@ -122,76 +140,123 @@
                             <div class="indicator"></div>
                         </div>
                     </div>
-                </section>
-                <section class="skills">
-                    <h3>SKILLS & TOOLS</h3>
-                    <h4>I may have what you're looking for.</h4>
-                    <div class="tech-skills-a">
-                        <div class="group-a">
-                            <div class="html"><img src="images/html-logo-greyscale.svg" alt="Grayscale HTML logo"></div>
-                            <div class="css"><img src="images/css-logo-greyscale.svg" alt="Grayscale CSS logo"></div>
-                            <div class="javascript"><img src="images/javascript-logo-greyscale.svg" alt="Grayscale JavaScript logo"></div>
-                            <div class="bootstrap"><img src="images/bootstrap-logo-greyscale.svg" alt="Grayscale Bootstrap logo"></div>
-                        </div>
-                        <div class="group-b">
-                            <div class="sass"><img src="images/sass-logo-greyscale.svg" alt="Grayscale Sass logo"></div>
-                            <div class="reactjs"><img src="images/react-logo-greyscale.svg" alt="Grayscale React logo"></div>
-                            <div class="php"><img src="images/php-logo-greyscale.svg" alt="Grayscale PHP logo"></div>
-                            <div class="codeigniter"><img src="images/codeigniter-logo-greyscale.svg" alt="Grayscale CodeIgniter logo"></div>
-                        </div>
+                    <h4>Other noteworthy projects</h4>
+                    <div class="personal-projects">
+                        <a href="#"><img src="images/my-project1.png" alt=""></a>
+                        <a href="#"><img src="images/my-project2.png" alt=""></a>
+                        <a href="#"><img src="images/my-project3.png" alt=""></a>
                     </div>
-                    <div class="tech-skills-b">
-                        <div class="group-c">
-                            <div class="laravel"><img src="images/laravel-logo-greyscale.svg" alt="Grayscale Laravel logo"></div>
-                            <div class="sql"><img src="images/sql-logo-greyscale.svg" alt="Grayscale SQL logo"></div>
-                            <div class="mysql"><img src="images/mysql-logo-greyscale.svg" alt="Grayscale MySQL logo"></div>
-                            <div class="postman"><img src="images/postman-logo-greyscale.svg" alt="Grayscale Postman logo"></div>
-                        </div>
-                        <div class="group-d">
-                            <div class="vscode"><img src="images/vscode-logo-greyscale.svg" alt="Grayscale VSCode logo"></div>
-                            <div class="selenium"><img src="images/selenium-logo-greyscale.svg" alt="Grayscale Selenium logo"></div>
-                            <div class="adobe-express"><img src="images/adobeexpress-logo-greyscale.svg" alt="Grayscale Adobe Express logo"></div>
-                            <div class="figma"><img src="images/figma-logo-greyscale.svg" alt="Grayscale Figma logo"></div>
-                        </div>
-                    </div>
+                    <h4>Made specifically to increase productivity</h4>
                 </section>
+                
                 <section id = "aboutmyself" class="aboutmyself">
                     <h3>ABOUT ME</h3>
-                    <h4>The short version</h4>
-                    <div class="short-version">
-                        <div class="about">
-                            <p>Hi there, I'm Jerico and I'm a web developer based in the Philippines. When I'm not glued to my computer screen, you can find me binge-watching Netflix, eating my favorite “Adobo”, and playing with my dogs Sola, Luna, Snoopy and Barkley. But don’t let my love for my doggies fool you - I’m passionate about creating websites and web applications that are both functional and beautiful.</p>
-                            <div class="dogs">
-                                <img src="images/my-dogs.png" alt="Two Shih Tzus, an Aspin and a Schipperke">
+                    <div class="about-me-container">
+                        <div class="image-container">
+                            <img src="images/Portrait.png" alt="">
+                        </div>
+                        <div class="about-me-details">
+                            <div class="short-version">
+                                <div class="about">
+                                    <p>Hi there, I'm Jerico and I'm a web developer based in the Philippines. When I'm not glued to my computer screen, you can find me binge-watching Netflix, eating my favorite “Adobo”, and playing with my dogs Sola, Luna, Snoopy and Barkley. But don’t let my love for my doggies fool you - I’m passionate about creating websites and web applications that are both functional and beautiful.</p>
+                                </div>
+                                <div class="dogs">
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="other-versions">
+                                <div class="somewhat-long">
+                                    <p>In January 2023, I embarked on an exciting journey to delve into the world of web development. To accelerate my learning, I enrolled in a comprehensive bootcamp that spanned four months. Equipped with the knowledge and skills gained from the bootcamp, I continued my web development journey through self-study starting in May 2023.
+                                    <a href = "https://skymans0n.notion.site/My-Web-Development-Journey-6e979fca1455470f8a4ec24f5e71b810?pvs=4" class = "read-more">Read More</a></p>
+                                    <img src="images/best-capstone.svg" alt="Image of the Best Village88 Capstone certificate">
+                                    <div class="notion">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <section class="skills">
+                                <p>Skills and Tools</p>
+                                <div class="tech-skills-a">
+                                    <div class="group-a">
+                                        <div class="html"><img src="images/html-logo-greyscale.svg" alt="Grayscale HTML logo"></div>
+                                        <div class="css"><img src="images/css-logo-greyscale.svg" alt="Grayscale CSS logo"></div>
+                                        <div class="javascript"><img src="images/javascript-logo-greyscale.svg" alt="Grayscale JavaScript logo"></div>
+                                        <div class="bootstrap"><img src="images/bootstrap-logo-greyscale.svg" alt="Grayscale Bootstrap logo"></div>
+                                    </div>
+                                    <div class="group-b">
+                                        <div class="sass"><img src="images/sass-logo-greyscale.svg" alt="Grayscale Sass logo"></div>
+                                        <div class="reactjs"><img src="images/react-logo-greyscale.svg" alt="Grayscale React logo"></div>
+                                        <div class="php"><img src="images/php-logo-greyscale.svg" alt="Grayscale PHP logo"></div>
+                                        <div class="codeigniter"><img src="images/codeigniter-logo-greyscale.svg" alt="Grayscale CodeIgniter logo"></div>
+                                    </div>
+                                </div>
+                                <div class="tech-skills-b">
+                                    <div class="group-c">
+                                        <div class="laravel"><img src="images/laravel-logo-greyscale.svg" alt="Grayscale Laravel logo"></div>
+                                        <div class="sql"><img src="images/sql-logo-greyscale.svg" alt="Grayscale SQL logo"></div>
+                                        <div class="mysql"><img src="images/mysql-logo-greyscale.svg" alt="Grayscale MySQL logo"></div>
+                                        <div class="postman"><img src="images/postman-logo-greyscale.svg" alt="Grayscale Postman logo"></div>
+                                    </div>
+                                    <div class="group-d">
+                                        <div class="vscode"><img src="images/vscode-logo-greyscale.svg" alt="Grayscale VSCode logo"></div>
+                                        <div class="selenium"><img src="images/selenium-logo-greyscale.svg" alt="Grayscale Selenium logo"></div>
+                                        <div class="adobe-express"><img src="images/adobeexpress-logo-greyscale.svg" alt="Grayscale Adobe Express logo"></div>
+                                        <div class="figma"><img src="images/figma-logo-greyscale.svg" alt="Grayscale Figma logo"></div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="downloadable-version">
+                                <div class="cv-icon">
+                                    <a href="" download>Download Resume</a>
+                                    <img src="images/cv.png" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <h4>The somewhat long version</h4>
-                    <div class="other-versions">
-                        <p>In January 2023, I embarked on an exciting journey to delve into the world of web development. To accelerate my learning, I enrolled in a comprehensive bootcamp that spanned four months. Equipped with the knowledge and skills gained from the bootcamp, I continued my web development journey through self-study starting in May 2023.
-                        <a href = "https://skymans0n.notion.site/My-Web-Development-Journey-6e979fca1455470f8a4ec24f5e71b810?pvs=4" class = "read-more">Read More</a></p>
-                        <img src="images/best-capstone.svg" alt="Image of the Best Village88 Capstone certificate">
                     </div>
-                    <h4>The downloadable version</h4>
-                    <a href="Technical  Resume.pdf" class="resume-link">Resume</a>
                 </section>
                 <section id = "contact" class="contact">
                     <h3>Are you looking for a developer?</h3>
                     <h4>I'm currently available for work.</h4>
                     <div class="contact-container">
+                        <div class="contact-form">
+                            <h3>Lightning option?</h3>
+                            <h4>Hit me up and I'll get back to you asap.</h4>
+                            <form action="/submit-contact-form" method="POST">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                                
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                                
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                                
+                                <button type="submit">Send</button>
+                            </form>
+                        </div>
                         <div class="contact-me">
                             <h3>Are you looking for a developer?</h3>
                             <h4>I'm currently available for work.</h4>
                             <button class="send-message" onclick="location.href='mailto:jerico@developer.com?subject=Inquiry'">Send a message
                             </button>
-                            <div class="contact-details">
-                                <div class="business-phone">
+                            <h3>Prefer other methods?</h3>
+                            <h4>I have those too.</h4>
+                            <div class="business-phone">
+                                <div class="phone-icon">
                                     <img src="images/phone-icon.png" alt="">
-                                    <p><a href = "tel:+639279448803">+63 927-944-8803</a></p>
                                 </div>
-                                <div class="business-email">
+                                <phone-number-details>
+                                    <p><a href = "tel: 09279448803">+63 927-944-8803</a></p>
+                                </phone-number-details>
+                            </div>
+                            <div class="business-email">
+                                <div class="email-icon">
                                     <img src="images/email-icon.png" alt="">
-                                    <p><a href = "mailto:jerico@developer.com?subject=Inquiry">jerico@developer.com</a></p>
+                                </div>
+                                <div>
+                                <p><a href = "mailto:jerico@developer.com?subject=Inquiry">jerico@developer.com</a></p>
                                 </div>
                             </div>
                             <address class="address2">
@@ -218,28 +283,20 @@
                             <p><a href = "tel:+639279448803">+63 927-944-8803</a></p>
                             <p><a href = "mailto:jerico@developer.com?subject=Inquiry">jerico@developer.com</a></p>
                         </div>
-                        <div class="contact-form">
-                            <form action="/submit-contact-form" method="POST">
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" required>
-
-                                <label for="name">Company Name:</label>
-                                <input type="text" id="company-name" name="name" required>
-                                
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
-                                
-                                <label for="message">Message:</label>
-                                <textarea id="message" name="message" rows="4" required></textarea>
-                                
-                                <button type="submit">Send</button>
-                            </form>
-                        </div>
                     </div>
                 </section>
+                <div class="dev-process">
+                    <div class="icon">
+                        <i class="fa-solid fa-circle-up icon"></i>
+                    </div>
+                    <p>I designed and developed the responsive website using a blend of traditional paper sketches and Figma. The coding phase took place in Visual Studio Code, utilizing HTML, CSS (with Sass), and JavaScript. The finished website was then deployed on GitHub using GitHub Pages for seamless online accessibility.</p>
+                </div>
             </main>
             <footer>
                 <div class="footer-container">
+                    <div class="sitemap">
+                        <a href="#sitemap">Sitemap</a>
+                    </div>
                     <address class="address">
                         <p>Phase 7, Martinez Subd.,</p>
                         <p>Dahican, Mati City,</p>
@@ -252,6 +309,9 @@
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/jerico-eijansantos/"><img src="images/linkedin-tile.svg" alt="View Jerico Eijansantos' LinkedIn profile - White LinkedIn logo"></a>
                         <a href="https://github.com/SkymanS0n"><img src="images/github-tile.svg" alt="View SkymanS0n's GitHub profile - White GitHub logo"></a>
+                    </div>
+                    <div class="hire">
+                        <a href="mailto:jerico@developer.com?subject=Job Offer"><strong>Hire this guy!</strong></a>
                     </div>
                 </div>
             </footer>

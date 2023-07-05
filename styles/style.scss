@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-$mobile-font: 2rem;
+$mobile-font: 1.6rem;
 $mobile-font-h3: 3rem;
 $mobile-font-h4: 2rem;
 $mobile-btn-font: 1.5rem;
 $hdr-ftr-bg: #16181a;
 $mobile-width: 90%;
+$font-color1: #efefef;
+$focus: 2px solid white;
+$carouselWidth: 100%;
 $btn: (
   align-self: center,
   text-align: center,
@@ -14,6 +17,7 @@ $btn: (
   color: #000000,
   font-weight: 600,
   padding: 0.6em 1em,
+  transition: background-color 0.3s ease,
 );
 $h3: 3rem;
 $btn-single: (
@@ -30,10 +34,10 @@ html {
     font-size: 62.5%;
     font-family: 'Poppins', sans-serif;
 }
-
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
 @import 'mobile-display';
 @import 'tablet-display';
-@import 'laptop-displays';
+@import 'large-tablet-displays';
 @import 'monitor-displays';
 @import 'large-monitors';
 @import 'large-tv-displays';

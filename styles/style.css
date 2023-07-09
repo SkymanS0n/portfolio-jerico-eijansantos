@@ -483,6 +483,7 @@ html {
   }
   header .nav-section .slide-menu .nav-bar-links li {
     padding: 0.5em;
+    margin-left: 1.5em;
   }
   header .nav-section .slide-menu .nav-bar-links li a {
     width: 100%;
@@ -503,7 +504,7 @@ html {
   /* Start of Hero Section */
   .hero-section {
     background: linear-gradient(to right, #42464B, #16181a);
-    padding-bottom: 8em;
+    padding: 5em 0em 8em;
   }
   .hero-section .hero-container {
     color: white;
@@ -527,6 +528,8 @@ html {
   }
   .hero-section .hero-container .hero-details p:is(h2), .hero-section .hero-container .hero-details h2:is(h2) {
     font-size: 1.5rem;
+    width: 50%;
+    align-self: center;
   }
   .hero-section .hero-container .hero-details h1 {
     font-size: 4rem;
@@ -638,17 +641,18 @@ html {
     display: flex;
     justify-content: center;
   }
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code,
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code,
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code,
-  #projects.projects-section .featured-projects .carousel .project-b .buttons-a .source-code,
-  #projects.projects-section .featured-projects .carousel .project-b .buttons-b .source-code,
-  #projects.projects-section .featured-projects .carousel .project-b .buttons-c .source-code,
-  #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code,
-  #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code,
-  #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code {
-    font-size: 2rem;
-    font-weight: 600;
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-a button,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-b button,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-c button,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-a button,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-b button,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-c button,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-a button,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-b button,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-c button {
+    margin: 0 0.5em;
+    font-size: 1rem;
+    padding: 0.5em 1em;
   }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project,
   #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project,
@@ -676,18 +680,27 @@ html {
     transition: background-color 0.3s ease;
     font-size: 2rem;
   }
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-a button,
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-b button,
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-c button,
-  #projects.projects-section .featured-projects .carousel .project-b .buttons-a button,
-  #projects.projects-section .featured-projects .carousel .project-b .buttons-b button,
-  #projects.projects-section .featured-projects .carousel .project-b .buttons-c button,
-  #projects.projects-section .featured-projects .carousel .project-c .buttons-a button,
-  #projects.projects-section .featured-projects .carousel .project-c .buttons-b button,
-  #projects.projects-section .featured-projects .carousel .project-c .buttons-c button {
-    margin: 0 0.5em;
-    font-size: 1rem;
-    padding: 0.5em 1em;
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-a .source-code,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-b .source-code,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-c .source-code,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  #projects.projects-section .featured-projects .carousel .project-a .doc-options,
+  #projects.projects-section .featured-projects .carousel .project-b .doc-options,
+  #projects.projects-section .featured-projects .carousel .project-c .doc-options {
+    display: none;
+  }
+  #projects.projects-section .featured-projects .carousel .project-a .doc-options a,
+  #projects.projects-section .featured-projects .carousel .project-b .doc-options a,
+  #projects.projects-section .featured-projects .carousel .project-c .doc-options a {
+    display: none;
   }
   #projects.projects-section .featured-projects .indicators {
     display: flex;
@@ -704,35 +717,16 @@ html {
   #projects.projects-section .featured-projects .indicators .indicator.active {
     background-color: black;
   }
+  #projects.projects-section h4:nth-of-type(2) {
+    display: none;
+  }
+  #projects.projects-section .personal-projects {
+    display: none;
+  }
+  #projects.projects-section h4:last-of-type {
+    display: none;
+  }
   /* End of Project Section */
-  /* Start of Skills Section */
-  .skills {
-    padding: 8em 0em 8em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .skills h3 {
-    font-size: 3rem;
-  }
-  .skills h4 {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 4em;
-  }
-  .skills .tech-skills-a .group-a, .skills .tech-skills-a .group-b {
-    width: 80%;
-    display: flex;
-    margin: auto;
-  }
-  .skills .tech-skills-b .group-c, .skills .tech-skills-b .group-d {
-    width: 80%;
-    display: flex;
-    margin: auto;
-  }
-  /* End of Skills Section */
   /* Start of About Section */
   #aboutmyself.aboutmyself {
     text-align: center;
@@ -744,86 +738,348 @@ html {
   }
   #aboutmyself.aboutmyself h3 {
     font-size: 3rem;
+    margin-bottom: 2.6666em;
   }
-  #aboutmyself.aboutmyself h4 {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 4em;
+  #aboutmyself.aboutmyself .about-me-container .image-container img {
+    margin-bottom: 8em;
   }
-  #aboutmyself.aboutmyself .short-version .about p {
+  #aboutmyself.aboutmyself .about-me-container .about-me-details {
+    /* Start of Skills Section */
+    /* End of Skills Section */
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version .about p {
     font-size: 1.5rem;
     width: 90%;
     margin: auto;
     margin-bottom: 2em;
     line-height: 2;
+    text-align: justify;
   }
-  #aboutmyself.aboutmyself .short-version .about .dogs img {
-    margin-bottom: 7em;
-  }
-  #aboutmyself.aboutmyself .other-versions p {
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long p {
     font-size: 1.5rem;
     width: 90%;
     margin: auto;
     margin-bottom: 5em;
     line-height: 2;
+    text-align: justify;
   }
-  #aboutmyself.aboutmyself .other-versions .read-more {
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long .read-more {
     color: #FBBF00;
     font-weight: 600;
   }
-  #aboutmyself.aboutmyself .other-versions img {
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long img {
     display: none;
   }
-  #aboutmyself.aboutmyself a {
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills {
+    padding: 5em 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin: 0% 5%;
+    top: 5em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills p {
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 6em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    margin-right: 0em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b img {
+    width: 50%;
+    height: auto;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    margin-left: 0em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d img {
+    width: 50%;
+    height: auto;
+  }
+  #aboutmyself.aboutmyself .about-me-container .cv-icon {
+    margin-top: 8em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .cv-icon a {
     font-size: 1.5rem;
     color: #FBBF00;
     font-weight: 600;
   }
-  #aboutmyself.aboutmyself a:is(.resume-link) {
+  #aboutmyself.aboutmyself .about-me-container .cv-icon a:is(.resume-link) {
     font-size: 3rem;
     text-decoration: underline;
+  }
+  #aboutmyself.aboutmyself .about-me-container .cv-icon img {
+    width: 2%;
+    height: auto;
+    margin-left: 1em;
+    margin-top: 0.5em;
   }
   /* End of About Section */
   /* Start of Contact Section */
   #contact.contact {
-    padding: 8em 0em;
+    background-color: #efefef;
+    align-self: center;
+    padding: 8em 0em 0em 0em;
   }
-  #contact.contact .contact-me {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-  }
-  #contact.contact .contact-me h3 {
+  #contact.contact h3 {
     font-size: 3rem;
     margin-bottom: 0.5em;
     font-weight: 600;
+    text-align: Center;
   }
-  #contact.contact .contact-me h4 {
+  #contact.contact h4 {
     width: 90%;
+    text-align: center;
+    font-size: 2rem;
     margin: auto;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 3em;
+    padding-bottom: 4em;
   }
-  #contact.contact .contact-me .send-message {
+  #contact.contact .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+  #contact.contact .contact-container .contact-me {
+    color: #efefef;
+    width: 100%;
+    text-align: left;
+    background-color: #000000;
+    padding: 8em 0%;
+  }
+  #contact.contact .contact-container .contact-me h3:first-of-type {
+    display: none;
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    text-align: left;
+  }
+  #contact.contact .contact-container .contact-me h4:first-of-type {
+    width: 90%;
+    text-align: left;
     font-size: 2rem;
-    padding: 0.5em;
-    align-self: center;
+    margin: auto;
+    margin-bottom: 3em;
+    display: none;
+  }
+  #contact.contact .contact-container .contact-me h4:last-of-type {
+    margin: auto;
+    padding-bottom: 3em;
+  }
+  #contact.contact .contact-container .contact-me .send-message {
+    display: none;
+  }
+  #contact.contact .contact-container .contact-me .business-email, #contact.contact .contact-container .contact-me .business-phone {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 1em 1em 1em 3em;
+    width: 360px;
+    margin: auto;
+  }
+  #contact.contact .contact-container .contact-me .business-email .email-icon, #contact.contact .contact-container .contact-me .business-phone .email-icon {
+    max-width: 80%;
+    height: auto;
+    padding: 0em 1.5em 0em 0em;
+  }
+  #contact.contact .contact-container .contact-me .business-email .email-icon img, #contact.contact .contact-container .contact-me .business-phone .email-icon img {
+    display: flex;
+    align-items: center;
+    max-width: 80%;
+    height: auto;
+    min-width: 40px;
+  }
+  #contact.contact .contact-container .contact-me .business-email p, #contact.contact .contact-container .contact-me .business-phone p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    transition: margin-left 0.3s ease;
+  }
+  #contact.contact .contact-container .contact-me .business-email p:hover, #contact.contact .contact-container .contact-me .business-phone p:hover {
+    cursor: pointer;
+    margin-left: 1em;
+  }
+  #contact.contact .contact-container .contact-me .business-email .phone-icon, #contact.contact .contact-container .contact-me .business-phone .phone-icon {
+    display: flex;
+    padding: 0em 1.5em 0em 0em;
+  }
+  #contact.contact .contact-container .contact-me .business-email .phone-icon img, #contact.contact .contact-container .contact-me .business-phone .phone-icon img {
+    max-width: 80%;
+    height: auto;
+    min-width: 40px;
+  }
+  #contact.contact .contact-container .contact-me .business-email .phone-number-details, #contact.contact .contact-container .contact-me .business-phone .phone-number-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+  }
+  #contact.contact .contact-container .contact-me .address2 {
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 100;
+    padding: 0em 1em 1em 3em;
+    width: 360px;
+    margin: auto;
+  }
+  #contact.contact .contact-container .contact-me .address2 .address-icon img {
+    max-width: 80%;
+    height: auto;
+    min-width: 40px;
+  }
+  #contact.contact .contact-container .contact-me .address2 strong {
+    transition: margin-left 0.3s ease-in-out;
+  }
+  #contact.contact .contact-container .contact-me .address2 strong:hover {
+    cursor: pointer;
+    margin-left: 1em;
+  }
+  #contact.contact .contact-container .contact-me .address2 .address-icon {
+    display: flex;
+    align-items: center;
+    padding: 0em 1.5em 0em 0em;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 {
+    display: flex;
+    font-size: 1.6rem;
+    padding: 0em 1em 1em 3em;
+    width: 360px;
+    margin: auto;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .social-icon {
+    display: flex;
+    align-items: center;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .social-icon a:first-of-type, #contact.contact .contact-container .contact-me .social-links2 .social-icon a:last-of-type {
+    margin-right: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.2s ease-in-out;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .social-icon a:first-of-type:hover, #contact.contact .contact-container .contact-me .social-links2 .social-icon a:last-of-type:hover {
+    cursor: pointer;
+    scale: 1.15;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .social-icon a:first-of-type img, #contact.contact .contact-container .contact-me .social-links2 .social-icon a:last-of-type img {
+    width: 60%;
+    height: auto;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .chat-icon {
+    display: flex;
+    align-items: center;
+    padding: 0em 0.9em 0em 0em;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .chat-icon img {
+    max-width: 80%;
+    height: auto;
+    min-width: 40px;
+  }
+  #contact.contact .contact-container .contact-details2 {
+    display: none;
+  }
+  #contact.contact .contact-container .contact-form {
+    width: 100%;
+    padding: 8em 15% 5em 15%;
+    background-color: #000000;
+    color: #efefef;
+  }
+  #contact.contact .contact-container .contact-form h4 {
+    margin: auto;
+    margin-bottom: 0em;
+    padding-bottom: 3em;
+  }
+  #contact.contact .contact-container .contact-form form {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    color: #efefef;
+  }
+  #contact.contact .contact-container .contact-form form textarea, #contact.contact .contact-container .contact-form form input {
+    background-color: #3d3d3d;
+    border: 2px solid #efefef;
+  }
+  #contact.contact .contact-container .contact-form form label {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    font-size: 1.6rem;
+    color: #efefef;
+  }
+  #contact.contact .contact-container .contact-form form button {
+    margin-top: 2em;
+    text-align: center;
+    height: 54px;
+    max-width: 200px;
     background-color: #FBBF00;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
     color: #000000;
     font-weight: 600;
+    font-size: 1.6rem;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
   }
-  #contact.contact .contact-details {
+  #contact.contact .contact-container .contact-form form button:hover {
+    background-color: #ffaa00;
+    cursor: pointer;
+  }
+  .dev-process {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0em 0%;
     font-size: 1.5rem;
-    font-weight: 600;
+    overflow: hidden;
+    height: 3em;
+    transition: height 0.3s ease;
+  }
+  .dev-process.open {
+    height: 15em;
+  }
+  .dev-process.open i {
+    transform: rotate(180deg);
+  }
+  .dev-process .icon {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    transition: scale 0.1s ease;
+    margin: auto;
+    color: #FBBF00;
+  }
+  .dev-process .icon i {
+    padding: 0.3em 0em;
     text-align: center;
-    margin-top: 3em;
+    font-size: 2.5rem;
+    color: #FBBF00;
+    transition: color 0.3s ease;
+  }
+  .dev-process .icon i:hover {
+    cursor: pointer;
+    color: #efefef;
+  }
+  .dev-process .icon i:focus {
+    outline: solid 2px blue;
+  }
+  .dev-process p {
+    width: 100%;
+    text-align: center;
+    padding: 4em 25%;
+    background-color: #000000;
+    color: #efefef;
   }
   /* End of Contact Section */
   /* Start of Footer */
@@ -831,34 +1087,50 @@ html {
     background-color: #16181a;
     color: #efefef;
     padding: 0em 1.5em;
+    font-size: 1rem;
   }
   footer .footer-container {
     padding: 2em 0em;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
+    margin: auto;
+  }
+  footer .footer-container .sitemap {
+    display: none;
   }
   footer .footer-container address, footer .footer-container .legal-regulations {
-    font-size: 0.8rem;
     text-align: center;
     margin-bottom: 1.5em;
+  }
+  footer .footer-container address:is(address), footer .footer-container .legal-regulations:is(address) {
+    text-align: left;
+    margin: 0em;
+  }
+  footer .footer-container address:is(.legal-regulations), footer .footer-container .legal-regulations:is(.legal-regulations) {
+    margin: 0em 10% 0em 0em;
   }
   footer .footer-container address strong, footer .footer-container .legal-regulations strong {
     color: #FBBF00;
     font-weight: 600;
   }
-  footer .footer-container .social-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  footer .footer-container address strong:hover, footer .footer-container .legal-regulations strong:hover {
+    cursor: pointer;
+    color: #efefef;
   }
-  footer .footer-container .social-links a {
+  footer .footer-container .social-links {
+    display: none;
+  }
+  footer .footer-container .hire {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 2.5em;
-    width: 2.5em;
+    color: #FBBF00;
+    text-decoration: underline;
+  }
+  footer .footer-container .hire:hover {
+    cursor: pointer;
+    color: #efefef;
   }
   /* End of Footer */
 }
@@ -879,7 +1151,7 @@ html {
     color: #efefef;
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 80%;
     margin: auto;
     z-index: 2;
   }
@@ -938,6 +1210,7 @@ html {
   }
   header .nav-section .slide-menu .nav-bar-links li {
     padding: 0.5em;
+    margin-left: 1.5em;
   }
   header .nav-section .slide-menu .nav-bar-links li a {
     width: 100%;
@@ -958,7 +1231,7 @@ html {
   /* Start of Hero Section */
   .hero-section {
     background: linear-gradient(to right, #42464B, #16181a);
-    padding-bottom: 8em;
+    padding: 5em 0em 8em;
   }
   .hero-section .hero-container {
     color: white;
@@ -969,7 +1242,7 @@ html {
     margin: auto;
     padding-top: 5em;
     text-align: center;
-    width: 90%;
+    width: 80%;
   }
   .hero-section .hero-container .hero-details {
     width: 100%;
@@ -982,6 +1255,8 @@ html {
   }
   .hero-section .hero-container .hero-details p:is(h2), .hero-section .hero-container .hero-details h2:is(h2) {
     font-size: 1.5rem;
+    width: 50%;
+    align-self: center;
   }
   .hero-section .hero-container .hero-details h1 {
     font-size: 4rem;
@@ -1040,7 +1315,7 @@ html {
   #projects.projects-section .featured-projects {
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 80%;
   }
   #projects.projects-section .featured-projects .carousel {
     display: flex;
@@ -1093,17 +1368,18 @@ html {
     display: flex;
     justify-content: center;
   }
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code,
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code,
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code,
-  #projects.projects-section .featured-projects .carousel .project-b .buttons-a .source-code,
-  #projects.projects-section .featured-projects .carousel .project-b .buttons-b .source-code,
-  #projects.projects-section .featured-projects .carousel .project-b .buttons-c .source-code,
-  #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code,
-  #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code,
-  #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code {
-    font-size: 2rem;
-    font-weight: 600;
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-a button,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-b button,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-c button,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-a button,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-b button,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-c button,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-a button,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-b button,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-c button {
+    margin: 0 0.5em;
+    font-size: 1rem;
+    padding: 0.5em 1em;
   }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project,
   #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project,
@@ -1131,18 +1407,27 @@ html {
     transition: background-color 0.3s ease;
     font-size: 2rem;
   }
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-a button,
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-b button,
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-c button,
-  #projects.projects-section .featured-projects .carousel .project-b .buttons-a button,
-  #projects.projects-section .featured-projects .carousel .project-b .buttons-b button,
-  #projects.projects-section .featured-projects .carousel .project-b .buttons-c button,
-  #projects.projects-section .featured-projects .carousel .project-c .buttons-a button,
-  #projects.projects-section .featured-projects .carousel .project-c .buttons-b button,
-  #projects.projects-section .featured-projects .carousel .project-c .buttons-c button {
-    margin: 0 0.5em;
-    font-size: 1rem;
-    padding: 0.5em 1em;
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-a .source-code,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-b .source-code,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-c .source-code,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  #projects.projects-section .featured-projects .carousel .project-a .doc-options,
+  #projects.projects-section .featured-projects .carousel .project-b .doc-options,
+  #projects.projects-section .featured-projects .carousel .project-c .doc-options {
+    display: none;
+  }
+  #projects.projects-section .featured-projects .carousel .project-a .doc-options a,
+  #projects.projects-section .featured-projects .carousel .project-b .doc-options a,
+  #projects.projects-section .featured-projects .carousel .project-c .doc-options a {
+    display: none;
   }
   #projects.projects-section .featured-projects .indicators {
     display: flex;
@@ -1159,35 +1444,16 @@ html {
   #projects.projects-section .featured-projects .indicators .indicator.active {
     background-color: black;
   }
+  #projects.projects-section h4:nth-of-type(2) {
+    display: none;
+  }
+  #projects.projects-section .personal-projects {
+    display: none;
+  }
+  #projects.projects-section h4:last-of-type {
+    display: none;
+  }
   /* End of Project Section */
-  /* Start of Skills Section */
-  .skills {
-    padding: 8em 0em 8em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .skills h3 {
-    font-size: 3rem;
-  }
-  .skills h4 {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 4em;
-  }
-  .skills .tech-skills-a .group-a, .skills .tech-skills-a .group-b {
-    width: 80%;
-    display: flex;
-    margin: auto;
-  }
-  .skills .tech-skills-b .group-c, .skills .tech-skills-b .group-d {
-    width: 80%;
-    display: flex;
-    margin: auto;
-  }
-  /* End of Skills Section */
   /* Start of About Section */
   #aboutmyself.aboutmyself {
     text-align: center;
@@ -1199,86 +1465,353 @@ html {
   }
   #aboutmyself.aboutmyself h3 {
     font-size: 3rem;
+    margin-bottom: 2.6666em;
   }
-  #aboutmyself.aboutmyself h4 {
-    width: 90%;
+  #aboutmyself.aboutmyself .about-me-container {
+    width: 80%;
     margin: auto;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 4em;
   }
-  #aboutmyself.aboutmyself .short-version .about p {
+  #aboutmyself.aboutmyself .about-me-container .image-container img {
+    margin-bottom: 8em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details {
+    /* Start of Skills Section */
+    /* End of Skills Section */
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version .about p {
     font-size: 1.5rem;
     width: 90%;
     margin: auto;
     margin-bottom: 2em;
     line-height: 2;
+    text-align: justify;
   }
-  #aboutmyself.aboutmyself .short-version .about .dogs img {
-    margin-bottom: 7em;
-  }
-  #aboutmyself.aboutmyself .other-versions p {
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long p {
     font-size: 1.5rem;
     width: 90%;
     margin: auto;
     margin-bottom: 5em;
     line-height: 2;
+    text-align: justify;
   }
-  #aboutmyself.aboutmyself .other-versions .read-more {
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long .read-more {
     color: #FBBF00;
     font-weight: 600;
   }
-  #aboutmyself.aboutmyself .other-versions img {
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long img {
     display: none;
   }
-  #aboutmyself.aboutmyself a {
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills {
+    padding: 5em 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin: 0% 5%;
+    top: 5em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills p {
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 6em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    margin-right: 0em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b img {
+    width: 50%;
+    height: auto;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    margin-left: 0em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d img {
+    width: 50%;
+    height: auto;
+  }
+  #aboutmyself.aboutmyself .about-me-container .cv-icon {
+    margin-top: 8em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .cv-icon a {
     font-size: 1.5rem;
     color: #FBBF00;
     font-weight: 600;
   }
-  #aboutmyself.aboutmyself a:is(.resume-link) {
+  #aboutmyself.aboutmyself .about-me-container .cv-icon a:is(.resume-link) {
     font-size: 3rem;
     text-decoration: underline;
+  }
+  #aboutmyself.aboutmyself .about-me-container .cv-icon img {
+    width: 2%;
+    height: auto;
+    margin-left: 1em;
+    margin-top: 0.5em;
   }
   /* End of About Section */
   /* Start of Contact Section */
   #contact.contact {
-    padding: 8em 0em;
+    background-color: #efefef;
+    align-self: center;
+    padding: 8em 0em 0em 0em;
   }
-  #contact.contact .contact-me {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-  }
-  #contact.contact .contact-me h3 {
+  #contact.contact h3 {
     font-size: 3rem;
     margin-bottom: 0.5em;
     font-weight: 600;
+    text-align: Center;
   }
-  #contact.contact .contact-me h4 {
+  #contact.contact h4 {
     width: 90%;
+    text-align: center;
+    font-size: 2rem;
     margin: auto;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 3em;
+    padding-bottom: 4em;
   }
-  #contact.contact .contact-me .send-message {
+  #contact.contact .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin: auto;
+  }
+  #contact.contact .contact-container .contact-me {
+    color: #efefef;
+    width: 100%;
+    text-align: left;
+    background-color: #000000;
+    padding: 8em 0%;
+  }
+  #contact.contact .contact-container .contact-me h3:first-of-type {
+    display: none;
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    text-align: left;
+  }
+  #contact.contact .contact-container .contact-me h4:first-of-type {
+    width: 90%;
+    text-align: left;
     font-size: 2rem;
-    padding: 0.5em;
-    align-self: center;
+    margin: auto;
+    margin-bottom: 3em;
+    display: none;
+  }
+  #contact.contact .contact-container .contact-me h4:last-of-type {
+    margin: auto;
+    padding-bottom: 3em;
+  }
+  #contact.contact .contact-container .contact-me .send-message {
+    display: none;
+  }
+  #contact.contact .contact-container .contact-me .business-email, #contact.contact .contact-container .contact-me .business-phone {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 1em 1em 1em 3em;
+    width: 360px;
+    margin: auto;
+  }
+  #contact.contact .contact-container .contact-me .business-email .email-icon, #contact.contact .contact-container .contact-me .business-phone .email-icon {
+    max-width: 80%;
+    height: auto;
+    padding: 0em 1.5em 0em 0em;
+  }
+  #contact.contact .contact-container .contact-me .business-email .email-icon img, #contact.contact .contact-container .contact-me .business-phone .email-icon img {
+    display: flex;
+    align-items: center;
+    max-width: 80%;
+    height: auto;
+    min-width: 40px;
+  }
+  #contact.contact .contact-container .contact-me .business-email p, #contact.contact .contact-container .contact-me .business-phone p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    transition: margin-left 0.3s ease;
+  }
+  #contact.contact .contact-container .contact-me .business-email p:hover, #contact.contact .contact-container .contact-me .business-phone p:hover {
+    cursor: pointer;
+    margin-left: 1em;
+  }
+  #contact.contact .contact-container .contact-me .business-email .phone-icon, #contact.contact .contact-container .contact-me .business-phone .phone-icon {
+    display: flex;
+    padding: 0em 1.5em 0em 0em;
+  }
+  #contact.contact .contact-container .contact-me .business-email .phone-icon img, #contact.contact .contact-container .contact-me .business-phone .phone-icon img {
+    max-width: 80%;
+    height: auto;
+    min-width: 40px;
+  }
+  #contact.contact .contact-container .contact-me .business-email .phone-number-details, #contact.contact .contact-container .contact-me .business-phone .phone-number-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+  }
+  #contact.contact .contact-container .contact-me .address2 {
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 100;
+    padding: 0em 1em 1em 3em;
+    width: 360px;
+    margin: auto;
+  }
+  #contact.contact .contact-container .contact-me .address2 .address-icon img {
+    max-width: 80%;
+    height: auto;
+    min-width: 40px;
+  }
+  #contact.contact .contact-container .contact-me .address2 strong {
+    transition: margin-left 0.3s ease-in-out;
+  }
+  #contact.contact .contact-container .contact-me .address2 strong:hover {
+    cursor: pointer;
+    margin-left: 1em;
+  }
+  #contact.contact .contact-container .contact-me .address2 .address-icon {
+    display: flex;
+    align-items: center;
+    padding: 0em 1.5em 0em 0em;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 {
+    display: flex;
+    font-size: 1.6rem;
+    padding: 0em 1em 1em 3em;
+    width: 360px;
+    margin: auto;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .social-icon {
+    display: flex;
+    align-items: center;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .social-icon a:first-of-type, #contact.contact .contact-container .contact-me .social-links2 .social-icon a:last-of-type {
+    margin-right: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.2s ease-in-out;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .social-icon a:first-of-type:hover, #contact.contact .contact-container .contact-me .social-links2 .social-icon a:last-of-type:hover {
+    cursor: pointer;
+    scale: 1.15;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .social-icon a:first-of-type img, #contact.contact .contact-container .contact-me .social-links2 .social-icon a:last-of-type img {
+    width: 60%;
+    height: auto;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .chat-icon {
+    display: flex;
+    align-items: center;
+    padding: 0em 0.9em 0em 0em;
+  }
+  #contact.contact .contact-container .contact-me .social-links2 .chat-icon img {
+    max-width: 80%;
+    height: auto;
+    min-width: 40px;
+  }
+  #contact.contact .contact-container .contact-details2 {
+    display: none;
+  }
+  #contact.contact .contact-container .contact-form {
+    width: 100%;
+    padding: 8em 15% 5em 15%;
+    background-color: #000000;
+    color: #efefef;
+  }
+  #contact.contact .contact-container .contact-form h4 {
+    margin: auto;
+    margin-bottom: 0em;
+    padding-bottom: 3em;
+  }
+  #contact.contact .contact-container .contact-form form {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    color: #efefef;
+  }
+  #contact.contact .contact-container .contact-form form textarea, #contact.contact .contact-container .contact-form form input {
+    background-color: #3d3d3d;
+    border: 2px solid #efefef;
+  }
+  #contact.contact .contact-container .contact-form form label {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    font-size: 1.6rem;
+    color: #efefef;
+  }
+  #contact.contact .contact-container .contact-form form button {
+    margin-top: 2em;
+    text-align: center;
+    height: 54px;
+    max-width: 200px;
     background-color: #FBBF00;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
     color: #000000;
     font-weight: 600;
+    font-size: 1.6rem;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
   }
-  #contact.contact .contact-details {
+  #contact.contact .contact-container .contact-form form button:hover {
+    background-color: #ffaa00;
+    cursor: pointer;
+  }
+  .dev-process {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0em 0%;
     font-size: 1.5rem;
-    font-weight: 600;
+    overflow: hidden;
+    height: 3em;
+    transition: height 0.3s ease;
+  }
+  .dev-process.open {
+    height: 15em;
+  }
+  .dev-process.open i {
+    transform: rotate(180deg);
+  }
+  .dev-process .icon {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    transition: scale 0.1s ease;
+    margin: auto;
+    color: #FBBF00;
+  }
+  .dev-process .icon i {
+    padding: 0.3em 0em;
     text-align: center;
-    margin-top: 3em;
+    font-size: 2.5rem;
+    color: #FBBF00;
+    transition: color 0.3s ease;
+  }
+  .dev-process .icon i:hover {
+    cursor: pointer;
+    color: #efefef;
+  }
+  .dev-process .icon i:focus {
+    outline: solid 2px blue;
+  }
+  .dev-process p {
+    width: 100%;
+    text-align: center;
+    padding: 4em 25%;
+    background-color: #000000;
+    color: #efefef;
   }
   /* End of Contact Section */
   /* Start of Footer */
@@ -1286,34 +1819,50 @@ html {
     background-color: #16181a;
     color: #efefef;
     padding: 0em 1.5em;
+    font-size: 1rem;
   }
   footer .footer-container {
     padding: 2em 0em;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+  footer .footer-container .sitemap {
+    display: none;
   }
   footer .footer-container address, footer .footer-container .legal-regulations {
-    font-size: 0.8rem;
     text-align: center;
     margin-bottom: 1.5em;
+  }
+  footer .footer-container address:is(address), footer .footer-container .legal-regulations:is(address) {
+    text-align: left;
+    margin: 0em;
+  }
+  footer .footer-container address:is(.legal-regulations), footer .footer-container .legal-regulations:is(.legal-regulations) {
+    margin: 0em 8% 0em 0em;
   }
   footer .footer-container address strong, footer .footer-container .legal-regulations strong {
     color: #FBBF00;
     font-weight: 600;
   }
-  footer .footer-container .social-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  footer .footer-container address strong:hover, footer .footer-container .legal-regulations strong:hover {
+    cursor: pointer;
+    color: #efefef;
   }
-  footer .footer-container .social-links a {
+  footer .footer-container .social-links {
+    display: none;
+  }
+  footer .footer-container .hire {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 2.5em;
-    width: 2.5em;
+    color: #FBBF00;
+    text-decoration: underline;
+  }
+  footer .footer-container .hire:hover {
+    cursor: pointer;
+    color: #efefef;
   }
   /* End of Footer */
 }
@@ -3058,6 +3607,9 @@ html {
   .dev-process .icon i:hover {
     cursor: pointer;
     color: #efefef;
+  }
+  .dev-process .icon i:focus {
+    outline: solid 2px blue;
   }
   .dev-process p {
     width: 100%;

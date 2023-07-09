@@ -15,10 +15,10 @@
 
         .nav-section {
             align-items: center;
-            color: #efefef;
+            color: $font-color1;
             display: flex;
             justify-content: space-between;
-            width: $mobile-width;
+            width: 80%;
             margin: auto;
             z-index: 2;
 
@@ -83,6 +83,7 @@
 
                     li {
                         padding: 0.5em;
+                        margin-left: 1.5em;
                         a {
                             width: 100%;
                         }
@@ -109,7 +110,8 @@
 
     .hero-section {
         background: linear-gradient(to right, #42464B,  #16181a);
-        padding-bottom: 8em;
+        padding: 5em 0em 8em;
+
         .hero-container {
             color: white;
             display: flex;
@@ -119,28 +121,35 @@
             margin: auto;
             padding-top: 5em;
             text-align: center;
-            width: $mobile-width;
+            width: 80%;
+
             .hero-details {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
+
                 p, h2 {
                     line-height: 1.7em;
                     margin-bottom: 0.5em;
     
                     &:is(h2) {
                         font-size: 1.5rem;
+                        width: 50%;
+                        align-self: center;
                     }
                 }
+
                 h1 {
                     font-size: 4rem;
                     font-weight: 600;
                     margin-bottom: 0.3em;
                 }
+
                 .buttons {
                     display: none;
                 }
             }
+
             .hero-img {
                 margin-top: 2em;
                 margin-bottom: 4em;
@@ -148,17 +157,20 @@
                 height: auto;
             }
         }
+
         #buttons2 {
             margin-top: 2em;
             display: flex;
             flex-direction: row;
             justify-content: center;
+
             .view-work, .about-me {
                 width: 10em;
                 font-size: 2rem;
                 @each $property, $value in $btn {
                     #{$property}: $value;
                 }
+
                 &:is(.about-me) {
                     background-color: transparent;
                     color: #FBBF00;
@@ -196,190 +208,263 @@
         .featured-projects {
         position: relative;
         overflow: hidden;
-        width: 100%;
+        width:80%;
     
-        .carousel {
-            display: flex;
-            width: $carouselWidth;
-            scroll-behavior: smooth;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            scroll-snap-type: x mandatory;
-            scrollbar-width: none;
-            &::-webkit-scrollbar {
-            display: none;
+            .carousel {
+                display: flex;
+                width: $carouselWidth;
+                scroll-behavior: smooth;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scroll-snap-type: x mandatory;
+                scrollbar-width: none;
+                &::-webkit-scrollbar {
+                display: none;
+                }
+        
+                .project-a,
+                .project-b,
+                .project-c {
+                flex: 0 0 $carouselWidth;
+                scroll-snap-align: start;
+                padding: 1em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+        
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        margin-bottom: 1em;
+                    }
+            
+                    p {
+                        font-size: 1.5rem;
+                        margin-bottom: 4em;
+                        margin-top: 2em;
+                        width: 50%;
+                    }
+            
+                    .buttons-a,
+                    .buttons-b,
+                    .buttons-c {
+                        display: flex;
+                        justify-content: center;
+
+                        button {
+                            margin: 0 0.5em;
+                            font-size: 1rem;
+                            padding: 0.5em 1em;
+                        }
+
+                        .view-project {
+                            @each $property, $value in $btn {
+                                #{$property}: $value;
+                                font-size: 2rem;
+                            }
+                        }
+            
+                        .source-code {
+                            font-size: 2rem;
+                            font-weight: 600;
+                        }
+                    }
+                    
+                    .doc-options {
+                        display: none;
+
+                        a {
+                            display: none;
+                        }
+                    }
+                }
             }
     
-            .project-a,
-            .project-b,
-            .project-c {
-            flex: 0 0 $carouselWidth;
-            scroll-snap-align: start;
-            padding: 1em;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-    
-            img {
-                max-width: 100%;
-                height: auto;
-                margin-bottom: 1em;
-            }
-    
-            p {
-                font-size: 1.5rem;
-                margin-bottom: 4em;
-                margin-top: 2em;
-                width: 50%;
-            }
-    
-            .buttons-a,
-            .buttons-b,
-            .buttons-c {
+            .indicators {
                 display: flex;
                 justify-content: center;
-                .source-code {
-                font-size: 2rem;
-                font-weight: 600;
+                margin-top: 5em;
+        
+                .indicator {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: gray;
+                    margin: 0 5px;
+            
+                    &.active {
+                        background-color: black;
+                    }
                 }
-                .view-project {
-                @each $property, $value in $btn {
-                    #{$property}: $value;
-                    font-size: 2rem;
-                }
-                }
-    
-                button {
-                margin: 0 0.5em;
-                font-size: 1rem;
-                padding: 0.5em 1em;
-                }
-            }
             }
         }
-    
-        .indicators {
-            display: flex;
-            justify-content: center;
-            margin-top: 5em;
-    
-            .indicator {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: gray;
-            margin: 0 5px;
-    
-            &.active {
-                background-color: black;
-            }
-            }
+
+        h4:nth-of-type(2) {
+            display: none;
         }
+
+        .personal-projects {
+            display: none;
+        }
+
+        h4:last-of-type {
+            display: none;
         }
     }
     
     
     /* End of Project Section */
-    
-        
-    /* Start of Skills Section */
-        
-    
-    .skills {
-        padding: 8em 0em 8em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h3 {
-            font-size: $h3;
-        }
-        h4 {
-            width: 90%;
-            margin: auto;
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 4em;
-        }
-        .tech-skills-a {
-            .group-a, .group-b {
-                width: 80%;
-                display: flex;
-                margin: auto;
-            }
-        }
-        .tech-skills-b {
-            .group-c, .group-d {
-                width: 80%;
-                display: flex;
-                margin: auto;
-            }
-        }
-    }
-    
-    
-    /* End of Skills Section */
+
     
     /* Start of About Section */
     
     
     #aboutmyself.aboutmyself {
+
         text-align: center;
         background-color: #303030;
         color: #efefef;
         padding-top: 8em;
         padding-bottom: 8em;
         background: linear-gradient(to bottom, #42464B,  #16181a);
+        
         h3 {
             font-size: $h3;
+            margin-bottom: 2.6666em;
         }
-        h4 {
-            width: 90%;
+
+        .about-me-container {
+            width: 80%;
             margin: auto;
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 4em;
-        }
-        .short-version {
-            .about {
-                p {
-                    font-size: 1.5rem;
-                    width: 90%;
-                    margin: auto;
-                    margin-bottom: 2em;
-                    line-height: 2;
+
+            .image-container {
+
+                img {
+                    margin-bottom: 8em;
                 }
-                .dogs {
-                    img {
-                        margin-bottom: 7em;
+            }
+
+            .about-me-details {
+
+                .short-version {
+
+                    .about {
+
+                        p {
+                            font-size: 1.5rem;
+                            width: 90%;
+                            margin: auto;
+                            margin-bottom: 2em;
+                            line-height: 2;text-align: justify;
+                        }
+                        .dogs {
+
+                        }
                     }
                 }
+
+                .other-versions {
+                    
+                    .somewhat-long {
+
+                        p {
+                            font-size: 1.5rem;
+                            width: 90%;
+                            margin: auto;
+                            margin-bottom: 5em;
+                            line-height: 2;
+                            text-align: justify;
+                        }
+            
+                        .read-more {
+                            color: #FBBF00;
+                            font-weight: 600;
+                        }
+                        
+                        img {
+                            display: none;
+                        }
+
+                        .notion {
+                            
+                        }
+                    }
+                }
+
+                 /* Start of Skills Section */
+        
+    
+                .skills {
+                    padding: 5em 5%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    position: relative;
+                    margin: 0% 5%;
+                    top: 5em;
+
+                    p {
+                        font-size: $h3;
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        margin-bottom: 6em;
+                    }
+
+                    .tech-skills-a {
+
+                        .group-a, .group-b {
+                            width: 80%;
+                            display: flex;
+                            margin: auto;
+                            margin-right: 0em;
+
+                            img {
+                                width: 50%;
+                                height: auto;
+                            }
+                        }
+                    }
+
+                    .tech-skills-b {
+
+                        .group-c, .group-d {
+                            width: 80%;
+                            display: flex;
+                            margin: auto;
+                            margin-left: 0em;
+
+                            img {
+                                width: 50%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }/* End of Skills Section */
             }
-        }
-        .other-versions {
-            p {
-                font-size: 1.5rem;
-                width: 90%;
-                margin: auto;
-                margin-bottom: 5em;
-                line-height: 2;
-            }
-            .read-more {
-                color: #FBBF00;
-                font-weight: 600;
-            }
-            img {
-                display: none;
-            }
-        }
-        a {
-            font-size: 1.5rem;
-            color: #FBBF00;
-            font-weight: 600;
-            &:is(.resume-link) {
-                font-size: 3rem;
-                text-decoration: underline;
+
+            .cv-icon {
+                margin-top: 8em;
+
+                a {
+                    font-size: 1.5rem;
+                    color: #FBBF00;
+                    font-weight: 600;
+        
+                    &:is(.resume-link) {
+                        font-size: 3rem;
+                        text-decoration: underline;
+                    }
+                }
+
+                img {
+                    width: 2%;
+                    height: auto;
+                    margin-left: 1em;
+                    margin-top: 0.5em;
+                }
             }
         }
     }
@@ -390,37 +475,309 @@
     /* Start of Contact Section */
     
     
-    #contact.contact{
-        padding: 8em 0em;
-        .contact-me {
+    #contact.contact {
+        background-color: $font-color1;
+        align-self: center;
+        padding: 8em 0em 0em 0em;
+
+        h3 {
+            font-size: $h3;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+            text-align: Center;
+        }
+
+        h4 {
             width: 90%;
-            margin: auto;
             text-align: center;
-            h3 {
-                font-size: $h3;
-                margin-bottom: 0.5em;
-                font-weight: 600;
+            font-size: 2rem;
+            margin: auto;
+            padding-bottom: 4em;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+            margin: auto;
+
+            .contact-me {
+                color: $font-color1;
+                width: 100%;
+                text-align: left;
+                background-color: #000000;
+                padding: 8em 0%;
+
+                h3:first-of-type {
+                    display: none;
+                    font-size: $h3;
+                    margin-bottom: 0.5em;
+                    font-weight: 600;
+                    text-align: left;
+                }
+
+                h4:first-of-type {
+                    width: 90%;
+                    text-align: left;
+                    font-size: 2rem;
+                    margin: auto;
+                    margin-bottom: 3em;
+                    display: none;
+                }
+
+                h4:last-of-type {
+                    margin: auto;
+                    padding-bottom: 3em;
+                }
+
+                .send-message {
+                    display: none;
+                }
+
+                .business-email, .business-phone {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.6rem;
+                    padding: 1em 1em 1em 3em;
+                    width: 360px;
+                    margin: auto;
+
+                    .email-icon {
+                        max-width: 80%;
+                        height: auto;
+                        padding: 0em 1.5em 0em 0em;
+                        
+
+                        img {
+                            display: flex;
+                            align-items: center;
+                            max-width: 80%;
+                            height: auto;
+                            min-width: 40px;
+                        }
+                    }
+                    
+                    p {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: 100;
+                        transition: margin-left 0.3s ease;
+
+                        &:hover {
+                            cursor: pointer;
+                            margin-left: 1em;
+                        }
+                    }
+
+                    .phone-icon {
+                        display: flex;
+                        padding: 0em 1.5em 0em 0em;
+
+                        img {
+                            max-width: 80%;
+                            height: auto;
+                            min-width: 40px;
+                        }
+                    }
+
+                    .phone-number-details {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                    }
+                }
+
+                .address2 {
+                    display: flex;
+                    font-size: 1.6rem;
+                    font-weight: 100;
+                    padding: 0em 1em 1em 3em;
+                    width: 360px;
+                    margin: auto;
+
+                    .address-icon {
+                        
+
+                        img {
+                            max-width: 80%;
+                            height: auto;
+                            min-width: 40px;
+                        }
+                    }
+
+                    
+                    strong {
+                        transition: margin-left 0.3s ease-in-out;
+
+                        &:hover {
+                            cursor: pointer;
+                            margin-left: 1em;
+                        }
+                    }
+
+                    .address-icon {
+                        display: flex;
+                        align-items: center;
+                        padding: 0em 1.5em 0em 0em;
+                    }
+                }
+                
+                .social-links2 {
+                    display: flex;
+                    font-size: 1.6rem;
+                    padding: 0em 1em 1em 3em;
+                    width: 360px;
+                    margin: auto;
+
+                    .social-icon {
+                        display: flex;
+                        align-items: center;
+                        
+                        a:first-of-type, a:last-of-type {
+                            margin-right: 0.5em;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: scale 0.2s ease-in-out;
+
+                            &:hover {
+                                cursor: pointer;
+                                scale: 1.15;
+                            }
+
+                            img {
+                                width: 60%;
+                                height: auto;
+                            }
+                        }
+                    }
+
+                    .chat-icon {
+                        display: flex;
+                        align-items: center;
+                        padding: 0em 0.9em 0em 0em;
+
+                        img {
+                            max-width: 80%;
+                            height: auto;
+                            min-width: 40px;
+                        }
+                    }
+                }
             }
-            h4 {
-                width: 90%;
-                margin: auto;
-                text-align: center;
-                font-size: 2rem;
-                margin-bottom: 3em;
+
+            .contact-details2 {
+                display: none;
             }
-            .send-message {
-                font-size: 2rem;
-                padding: 0.5em;
-                @each $property, $value in $btn {
-                    #{$property}: $value;
+
+            .contact-form {
+                width: 100%;
+                padding: 8em 15% 5em 15%;
+                background-color: #000000;
+                color: $font-color1;
+                
+                h4 {
+                    margin: auto;
+                    margin-bottom: 0em;
+                    padding-bottom: 3em;
+                }
+
+                form {
+                    font-size: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    color: $font-color1;
+
+                    textarea, input {
+                        background-color: #3d3d3d;
+                        border: 2px solid $font-color1;
+                    }
+
+                    label {
+                        padding-top: 1em;
+                        padding-bottom: 0.5em;
+                        font-size: 1.6rem;
+                        color: $font-color1;
+                    }
+
+                    button {
+                        margin-top: 2em;
+                        text-align: center;
+                        height: 54px;
+                        max-width: 200px;
+                        background-color: #FBBF00;
+                        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+                        color: #000000;
+                        font-weight: 600;
+                        font-size: 1.6rem;
+                        padding: 0.6em 1em;
+                        transition: background-color 0.3s ease;
+
+                        &:hover {
+                            background-color: #ffaa00;
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
         }
-        .contact-details {
-            font-size: 1.5rem;
-            font-weight: 600;
+    }
+    
+    .dev-process {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0em 0%;
+        font-size: 1.5rem;
+        overflow: hidden;
+        height: 3em; 
+        transition: height 0.3s ease;
+        
+        &.open {
+          height: 15em;
+
+            i {
+                transform: rotate(180deg);
+            }
+        }
+
+        .icon {
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            transition: scale 0.1s ease;
+            margin: auto;
+            color: #FBBF00;
+
+            i   {
+                padding: 0.3em 0em;
+                text-align: center;
+                font-size: 2.5rem;
+                color: #FBBF00;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    cursor: pointer;
+                    color:$font-color1;
+                }
+
+                &:focus {
+                    outline: solid 2px blue;
+                }
+            }
+        }
+
+        p   {
+            width: 100%;
             text-align: center;
-            margin-top: 3em;
+            padding: 4em 25%;
+            background-color: #000000;
+            color: $font-color1;
         }
     }
     
@@ -434,31 +791,57 @@
         background-color: #16181a;
         color: #efefef;
         padding: 0em 1.5em;
+        font-size: 1rem;
+
         .footer-container {
             padding: 2em 0em;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            width: 80%;
+            margin: auto;
+
+            .sitemap {
+                display: none;
+            }
+
             address, .legal-regulations {
-                font-size: 0.8rem;
                 text-align: center;
                 margin-bottom: 1.5em;
+
+                &:is(address) {
+                    text-align: left;
+                    margin: 0em;
+                }
+
+                &:is(.legal-regulations) {
+                    margin: 0em 8% 0em 0em;
+                }
+
                 strong {
                     color: #FBBF00;
                     font-weight: 600;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: #efefef;
+                    }
                 }
             }
+
             .social-links {
+                display: none;
+            }
+
+            .hire {
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
-                a {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    height: 2.5em;
-                    width: 2.5em;
+                color: #FBBF00;
+                text-decoration: underline;
+
+                &:hover {
+                    cursor: pointer;
+                    color: #efefef;
                 }
             }
         }

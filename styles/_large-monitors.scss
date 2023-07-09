@@ -823,9 +823,13 @@
                 color: #FBBF00;
                 transition: color 0.3s ease;
 
-                    &:hover {
+                &:hover {
                     cursor: pointer;
                     color:$font-color1;
+                }
+
+                &:focus {
+                    outline: solid 2px blue;
                 }
             }
         }

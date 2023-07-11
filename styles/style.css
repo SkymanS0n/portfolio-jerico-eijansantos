@@ -31,7 +31,7 @@ html {
     display: flex;
     height: auto;
     justify-content: center;
-    width: 30px;
+    width: 33px;
     z-index: 2;
   }
   header .nav-section #menu-toggle {
@@ -55,15 +55,15 @@ html {
     align-self: center;
     display: flex;
     flex-direction: column;
-    height: 20px;
+    height: 28px;
     justify-content: space-between;
-    width: 25px;
+    width: 33px;
     z-index: 2;
   }
   header .nav-section .hamburger span {
     background-color: #FBBF00;
     color: #efefef;
-    height: 4px;
+    height: 5.5px;
     width: 100%;
   }
   header .nav-section .slide-menu {
@@ -558,7 +558,7 @@ html {
   }
   #contact.contact .contact-container .contact-form {
     width: 100%;
-    padding: 8em 15% 5em 15%;
+    padding: 8em 10% 5em 10%;
     background-color: #000000;
     color: #efefef;
   }
@@ -693,6 +693,7 @@ html {
   }
   footer .footer-container address #zip, footer .footer-container .legal-regulations #zip {
     color: #efefef;
+    font-weight: 300;
   }
   footer .footer-container address #zip:hover, footer .footer-container .legal-regulations #zip:hover {
     cursor: auto;
@@ -707,8 +708,8 @@ html {
   footer .footer-container .hire {
     display: flex;
     color: #FBBF00;
-    text-decoration: underline;
     text-align: center;
+    font-weight: 600;
   }
   footer .footer-container .hire:hover {
     cursor: pointer;

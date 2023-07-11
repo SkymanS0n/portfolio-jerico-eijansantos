@@ -27,7 +27,7 @@
                 display: flex;
                 height: auto;
                 justify-content: center;
-                width: 30px;
+                width: 33px;
                 z-index: 2;
             }
 
@@ -55,15 +55,15 @@
                 align-self: center;
                 display: flex;
                 flex-direction: column;
-                height: 20px;
+                height: 28px;
                 justify-content: space-between;
-                width: 25px;
+                width: 33px;
                 z-index: 2;
 
                 span {
                     background-color: #FBBF00;
                     color: #efefef;
-                    height: 4px;
+                    height: 5.5px;
                     width: 100%;
                 }
             }
@@ -663,7 +663,7 @@
 
             .contact-form {
                 width: 100%;
-                padding: 8em 15% 5em 15%;
+                padding: 8em 10% 5em 10%;
                 background-color: #000000;
                 color: $font-color1;
                 
@@ -823,6 +823,7 @@
 
                 #zip {
                     color: #efefef;
+                    font-weight: 300;
 
                     &:hover {
                         cursor: auto;
@@ -842,8 +843,8 @@
             .hire {
                 display: flex;
                 color: #FBBF00;
-                text-decoration: underline;
                 text-align: center;
+                font-weight: 600;
 
                 &:hover {
                     cursor: pointer;

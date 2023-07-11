@@ -3,415 +3,836 @@
 @media screen and (max-width:450px) {
 
 
-header {
-    align-items: center;
-    background-color: $hdr-ftr-bg;
-    box-shadow: 0px 2px 4px rgba(87, 87, 87, 0.4);
-    padding: 1em 0 1em 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-    .nav-section {
+    header {
         align-items: center;
-        color: #efefef;
-        display: flex;
-        justify-content: space-between;
-        margin: auto;
-        width: $mobile-width;
+        background-color: $hdr-ftr-bg;
+        box-shadow: 0px 2px 4px rgba(87, 87, 87, 0.4);
+        padding: 1em 0 1em 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
         z-index: 2;
-        a {
+
+        .nav-section {
             align-items: center;
+            color: #efefef;
             display: flex;
-            height: auto;
-            justify-content: center;
-            width: 30px;
-            z-index: 2;
-        }
-        #menu-toggle {
-            display: none;
-            z-index: 1;
-            &:checked ~ .slide-menu {
-                left: 0;
-                top: 2.5em;
-                transition: 0.4s ease-in-out;
-                z-index: -1;
-            }
-            &:not(:checked) ~ .slide-menu {
-                background-color: transparent;
-                left: 0;
-                top: -100%;
-                transition: 0.5s ease-in-out;
-                z-index: -1;
-            }
-        }
-        
-        .hamburger {
-            align-self: center;
-            display: flex;
-            flex-direction: column;
-            height: 20px;
             justify-content: space-between;
-            width: 25px;
+            margin: auto;
+            width: $mobile-width;
             z-index: 2;
-            span {
-                background-color: #FBBF00;
-                color: #efefef;
-                height: 4px;
-                width: 100%;
+
+            a {
+                align-items: center;
+                display: flex;
+                height: auto;
+                justify-content: center;
+                width: 30px;
+                z-index: 2;
             }
-        }
-        .slide-menu {
-            background-color: rgba(66, 70, 75, 1);
-            display: flex;
-            font-size: 2rem;
-            height: calc(100vh - 50px);
-            justify-content: center;
-            position: fixed;
-            text-align: center;
-            width: 100%;
-            z-index: -1;
-            .nav-bar-links {
+
+            #menu-toggle {
+                display: none;
+                z-index: 1;
+
+                &:checked ~ .slide-menu {
+                    left: 0;
+                    top: 2.5em;
+                    transition: 0.4s ease-in-out;
+                    z-index: -1;
+                }
+
+                &:not(:checked) ~ .slide-menu {
+                    background-color: transparent;
+                    left: 0;
+                    top: -100%;
+                    transition: 0.5s ease-in-out;
+                    z-index: -1;
+                }
+            }
+            
+            .hamburger {
+                align-self: center;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                padding-top: 5em;
-                z-index: -1;
-                li {
-                    padding: 0.5em;
-                    z-index: -1;
-                    a {
-                        width: 100%;
-                    }
-                }
-                .menu-send-message {
-                    margin-top: 5em;
-                    @each $property, $value in $btn {
-                        #{$property}: $value;
-                      }
+                height: 20px;
+                justify-content: space-between;
+                width: 25px;
+                z-index: 2;
+
+                span {
+                    background-color: #FBBF00;
+                    color: #efefef;
+                    height: 4px;
+                    width: 100%;
                 }
             }
-        }
-    }
-}
 
-/* End of header */
-
-/* Start of Hero Section */
-
-.hero-section {
-    background: linear-gradient(to right, #42464B,  #16181a);
-    padding-bottom: 8em;
-    .hero-container {
-        color: white;
-        display: flex;
-        flex-direction: column;
-        font-size: $mobile-font;
-        font-weight: 300;
-        margin: auto;
-        padding-top: 5em;
-        text-align: center;
-        width: $mobile-width;
-        .hero-details {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            p, h2 {
-                line-height: 1.7em;
-                margin-bottom: 0.5em;
-
-                &:is(h2) {
-                    font-size: 1.5rem;
-                }
-            }
-            h1 {
-                font-size: 4rem;
-                font-weight: 600;
-                margin-bottom: 0.3em;
-            }
-            .buttons {
-                display: none;
-            }
-        }
-        .hero-img {
-            margin-top: 2em;
-            margin-bottom: 4em;
-            width: 100%;
-            height: auto;
-        }
-    }
-    #buttons2 {
-        margin-top: 2em;
-        display: flex;
-        flex-direction: column;
-        .view-work, .about-me {
-            width: 10em;
-            font-size: 2rem;
-            @each $property, $value in $btn {
-                #{$property}: $value;
-            }
-            &:is(.about-me) {
-                margin-top: 1em;
-                background-color: transparent;
-                color: #FBBF00;
-                box-shadow: none;
-            }
-        }
-    }
-}
-
-/* End of Hero Section */
-
-/* Start of Project Section */
-
-#projects.projects-section {
-    background-color: #eaeaea;
-    padding: 8em 0em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h3 {
-        font-size: $h3;
-    }
-    h4 {
-        font-size: 2rem;
-        margin-bottom: 4em;
-    }
-    .featured-projects {
-        margin: auto;
-        .carousel {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .project-a, .project-c, .project-b {
-                width: 90%;
-                margin: auto;
-                margin-bottom: 8em;
+            .slide-menu {
+                background-color: rgba(66, 70, 75, 1);
+                display: flex;
+                font-size: 2rem;
+                height: calc(100vh - 50px);
+                justify-content: center;
+                position: fixed;
                 text-align: center;
-                margin: auto;
-                &:is(.project-a) {
-                    padding-bottom: 8em;
-                }
-                &:is(.project-c) {
-                    padding-top: 8em;
-                }
-                img {
-                    margin-bottom: 2em;
-                }
-                p {
-                    font-size: 1.5em;
-                    text-align: center;
-                    width: 90%;
-                    margin: auto;
-                    margin-bottom: 3em;
-                }
-                .buttons-a, .buttons-c, .buttons-b {
+                width: 100%;
+                z-index: -1;
+
+                .nav-bar-links {
                     display: flex;
-                    justify-content: center;
-                    text-align: center;
-                    margin: auto;
-                    .view-project, .source-code {
-                        display: flex;
-                        justify-content: center;
-                        font-size: 1.5rem;
-                        width: 8.5em;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: 5em;
+                    z-index: -1;
+
+                    li {
                         padding: 0.5em;
+                        z-index: -1;
+                        a {
+                            width: 100%;
+                        }
+                    }
+
+                    .menu-send-message {
+                        margin-top: 5em;
                         @each $property, $value in $btn {
                             #{$property}: $value;
                         }
-                        &:is(.source-code) {
-                            @each $property, $value in $btn-single {
+                    }
+                }
+            }
+        }
+    }
+
+    /* End of header */
+
+    /* Start of Hero Section */
+
+    .hero-section {
+        background: linear-gradient(to right, #42464B,  #16181a);
+        padding-bottom: 8em;
+
+        .hero-container {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            font-size: 2rem;
+            font-weight: 300;
+            margin: auto;
+            padding-top: 5em;
+            text-align: center;
+            width: $mobile-width;
+
+            .hero-details {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                p, h2 {
+                    line-height: 1.7em;
+                    margin-bottom: 0.5em;
+
+                    &:is(h2) {
+                        font-size: 1.7rem;
+                        width: 90%;
+                        text-align: center;
+                        margin: auto;
+                    }
+                }
+                
+                h1 {
+                    font-size: 4rem;
+                    font-weight: 600;
+                    margin-bottom: 0.3em;
+                }
+
+                .buttons {
+                    display: none;
+                }
+            }
+
+            .hero-img {
+                margin-top: 1em;
+                margin-bottom: 2em;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        #buttons2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 90%;
+            margin: auto;
+
+            .view-work, .about-me {
+                min-width: 5em;
+                font-size: 1.7rem;
+                @each $property, $value in $btn {
+                    #{$property}: $value;
+                }
+
+                &:is(.about-me) {
+                    background-color: transparent;
+                    color: #FBBF00;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    /* End of Hero Section */
+
+    /* Start of Project Section */
+
+    #projects.projects-section {
+        background-color: #eaeaea;
+        padding: 8em 0em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            font-size: $h3;
+        }
+
+        h4 {
+            font-size: 2rem;
+            margin-bottom: 4em;
+            text-align: center;
+        }
+
+        .featured-projects {
+            margin: auto;
+            width: 100%;
+
+            .carousel {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+
+                .project-a, .project-c, .project-b {
+                    width: 90%;
+                    margin: auto;
+                    margin-bottom: 8em;
+                    text-align: center;
+                    margin: auto;
+
+                    p {
+                        font-size: 1.5em;
+                        text-align: center;
+                        width: 70%;
+                        text-align: center;
+                        margin: auto;
+                        margin-bottom: 3em;
+                    }
+                    
+                    &:is(.project-a) {
+                        padding-bottom: 8em;
+                        width: 100%;
+                    }
+
+                    &:is(.project-c) {
+                        padding-top: 8em;
+                        width: 100%;
+                    }
+
+                    img {
+                        margin-bottom: 2em;
+                    }
+
+                    .buttons-a, .buttons-c, .buttons-b {
+                        display: flex;
+                        justify-content: space-evenly;
+                        text-align: center;
+                        margin: auto;
+                        padding: 0em 5%;
+
+                        .view-project, .source-code {
+                            display: flex;
+                            justify-content: center;
+                            font-size: 1.5rem;
+                            width: 8.5em;
+                            padding: 0.5em;
+                            @each $property, $value in $btn {
                                 #{$property}: $value;
+                            }
+
+                            &:is(.source-code) {
+                                @each $property, $value in $btn-single {
+                                    #{$property}: $value;
+                                }
+                            }
+
+                            &:is(.view-project) {
+
+                                #view-live-site {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+
+                    .doc-options {
+                        display: none;
+
+                        a {
+                            display: none;
+                        }
+                    }
+                }
+
+                .project-b {
+                    padding: 8em 0em;
+                    background-color: #ffffff;
+                    width: 100%;
+                }
+            }
+        }
+
+        h4:nth-of-type(2), h4:last-of-type {
+            display: none;
+        }
+
+        .personal-projects {
+            display: none;
+        }
+    }
+
+
+    /* End of Project Section */
+
+    /* Start of About Section */
+
+
+    #aboutmyself.aboutmyself {
+        text-align: center;
+        background-color: #303030;
+        color: #efefef;
+        padding-top: 8em;
+        padding-bottom: 8em;
+        background: linear-gradient(to bottom, #42464B,  #16181a);
+
+        h3 {
+            font-size: $h3;
+            margin-bottom: 2em;
+        }
+
+        .about-me-container {
+
+            .image-container {
+                margin-bottom: 5em;
+            }
+
+            .about-me-details {
+
+                .short-version {
+
+                    .about {
+            
+                        p {
+                            font-size: 1.7rem;
+                            width: 90%;
+                            margin: auto;
+                            margin-bottom: 2em;
+                            line-height: 1.5;
+                            text-align: center;
+                        }
+            
+                        .dogs {
+                            display: none;
+                        }
+                    }
+                }
+
+                .other-versions {
+
+                    p {
+                        font-size: 1.7rem;
+                        width: 90%;
+                        margin: auto;
+                        margin-bottom: 5em;
+                        line-height: 1.5;
+                        text-align: center;
+                    }
+            
+                    .read-more {
+                        color: #FBBF00;
+                        font-weight: 600;
+                    }
+            
+                    img {
+                        display: none;
+                    }
+                }
+
+                /* Start of Skills Section */
+
+                .skills {
+                padding: 0em 0em 8em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                    p {
+                        font-size: 2rem;
+                        margin-bottom: 3em;
+                    }
+
+                    .tech-skills-a {
+                        .group-a, .group-b {
+                            width: 80%;
+                            display: flex;
+                            margin: auto;
+
+                            img {
+                                width: 80%;
+                                height: auto;
+                            }
+                        }
+                    }
+
+                    .tech-skills-b {
+                        
+                        .group-c, .group-d {
+                            width: 80%;
+                            display: flex;
+                            margin: auto;
+
+                            img {
+                                width: 80%;
+                                height: auto;
                             }
                         }
                     }
                 }
-            }
-            .project-b {
-                padding: 8em 0em;
-                background-color: #ffffff;
-                width: 100%;
-            }
-        }
-    }
-}
+                /* End of Skills Section */
+                .downloadable-version {
 
+                    .cv-icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
 
-/* End of Project Section */
+                        a {
+                            margin-right: 0.5em;
+                            font-size: 1.7rem;
+                            color: #FBBF00;
+                            font-weight: 600;
+                        }
 
-/* Start of Skills Section */
-
-.skills {
-    padding: 8em 0em 8em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h3 {
-        font-size: $h3;
-    }
-    h4 {
-        width: 90%;
-        margin: auto;
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 4em;
-    }
-    .tech-skills-a {
-        .group-a, .group-b {
-            width: 80%;
-            display: flex;
-            margin: auto;
-        }
-    }
-    .tech-skills-b {
-        .group-c, .group-d {
-            width: 80%;
-            display: flex;
-            margin: auto;
-        }
-    }
-}
-
-/* End of Skills Section */
-
-/* Start of About Section */
-
-#aboutmyself.aboutmyself {
-    text-align: center;
-    background-color: #303030;
-    color: #efefef;
-    padding-top: 8em;
-    padding-bottom: 8em;
-    background: linear-gradient(to bottom, #42464B,  #16181a);
-    h3 {
-        font-size: $h3;
-    }
-    h4 {
-        width: 90%;
-        margin: auto;
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 4em;
-    }
-    .short-version {
-        .about {
-            p {
-                font-size: 1.5rem;
-                width: 90%;
-                margin: auto;
-                margin-bottom: 2em;
-                line-height: 2;
-            }
-            .dogs {
-                img {
-                    margin-bottom: 7em;
+                        img {
+                            max-width: 3.5%;
+                        }
+                    }
                 }
             }
         }
     }
-    .other-versions {
-        p {
-            font-size: 1.5rem;
-            width: 90%;
-            margin: auto;
-            margin-bottom: 5em;
-            line-height: 2;
-        }
-        .read-more {
-            color: #FBBF00;
-            font-weight: 600;
-        }
-        img {
-            display: none;
-        }
-    }
-    a {
-        font-size: 1.5rem;
-        color: #FBBF00;
-        font-weight: 600;
-        &:is(.resume-link) {
-            font-size: 3rem;
-            text-decoration: underline;
-        }
-    }
-}
 
-/* End of About Section */
+    /* End of About Section */
 
-/* Start of Contact Section */
+    /* Start of Contact Section */
+        
+        
+    #contact.contact {
+        background-color: $font-color1;
+        align-self: center;
+        padding: 8em 0em 0em 0em;
 
-
-#contact.contact{
-    padding: 8em 0em;
-    .contact-me {
-        width: 90%;
-        margin: auto;
-        text-align: center;
         h3 {
             font-size: $h3;
             margin-bottom: 0.5em;
             font-weight: 600;
+            text-align: Center;
         }
+
         h4 {
             width: 90%;
+            text-align: center;
+            font-size: 2rem;
             margin: auto;
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 3em;
+            padding-bottom: 4em;
         }
-        .send-message {
-            font-size: 2rem;
-            padding: 0.5em;
-            @each $property, $value in $btn {
-                #{$property}: $value;
-            }
-        }
-    }
-    .contact-details {
-        font-size: 1.5rem;
-        font-weight: 600;
-        text-align: center;
-        margin-top: 3em;
-    }
-}
-
-/* End of Contact Section */
-
-/* Start of Footer */
-
-footer {
-    background-color: #16181a;
-    color: #efefef;
-    padding: 0em 1.5em;
-    .footer-container {
-        padding: 2em 0em;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        address, .legal-regulations {
-            font-size: 0.8rem;
-            text-align: center;
-            margin-bottom: 1.5em;
-            strong {
-                color: #FBBF00;
-                font-weight: 600;
-            }
-        }
-        .social-links {
+        
+        .contact-container {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            a {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                height: 2.5em;
-                width: 2.5em;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+
+            .contact-me {
+                color: $font-color1;
+                width: 100%;
+                text-align: left;
+                background-color: #000000;
+                padding: 8em 0%;
+
+                h3:first-of-type {
+                    display: none;
+                    font-size: $h3;
+                    margin-bottom: 0.5em;
+                    font-weight: 600;
+                    text-align: left;
+                }
+
+                h4:first-of-type {
+                    width: 90%;
+                    text-align: left;
+                    font-size: 2rem;
+                    margin: auto;
+                    margin-bottom: 3em;
+                    display: none;
+                }
+
+                h4:last-of-type {
+                    margin: auto;
+                    padding-bottom: 3em;
+                }
+
+                .send-message {
+                    display: none;
+                }
+
+                .contact-links {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin: 0% 7%;
+
+                    .business-phone {
+                        display: flex;
+                        align-items: center;
+                        padding: 1em 1em 1em 3em;
+                        width: fit-content;
+                        
+                        .phone-icon {
+                            display: flex;
+                            align-items: center;
+                            padding: 0em 1.5em 0em 0em;
+    
+                            img {
+                                max-width: 100%;
+                                height: auto;
+                                min-width: 50px;
+                            }
+                        }
+    
+                        .phone-number-details {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+    
+                            a {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                text-align: left;
+                                font-size: 1.7rem;
+                            }
+                        }
+                    }
+    
+                    .business-email {
+                        display: flex;
+                        align-items: center;
+                        padding: 1em 1em 1em 3em;
+                        width: fit-content;
+                    
+                        .email-icon {
+                            display: flex;
+                            align-items: center;
+                            padding: 0em 1.5em 0em 0em;
+                    
+                            img {
+                                max-width: 100%;
+                                height: auto;
+                                min-width: 50px;
+                            }
+                        }
+                    
+                        .my-email {
+                            a {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: left;
+                                font-size: 1.7rem;
+                                word-break: break-all;
+                            }
+                        }
+                    }
+                    
+    
+                    .address2 {
+                        display: flex;
+                        font-weight: 100;
+                        padding: 0em 1em 1em 3em;
+                        width: fit-content;
+                        
+                        strong {
+                            transition: margin-left 0.3s ease-in-out;
+    
+                            &:hover {
+                                cursor: pointer;
+                                margin-left: 1em;
+                            }
+                        }
+    
+                        .address-icon {
+                            display: flex;
+                            align-items: center;
+                            padding: 0em 1.5em 0em 0em;
+    
+                            img {
+                                max-width: 100%;
+                                height: auto;
+                                min-width: 50px;
+                            }
+                        }
+    
+                        .local-address {
+                            
+                            p {
+                                width: 100%;
+                                font-size: 1.7rem;
+                                word-break: break-all;
+                            }
+    
+                            a {
+                                font-size: 1.7rem;
+                                word-break: break-all;
+                            }
+                        }
+                    }
+                    
+                    .social-links2 {
+                        display: flex;
+                        padding: 0em 1em 1em 3em;
+                        width: fit-content;
+    
+                        .social-icon {
+                            display: flex;
+                            align-items: center;
+                            
+                            a:first-of-type, a:last-of-type {
+                                margin-right: 0.5em;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transition: scale 0.2s ease-in-out;
+    
+                                &:hover {
+                                    cursor: pointer;
+                                    scale: 1.15;
+                                }
+    
+                                img {
+                                    width: 60%;
+                                    height: auto;
+                                    min-width: 30px;
+                                }
+                            }
+                        }
+    
+                        .chat-icon {
+                            display: flex;
+                            align-items: center;
+                            padding: 0em 0.9em 0em 0em;
+    
+                            img {
+                                max-width: 100%;
+                                height: auto;
+                                min-width: 50px;
+                            }
+                        }
+                    } 
+                }
+            }
+
+            .contact-details2 {
+                display: none;
+            }
+
+            .contact-form {
+                width: 100%;
+                padding: 8em 15% 5em 15%;
+                background-color: #000000;
+                color: $font-color1;
+                
+                h4 {
+                    margin: auto;
+                    margin-bottom: 0em;
+                    padding-bottom: 3em;
+                }
+
+                form {
+                    font-size: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    color: $font-color1;
+
+                    textarea, input {
+                        background-color: #3d3d3d;
+                        border: 2px solid $font-color1;
+                    }
+
+                    label {
+                        padding-top: 1em;
+                        padding-bottom: 0.5em;
+                        font-size: 1.7rem;
+                        color: $font-color1;
+                    }
+
+                    button {
+                        margin-top: 2em;
+                        text-align: center;
+                        height: 41px;
+                        max-width: 150px;
+                        background-color: #FBBF00;
+                        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+                        color: #000000;
+                        font-weight: 600;
+                        font-size: 1.7rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0.6em 1em;
+                        transition: background-color 0.3s ease;
+
+                        &:hover {
+                            background-color: #ffaa00;
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
         }
     }
-}
 
+    .dev-process {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0em 0%;
+        font-size: 1.5rem;
+        overflow: hidden;
+        height: 3em; 
+        transition: height 0.3s ease;
+        
+        &.open {
+        height: 20em;
+
+            i {
+                transform: rotate(180deg);
+            }
+        }
+
+        .icon {
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            transition: scale 0.1s ease;
+            margin: auto;
+            color: #FBBF00;
+
+            i   {
+                padding: 0.3em 0em;
+                text-align: center;
+                font-size: 2.5rem;
+                color: #FBBF00;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    cursor: pointer;
+                    color:$font-color1;
+                }
+
+                &:focus {
+                    outline: solid 2px blue;
+                }
+            }
+        }
+
+        p   {
+            width: 100%;
+            text-align: center;
+            padding: 4em 5%;
+            background-color: #000000;
+            color: $font-color1;
+            font-size: 1.7rem;
+        }
+    }
+
+
+    /* End of Contact Section */
+
+    /* Start of Footer */
+
+
+    footer {
+        background-color: #16181a;
+        color: #efefef;
+        padding: 0em 1.5em;
+
+        .footer-container {
+            padding: 2em 0em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+            font-size: 1.7rem;
+
+            .sitemap {
+                display: none;
+            }
+
+            address, .legal-regulations {
+                text-align: center;
+                margin-bottom: 1.5em;
+
+                &:is(address) {
+                    text-align: center;
+                    margin-bottom: 2em;
+                }
+
+                &:is(.legal-regulations) {
+                    text-align: center;
+                    margin-bottom: 2em;
+                }
+
+                strong {
+                    color: #FBBF00;
+                    font-weight: 600;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: #efefef;
+                    }
+                }
+            }
+
+            .social-links {
+                display: none;
+            }
+
+            .hire {
+                display: flex;
+                color: #FBBF00;
+                text-decoration: underline;
+                text-align: center;
+
+                &:hover {
+                    cursor: pointer;
+                    color: #efefef;
+                }
+            }
+        }
+    }/* End of Footer */
 }
-/* End of Footer */

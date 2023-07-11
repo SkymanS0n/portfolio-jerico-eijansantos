@@ -112,7 +112,7 @@ html {
     color: white;
     display: flex;
     flex-direction: column;
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 300;
     margin: auto;
     padding-top: 5em;
@@ -129,7 +129,10 @@ html {
     margin-bottom: 0.5em;
   }
   .hero-section .hero-container .hero-details p:is(h2), .hero-section .hero-container .hero-details h2:is(h2) {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    width: 90%;
+    text-align: center;
+    margin: auto;
   }
   .hero-section .hero-container .hero-details h1 {
     font-size: 4rem;
@@ -140,19 +143,21 @@ html {
     display: none;
   }
   .hero-section .hero-container .hero-img {
-    margin-top: 2em;
-    margin-bottom: 4em;
+    margin-top: 1em;
+    margin-bottom: 2em;
     width: 100%;
     height: auto;
   }
   .hero-section #buttons2 {
-    margin-top: 2em;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
   }
   .hero-section #buttons2 .view-work, .hero-section #buttons2 .about-me {
-    width: 10em;
-    font-size: 2rem;
+    min-width: 5em;
+    font-size: 1.7rem;
     align-self: center;
     text-align: center;
     background-color: #FBBF00;
@@ -163,7 +168,6 @@ html {
     transition: background-color 0.3s ease;
   }
   .hero-section #buttons2 .view-work:is(.about-me), .hero-section #buttons2 .about-me:is(.about-me) {
-    margin-top: 1em;
     background-color: transparent;
     color: #FBBF00;
     box-shadow: none;
@@ -183,9 +187,11 @@ html {
   #projects.projects-section h4 {
     font-size: 2rem;
     margin-bottom: 4em;
+    text-align: center;
   }
   #projects.projects-section .featured-projects {
     margin: auto;
+    width: 100%;
   }
   #projects.projects-section .featured-projects .carousel {
     display: flex;
@@ -199,27 +205,31 @@ html {
     text-align: center;
     margin: auto;
   }
+  #projects.projects-section .featured-projects .carousel .project-a p, #projects.projects-section .featured-projects .carousel .project-c p, #projects.projects-section .featured-projects .carousel .project-b p {
+    font-size: 1.5em;
+    text-align: center;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 3em;
+  }
   #projects.projects-section .featured-projects .carousel .project-a:is(.project-a), #projects.projects-section .featured-projects .carousel .project-c:is(.project-a), #projects.projects-section .featured-projects .carousel .project-b:is(.project-a) {
     padding-bottom: 8em;
+    width: 100%;
   }
   #projects.projects-section .featured-projects .carousel .project-a:is(.project-c), #projects.projects-section .featured-projects .carousel .project-c:is(.project-c), #projects.projects-section .featured-projects .carousel .project-b:is(.project-c) {
     padding-top: 8em;
+    width: 100%;
   }
   #projects.projects-section .featured-projects .carousel .project-a img, #projects.projects-section .featured-projects .carousel .project-c img, #projects.projects-section .featured-projects .carousel .project-b img {
     margin-bottom: 2em;
   }
-  #projects.projects-section .featured-projects .carousel .project-a p, #projects.projects-section .featured-projects .carousel .project-c p, #projects.projects-section .featured-projects .carousel .project-b p {
-    font-size: 1.5em;
-    text-align: center;
-    width: 90%;
-    margin: auto;
-    margin-bottom: 3em;
-  }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a, #projects.projects-section .featured-projects .carousel .project-a .buttons-c, #projects.projects-section .featured-projects .carousel .project-a .buttons-b, #projects.projects-section .featured-projects .carousel .project-c .buttons-a, #projects.projects-section .featured-projects .carousel .project-c .buttons-c, #projects.projects-section .featured-projects .carousel .project-c .buttons-b, #projects.projects-section .featured-projects .carousel .project-b .buttons-a, #projects.projects-section .featured-projects .carousel .project-b .buttons-c, #projects.projects-section .featured-projects .carousel .project-b .buttons-b {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
     margin: auto;
+    padding: 0em 5%;
   }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project, #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code, #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project, #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code, #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project, #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code, #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project, #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code, #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project, #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code, #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project, #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code, #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project, #projects.projects-section .featured-projects .carousel .project-b .buttons-a .source-code, #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project, #projects.projects-section .featured-projects .carousel .project-b .buttons-c .source-code, #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project, #projects.projects-section .featured-projects .carousel .project-b .buttons-b .source-code {
     display: flex;
@@ -244,40 +254,27 @@ html {
     font-weight: 600;
     padding: 0.6em 1em;
   }
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-a .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-c .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-b .source-code:is(.view-project) #view-live-site {
+    display: none;
+  }
+  #projects.projects-section .featured-projects .carousel .project-a .doc-options, #projects.projects-section .featured-projects .carousel .project-c .doc-options, #projects.projects-section .featured-projects .carousel .project-b .doc-options {
+    display: none;
+  }
+  #projects.projects-section .featured-projects .carousel .project-a .doc-options a, #projects.projects-section .featured-projects .carousel .project-c .doc-options a, #projects.projects-section .featured-projects .carousel .project-b .doc-options a {
+    display: none;
+  }
   #projects.projects-section .featured-projects .carousel .project-b {
     padding: 8em 0em;
     background-color: #ffffff;
     width: 100%;
   }
+  #projects.projects-section h4:nth-of-type(2), #projects.projects-section h4:last-of-type {
+    display: none;
+  }
+  #projects.projects-section .personal-projects {
+    display: none;
+  }
   /* End of Project Section */
-  /* Start of Skills Section */
-  .skills {
-    padding: 8em 0em 8em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .skills h3 {
-    font-size: 3rem;
-  }
-  .skills h4 {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 4em;
-  }
-  .skills .tech-skills-a .group-a, .skills .tech-skills-a .group-b {
-    width: 80%;
-    display: flex;
-    margin: auto;
-  }
-  .skills .tech-skills-b .group-c, .skills .tech-skills-b .group-d {
-    width: 80%;
-    display: flex;
-    margin: auto;
-  }
-  /* End of Skills Section */
   /* Start of About Section */
   #aboutmyself.aboutmyself {
     text-align: center;
@@ -289,86 +286,364 @@ html {
   }
   #aboutmyself.aboutmyself h3 {
     font-size: 3rem;
+    margin-bottom: 2em;
   }
-  #aboutmyself.aboutmyself h4 {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 4em;
+  #aboutmyself.aboutmyself .about-me-container .image-container {
+    margin-bottom: 5em;
   }
-  #aboutmyself.aboutmyself .short-version .about p {
-    font-size: 1.5rem;
+  #aboutmyself.aboutmyself .about-me-container .about-me-details {
+    /* Start of Skills Section */
+    /* End of Skills Section */
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version .about p {
+    font-size: 1.7rem;
     width: 90%;
     margin: auto;
     margin-bottom: 2em;
-    line-height: 2;
+    line-height: 1.5;
+    text-align: center;
   }
-  #aboutmyself.aboutmyself .short-version .about .dogs img {
-    margin-bottom: 7em;
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version .about .dogs {
+    display: none;
   }
-  #aboutmyself.aboutmyself .other-versions p {
-    font-size: 1.5rem;
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions p {
+    font-size: 1.7rem;
     width: 90%;
     margin: auto;
     margin-bottom: 5em;
-    line-height: 2;
+    line-height: 1.5;
+    text-align: center;
   }
-  #aboutmyself.aboutmyself .other-versions .read-more {
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .read-more {
     color: #FBBF00;
     font-weight: 600;
   }
-  #aboutmyself.aboutmyself .other-versions img {
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions img {
     display: none;
   }
-  #aboutmyself.aboutmyself a {
-    font-size: 1.5rem;
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills {
+    padding: 0em 0em 8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills p {
+    font-size: 2rem;
+    margin-bottom: 3em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b {
+    width: 80%;
+    display: flex;
+    margin: auto;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b img {
+    width: 80%;
+    height: auto;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d {
+    width: 80%;
+    display: flex;
+    margin: auto;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d img {
+    width: 80%;
+    height: auto;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version .cv-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version .cv-icon a {
+    margin-right: 0.5em;
+    font-size: 1.7rem;
     color: #FBBF00;
     font-weight: 600;
   }
-  #aboutmyself.aboutmyself a:is(.resume-link) {
-    font-size: 3rem;
-    text-decoration: underline;
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version .cv-icon img {
+    max-width: 3.5%;
   }
   /* End of About Section */
   /* Start of Contact Section */
   #contact.contact {
-    padding: 8em 0em;
+    background-color: #efefef;
+    align-self: center;
+    padding: 8em 0em 0em 0em;
   }
-  #contact.contact .contact-me {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-  }
-  #contact.contact .contact-me h3 {
+  #contact.contact h3 {
     font-size: 3rem;
     margin-bottom: 0.5em;
     font-weight: 600;
+    text-align: Center;
   }
-  #contact.contact .contact-me h4 {
+  #contact.contact h4 {
     width: 90%;
+    text-align: center;
+    font-size: 2rem;
     margin: auto;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 3em;
+    padding-bottom: 4em;
   }
-  #contact.contact .contact-me .send-message {
+  #contact.contact .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  #contact.contact .contact-container .contact-me {
+    color: #efefef;
+    width: 100%;
+    text-align: left;
+    background-color: #000000;
+    padding: 8em 0%;
+  }
+  #contact.contact .contact-container .contact-me h3:first-of-type {
+    display: none;
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    text-align: left;
+  }
+  #contact.contact .contact-container .contact-me h4:first-of-type {
+    width: 90%;
+    text-align: left;
     font-size: 2rem;
-    padding: 0.5em;
-    align-self: center;
+    margin: auto;
+    margin-bottom: 3em;
+    display: none;
+  }
+  #contact.contact .contact-container .contact-me h4:last-of-type {
+    margin: auto;
+    padding-bottom: 3em;
+  }
+  #contact.contact .contact-container .contact-me .send-message {
+    display: none;
+  }
+  #contact.contact .contact-container .contact-me .contact-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0% 7%;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .business-phone {
+    display: flex;
+    align-items: center;
+    padding: 1em 1em 1em 3em;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .business-phone .phone-icon {
+    display: flex;
+    align-items: center;
+    padding: 0em 1.5em 0em 0em;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .business-phone .phone-icon img {
+    max-width: 100%;
+    height: auto;
+    min-width: 50px;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .business-phone .phone-number-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .business-phone .phone-number-details a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    font-size: 1.7rem;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .business-email {
+    display: flex;
+    align-items: center;
+    padding: 1em 1em 1em 3em;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .business-email .email-icon {
+    display: flex;
+    align-items: center;
+    padding: 0em 1.5em 0em 0em;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .business-email .email-icon img {
+    max-width: 100%;
+    height: auto;
+    min-width: 50px;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .business-email .my-email a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    font-size: 1.7rem;
+    word-break: break-all;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .address2 {
+    display: flex;
+    font-weight: 100;
+    padding: 0em 1em 1em 3em;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .address2 strong {
+    transition: margin-left 0.3s ease-in-out;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .address2 strong:hover {
+    cursor: pointer;
+    margin-left: 1em;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .address2 .address-icon {
+    display: flex;
+    align-items: center;
+    padding: 0em 1.5em 0em 0em;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .address2 .address-icon img {
+    max-width: 100%;
+    height: auto;
+    min-width: 50px;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .address2 .local-address p {
+    width: 100%;
+    font-size: 1.7rem;
+    word-break: break-all;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .address2 .local-address a {
+    font-size: 1.7rem;
+    word-break: break-all;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .social-links2 {
+    display: flex;
+    padding: 0em 1em 1em 3em;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon {
+    display: flex;
+    align-items: center;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:first-of-type, #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:last-of-type {
+    margin-right: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.2s ease-in-out;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:first-of-type:hover, #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:last-of-type:hover {
+    cursor: pointer;
+    scale: 1.15;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:first-of-type img, #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:last-of-type img {
+    width: 60%;
+    height: auto;
+    min-width: 30px;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .social-links2 .chat-icon {
+    display: flex;
+    align-items: center;
+    padding: 0em 0.9em 0em 0em;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .social-links2 .chat-icon img {
+    max-width: 100%;
+    height: auto;
+    min-width: 50px;
+  }
+  #contact.contact .contact-container .contact-details2 {
+    display: none;
+  }
+  #contact.contact .contact-container .contact-form {
+    width: 100%;
+    padding: 8em 15% 5em 15%;
+    background-color: #000000;
+    color: #efefef;
+  }
+  #contact.contact .contact-container .contact-form h4 {
+    margin: auto;
+    margin-bottom: 0em;
+    padding-bottom: 3em;
+  }
+  #contact.contact .contact-container .contact-form form {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    color: #efefef;
+  }
+  #contact.contact .contact-container .contact-form form textarea, #contact.contact .contact-container .contact-form form input {
+    background-color: #3d3d3d;
+    border: 2px solid #efefef;
+  }
+  #contact.contact .contact-container .contact-form form label {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    font-size: 1.7rem;
+    color: #efefef;
+  }
+  #contact.contact .contact-container .contact-form form button {
+    margin-top: 2em;
+    text-align: center;
+    height: 41px;
+    max-width: 150px;
     background-color: #FBBF00;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
     color: #000000;
     font-weight: 600;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
   }
-  #contact.contact .contact-details {
+  #contact.contact .contact-container .contact-form form button:hover {
+    background-color: #ffaa00;
+    cursor: pointer;
+  }
+  .dev-process {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0em 0%;
     font-size: 1.5rem;
-    font-weight: 600;
+    overflow: hidden;
+    height: 3em;
+    transition: height 0.3s ease;
+  }
+  .dev-process.open {
+    height: 20em;
+  }
+  .dev-process.open i {
+    transform: rotate(180deg);
+  }
+  .dev-process .icon {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    transition: scale 0.1s ease;
+    margin: auto;
+    color: #FBBF00;
+  }
+  .dev-process .icon i {
+    padding: 0.3em 0em;
     text-align: center;
-    margin-top: 3em;
+    font-size: 2.5rem;
+    color: #FBBF00;
+    transition: color 0.3s ease;
+  }
+  .dev-process .icon i:hover {
+    cursor: pointer;
+    color: #efefef;
+  }
+  .dev-process .icon i:focus {
+    outline: solid 2px blue;
+  }
+  .dev-process p {
+    width: 100%;
+    text-align: center;
+    padding: 4em 5%;
+    background-color: #000000;
+    color: #efefef;
+    font-size: 1.7rem;
   }
   /* End of Contact Section */
   /* Start of Footer */
@@ -381,32 +656,50 @@ html {
     padding: 2em 0em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    width: 90%;
+    margin: auto;
+    font-size: 1.7rem;
+  }
+  footer .footer-container .sitemap {
+    display: none;
   }
   footer .footer-container address, footer .footer-container .legal-regulations {
-    font-size: 0.8rem;
     text-align: center;
     margin-bottom: 1.5em;
+  }
+  footer .footer-container address:is(address), footer .footer-container .legal-regulations:is(address) {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  footer .footer-container address:is(.legal-regulations), footer .footer-container .legal-regulations:is(.legal-regulations) {
+    text-align: center;
+    margin-bottom: 2em;
   }
   footer .footer-container address strong, footer .footer-container .legal-regulations strong {
     color: #FBBF00;
     font-weight: 600;
   }
+  footer .footer-container address strong:hover, footer .footer-container .legal-regulations strong:hover {
+    cursor: pointer;
+    color: #efefef;
+  }
   footer .footer-container .social-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: none;
   }
-  footer .footer-container .social-links a {
+  footer .footer-container .hire {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 2.5em;
-    width: 2.5em;
+    color: #FBBF00;
+    text-decoration: underline;
+    text-align: center;
   }
+  footer .footer-container .hire:hover {
+    cursor: pointer;
+    color: #efefef;
+  }
+  /* End of Footer */
 }
-/* End of Footer */
 /* Start of header */
 @media screen and (min-width: 451px) and (max-width: 800px) {
   header {
@@ -755,6 +1048,9 @@ html {
     line-height: 2;
     text-align: justify;
   }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version .about .dogs {
+    display: none;
+  }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long p {
     font-size: 1.5rem;
     width: 90%;
@@ -768,6 +1064,9 @@ html {
     font-weight: 600;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long img {
+    display: none;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long .notion {
     display: none;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills {
@@ -3099,6 +3398,17 @@ html {
   #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project:hover {
     background-color: #ffaa00;
     cursor: pointer;
+  }
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project #live-site {
+    display: none;
   }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a button,
   #projects.projects-section .featured-projects .carousel .project-a .buttons-b button,

@@ -226,7 +226,7 @@ html {
   }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a, #projects.projects-section .featured-projects .carousel .project-a .buttons-c, #projects.projects-section .featured-projects .carousel .project-a .buttons-b, #projects.projects-section .featured-projects .carousel .project-c .buttons-a, #projects.projects-section .featured-projects .carousel .project-c .buttons-c, #projects.projects-section .featured-projects .carousel .project-c .buttons-b, #projects.projects-section .featured-projects .carousel .project-b .buttons-a, #projects.projects-section .featured-projects .carousel .project-b .buttons-c, #projects.projects-section .featured-projects .carousel .project-b .buttons-b {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     text-align: center;
     margin: auto;
     padding: 0em 5%;
@@ -253,6 +253,10 @@ html {
     color: black;
     font-weight: 600;
     padding: 0.6em 1em;
+    margin-left: 0.5em;
+  }
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-b .buttons-a .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-b .buttons-c .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-b .buttons-b .source-code:is(.view-project) {
+    margin-right: 0.5em;
   }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-a .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-c .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-b .source-code:is(.view-project) #view-live-site {
     display: none;
@@ -337,8 +341,9 @@ html {
     margin: auto;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b img {
-    width: 80%;
+    width: 100%;
     height: auto;
+    padding: 1em;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d {
     width: 80%;
@@ -346,8 +351,9 @@ html {
     margin: auto;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d img {
-    width: 80%;
+    width: 100%;
     height: auto;
+    padding: 1em;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version .cv-icon {
     display: flex;
@@ -608,7 +614,7 @@ html {
     transition: height 0.3s ease;
   }
   .dev-process.open {
-    height: 20em;
+    height: 22em;
   }
   .dev-process.open i {
     transform: rotate(180deg);
@@ -684,6 +690,16 @@ html {
   footer .footer-container address strong:hover, footer .footer-container .legal-regulations strong:hover {
     cursor: pointer;
     color: #efefef;
+  }
+  footer .footer-container address #zip, footer .footer-container .legal-regulations #zip {
+    color: #efefef;
+  }
+  footer .footer-container address #zip:hover, footer .footer-container .legal-regulations #zip:hover {
+    cursor: auto;
+    color: #efefef;
+  }
+  footer .footer-container address #zip:hover ~ strong, footer .footer-container .legal-regulations #zip:hover ~ strong {
+    color: #FBBF00;
   }
   footer .footer-container .social-links {
     display: none;

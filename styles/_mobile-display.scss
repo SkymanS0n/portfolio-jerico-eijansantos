@@ -246,7 +246,7 @@
 
                     .buttons-a, .buttons-c, .buttons-b {
                         display: flex;
-                        justify-content: space-evenly;
+                        justify-content: center;
                         text-align: center;
                         margin: auto;
                         padding: 0em 5%;
@@ -265,10 +265,12 @@
                                 @each $property, $value in $btn-single {
                                     #{$property}: $value;
                                 }
+
+                                margin-left: 0.5em;
                             }
 
                             &:is(.view-project) {
-
+                                margin-right: 0.5em;
                                 #view-live-site {
                                     display: none;
                                 }
@@ -389,8 +391,9 @@
                             margin: auto;
 
                             img {
-                                width: 80%;
+                                width: 100%;
                                 height: auto;
+                                padding: 1em;
                             }
                         }
                     }
@@ -403,8 +406,9 @@
                             margin: auto;
 
                             img {
-                                width: 80%;
+                                width: 100%;
                                 height: auto;
+                                padding: 1em;
                             }
                         }
                     }
@@ -724,7 +728,7 @@
         transition: height 0.3s ease;
         
         &.open {
-        height: 20em;
+        height: 22em;
 
             i {
                 transform: rotate(180deg);
@@ -814,6 +818,19 @@
                     &:hover {
                         cursor: pointer;
                         color: #efefef;
+                    }
+                }
+
+                #zip {
+                    color: #efefef;
+
+                    &:hover {
+                        cursor: auto;
+                        color: #efefef;
+
+                        ~strong {
+                            color: #FBBF00;;
+                        }
                     }
                 }
             }

@@ -824,14 +824,9 @@
                 #zip {
                     color: #efefef;
                     font-weight: 300;
-
+                
                     &:hover {
                         cursor: auto;
-                        color: #efefef;
-
-                        ~strong {
-                            color: #FBBF00;;
-                        }
                     }
                 }
             }

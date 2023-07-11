@@ -697,10 +697,6 @@ html {
   }
   footer .footer-container address #zip:hover, footer .footer-container .legal-regulations #zip:hover {
     cursor: auto;
-    color: #efefef;
-  }
-  footer .footer-container address #zip:hover ~ strong, footer .footer-container .legal-regulations #zip:hover ~ strong {
-    color: #FBBF00;
   }
   footer .footer-container .social-links {
     display: none;

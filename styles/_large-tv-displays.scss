@@ -27,8 +27,9 @@
                     justify-content: center;
                   
                     img {
-                        max-width: 80%;
+                        max-width: 32px;
                         height: auto;
+                        min-width: 32px;
                         transition: transform 0.3s ease;
                     }
                   
@@ -57,6 +58,7 @@
                         flex-direction: row;
     
                         li {
+
                             a {
                                 padding: 0.5em;
                                 margin-left: 1.5em;
@@ -269,6 +271,10 @@
                                 &:hover {
                                 background-color: #ffaa00;
                                 cursor: pointer;
+                                }
+
+                                #live-site {
+                                    display: none;
                                 }
                             }
                     

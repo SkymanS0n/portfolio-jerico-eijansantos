@@ -737,9 +737,10 @@ html {
   header .nav-section a {
     align-items: center;
     display: flex;
+    max-width: 33px;
     height: auto;
     justify-content: center;
-    width: 30px;
+    min-width: 33px;
     z-index: 2;
   }
   header .nav-section #menu-toggle {
@@ -789,7 +790,7 @@ html {
   }
   header .nav-section .slide-menu .nav-bar-links li {
     padding: 0.5em;
-    margin-left: 1.5em;
+    margin-left: 2.5em;
   }
   header .nav-section .slide-menu .nav-bar-links li a {
     width: 100%;
@@ -831,10 +832,11 @@ html {
   .hero-section .hero-container .hero-details p, .hero-section .hero-container .hero-details h2 {
     line-height: 1.7em;
     margin-bottom: 0.5em;
+    font-size: 2rem;
   }
   .hero-section .hero-container .hero-details p:is(h2), .hero-section .hero-container .hero-details h2:is(h2) {
-    font-size: 1.5rem;
-    width: 50%;
+    font-size: 2rem;
+    width: 80%;
     align-self: center;
   }
   .hero-section .hero-container .hero-details h1 {
@@ -888,8 +890,8 @@ html {
     font-size: 3rem;
   }
   #projects.projects-section h4 {
-    font-size: 2rem;
-    margin-bottom: 4em;
+    font-size: 2.5rem;
+    margin-bottom: 2em;
   }
   #projects.projects-section .featured-projects {
     position: relative;
@@ -930,8 +932,8 @@ html {
   #projects.projects-section .featured-projects .carousel .project-a p,
   #projects.projects-section .featured-projects .carousel .project-b p,
   #projects.projects-section .featured-projects .carousel .project-c p {
-    font-size: 1.5rem;
-    margin-bottom: 4em;
+    font-size: 2rem;
+    margin-bottom: 2em;
     margin-top: 2em;
     width: 50%;
   }
@@ -986,6 +988,17 @@ html {
     transition: background-color 0.3s ease;
     font-size: 2rem;
   }
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project #live-site {
+    display: none;
+  }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code,
   #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code,
   #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code,
@@ -1011,7 +1024,7 @@ html {
   #projects.projects-section .featured-projects .indicators {
     display: flex;
     justify-content: center;
-    margin-top: 5em;
+    margin-top: 7em;
   }
   #projects.projects-section .featured-projects .indicators .indicator {
     width: 10px;
@@ -1054,23 +1067,23 @@ html {
     /* End of Skills Section */
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version .about p {
-    font-size: 1.5rem;
-    width: 90%;
+    font-size: 2rem;
+    width: 70%;
     margin: auto;
     margin-bottom: 2em;
     line-height: 2;
-    text-align: justify;
+    text-align: center;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version .about .dogs {
     display: none;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long p {
-    font-size: 1.5rem;
-    width: 90%;
+    font-size: 2rem;
+    width: 70%;
     margin: auto;
     margin-bottom: 5em;
     line-height: 2;
-    text-align: justify;
+    text-align: center;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long .read-more {
     color: #FBBF00;
@@ -1083,7 +1096,7 @@ html {
     display: none;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills {
-    padding: 5em 5%;
+    padding: 5em 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1096,7 +1109,7 @@ html {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-bottom: 6em;
+    margin-bottom: 8em;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b {
     width: 80%;
@@ -1105,8 +1118,9 @@ html {
     margin-right: 0em;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b img {
-    width: 50%;
+    width: 100%;
     height: auto;
+    padding: 1em;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d {
     width: 80%;
@@ -1115,14 +1129,15 @@ html {
     margin-left: 0em;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d img {
-    width: 50%;
+    width: 100%;
     height: auto;
+    padding: 1em;
   }
   #aboutmyself.aboutmyself .about-me-container .cv-icon {
     margin-top: 8em;
   }
   #aboutmyself.aboutmyself .about-me-container .cv-icon a {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #FBBF00;
     font-weight: 600;
   }
@@ -1150,9 +1165,9 @@ html {
     text-align: Center;
   }
   #contact.contact h4 {
-    width: 90%;
+    width: 100%;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: auto;
     padding-bottom: 4em;
   }
@@ -1195,8 +1210,8 @@ html {
   #contact.contact .contact-container .contact-me .business-email, #contact.contact .contact-container .contact-me .business-phone {
     display: flex;
     align-items: center;
-    font-size: 1.6rem;
-    padding: 1em 1em 1em 3em;
+    font-size: 2rem;
+    padding: 1em 1em 1em 1em;
     width: 360px;
     margin: auto;
   }
@@ -1240,9 +1255,9 @@ html {
   }
   #contact.contact .contact-container .contact-me .address2 {
     display: flex;
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 100;
-    padding: 0em 1em 1em 3em;
+    padding: 0em 1em 1em 1em;
     width: 360px;
     margin: auto;
   }
@@ -1265,8 +1280,8 @@ html {
   }
   #contact.contact .contact-container .contact-me .social-links2 {
     display: flex;
-    font-size: 1.6rem;
-    padding: 0em 1em 1em 3em;
+    font-size: 2rem;
+    padding: 0em 1em 1em 1em;
     width: 360px;
     margin: auto;
   }
@@ -1312,6 +1327,7 @@ html {
     margin: auto;
     margin-bottom: 0em;
     padding-bottom: 3em;
+    font-size: 2.5rem;
   }
   #contact.contact .contact-container .contact-form form {
     font-size: 2rem;
@@ -1326,7 +1342,7 @@ html {
   #contact.contact .contact-container .contact-form form label {
     padding-top: 1em;
     padding-bottom: 0.5em;
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: #efefef;
   }
   #contact.contact .contact-container .contact-form form button {
@@ -1338,7 +1354,7 @@ html {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
     color: #000000;
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 2rem;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
   }
@@ -1351,7 +1367,7 @@ html {
     justify-content: center;
     width: 100%;
     padding: 0em 0%;
-    font-size: 1.5rem;
+    font-size: 2rem;
     overflow: hidden;
     height: 3em;
     transition: height 0.3s ease;
@@ -1389,7 +1405,7 @@ html {
   .dev-process p {
     width: 100%;
     text-align: center;
-    padding: 4em 25%;
+    padding: 4em 15%;
     background-color: #000000;
     color: #efefef;
   }
@@ -1398,7 +1414,6 @@ html {
   footer {
     background-color: #16181a;
     color: #efefef;
-    padding: 0em 1.5em;
     font-size: 1rem;
   }
   footer .footer-container {
@@ -1409,6 +1424,7 @@ html {
     align-items: center;
     width: 90%;
     margin: auto;
+    font-size: 1.3rem;
   }
   footer .footer-container .sitemap {
     display: none;
@@ -1422,7 +1438,7 @@ html {
     margin: 0em;
   }
   footer .footer-container address:is(.legal-regulations), footer .footer-container .legal-regulations:is(.legal-regulations) {
-    margin: 0em 10% 0em 0em;
+    margin: 0em 5% 0em 0em;
   }
   footer .footer-container address strong, footer .footer-container .legal-regulations strong {
     color: #FBBF00;
@@ -1438,11 +1454,12 @@ html {
   footer .footer-container .hire {
     display: flex;
     color: #FBBF00;
-    text-decoration: underline;
+    font-weight: 600;
   }
   footer .footer-container .hire:hover {
     cursor: pointer;
     color: #efefef;
+    text-decoration: underline;
   }
   /* End of Footer */
 }
@@ -1463,16 +1480,17 @@ html {
     color: #efefef;
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 70%;
     margin: auto;
     z-index: 2;
   }
   header .nav-section a {
     align-items: center;
     display: flex;
+    max-width: 33px;
     height: auto;
     justify-content: center;
-    width: 30px;
+    min-width: 33px;
     z-index: 2;
   }
   header .nav-section #menu-toggle {
@@ -1522,7 +1540,7 @@ html {
   }
   header .nav-section .slide-menu .nav-bar-links li {
     padding: 0.5em;
-    margin-left: 1.5em;
+    margin-left: 2.5em;
   }
   header .nav-section .slide-menu .nav-bar-links li a {
     width: 100%;
@@ -1554,7 +1572,7 @@ html {
     margin: auto;
     padding-top: 5em;
     text-align: center;
-    width: 80%;
+    width: 90%;
   }
   .hero-section .hero-container .hero-details {
     width: 100%;
@@ -1564,10 +1582,11 @@ html {
   .hero-section .hero-container .hero-details p, .hero-section .hero-container .hero-details h2 {
     line-height: 1.7em;
     margin-bottom: 0.5em;
+    font-size: 2rem;
   }
   .hero-section .hero-container .hero-details p:is(h2), .hero-section .hero-container .hero-details h2:is(h2) {
-    font-size: 1.5rem;
-    width: 50%;
+    font-size: 2rem;
+    width: 80%;
     align-self: center;
   }
   .hero-section .hero-container .hero-details h1 {
@@ -1621,13 +1640,13 @@ html {
     font-size: 3rem;
   }
   #projects.projects-section h4 {
-    font-size: 2rem;
-    margin-bottom: 4em;
+    font-size: 2.5rem;
+    margin-bottom: 2em;
   }
   #projects.projects-section .featured-projects {
     position: relative;
     overflow: hidden;
-    width: 80%;
+    width: 100%;
   }
   #projects.projects-section .featured-projects .carousel {
     display: flex;
@@ -1663,8 +1682,8 @@ html {
   #projects.projects-section .featured-projects .carousel .project-a p,
   #projects.projects-section .featured-projects .carousel .project-b p,
   #projects.projects-section .featured-projects .carousel .project-c p {
-    font-size: 1.5rem;
-    margin-bottom: 4em;
+    font-size: 2rem;
+    margin-bottom: 2em;
     margin-top: 2em;
     width: 50%;
   }
@@ -1719,6 +1738,17 @@ html {
     transition: background-color 0.3s ease;
     font-size: 2rem;
   }
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project #live-site {
+    display: none;
+  }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code,
   #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code,
   #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code,
@@ -1744,7 +1774,7 @@ html {
   #projects.projects-section .featured-projects .indicators {
     display: flex;
     justify-content: center;
-    margin-top: 5em;
+    margin-top: 7em;
   }
   #projects.projects-section .featured-projects .indicators .indicator {
     width: 10px;
@@ -1779,10 +1809,6 @@ html {
     font-size: 3rem;
     margin-bottom: 2.6666em;
   }
-  #aboutmyself.aboutmyself .about-me-container {
-    width: 80%;
-    margin: auto;
-  }
   #aboutmyself.aboutmyself .about-me-container .image-container img {
     margin-bottom: 8em;
   }
@@ -1791,20 +1817,23 @@ html {
     /* End of Skills Section */
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version .about p {
-    font-size: 1.5rem;
-    width: 90%;
+    font-size: 2rem;
+    width: 70%;
     margin: auto;
     margin-bottom: 2em;
     line-height: 2;
-    text-align: justify;
+    text-align: center;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version .about .dogs {
+    display: none;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long p {
-    font-size: 1.5rem;
-    width: 90%;
+    font-size: 2rem;
+    width: 70%;
     margin: auto;
     margin-bottom: 5em;
     line-height: 2;
-    text-align: justify;
+    text-align: center;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long .read-more {
     color: #FBBF00;
@@ -1813,8 +1842,11 @@ html {
   #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long img {
     display: none;
   }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long .notion {
+    display: none;
+  }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills {
-    padding: 5em 5%;
+    padding: 8em 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1827,7 +1859,10 @@ html {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-bottom: 6em;
+    margin-bottom: 10em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a {
+    width: 50%;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b {
     width: 80%;
@@ -1836,8 +1871,12 @@ html {
     margin-right: 0em;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b img {
-    width: 50%;
+    width: 100%;
     height: auto;
+    padding: 1em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b {
+    width: 50%;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d {
     width: 80%;
@@ -1846,14 +1885,15 @@ html {
     margin-left: 0em;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d img {
-    width: 50%;
+    width: 100%;
     height: auto;
+    padding: 1em;
   }
   #aboutmyself.aboutmyself .about-me-container .cv-icon {
     margin-top: 8em;
   }
   #aboutmyself.aboutmyself .about-me-container .cv-icon a {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #FBBF00;
     font-weight: 600;
   }
@@ -1881,9 +1921,9 @@ html {
     text-align: Center;
   }
   #contact.contact h4 {
-    width: 90%;
+    width: 100%;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: auto;
     padding-bottom: 4em;
   }
@@ -1893,7 +1933,6 @@ html {
     justify-content: center;
     width: 100%;
     align-items: center;
-    margin: auto;
   }
   #contact.contact .contact-container .contact-me {
     color: #efefef;
@@ -1927,8 +1966,8 @@ html {
   #contact.contact .contact-container .contact-me .business-email, #contact.contact .contact-container .contact-me .business-phone {
     display: flex;
     align-items: center;
-    font-size: 1.6rem;
-    padding: 1em 1em 1em 3em;
+    font-size: 2rem;
+    padding: 1em 1em 1em 1em;
     width: 360px;
     margin: auto;
   }
@@ -1972,9 +2011,9 @@ html {
   }
   #contact.contact .contact-container .contact-me .address2 {
     display: flex;
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 100;
-    padding: 0em 1em 1em 3em;
+    padding: 0em 1em 1em 1em;
     width: 360px;
     margin: auto;
   }
@@ -1997,8 +2036,8 @@ html {
   }
   #contact.contact .contact-container .contact-me .social-links2 {
     display: flex;
-    font-size: 1.6rem;
-    padding: 0em 1em 1em 3em;
+    font-size: 2rem;
+    padding: 0em 1em 1em 1em;
     width: 360px;
     margin: auto;
   }
@@ -2044,6 +2083,7 @@ html {
     margin: auto;
     margin-bottom: 0em;
     padding-bottom: 3em;
+    font-size: 2.5rem;
   }
   #contact.contact .contact-container .contact-form form {
     font-size: 2rem;
@@ -2058,7 +2098,7 @@ html {
   #contact.contact .contact-container .contact-form form label {
     padding-top: 1em;
     padding-bottom: 0.5em;
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: #efefef;
   }
   #contact.contact .contact-container .contact-form form button {
@@ -2070,7 +2110,7 @@ html {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
     color: #000000;
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 2rem;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
   }
@@ -2083,7 +2123,7 @@ html {
     justify-content: center;
     width: 100%;
     padding: 0em 0%;
-    font-size: 1.5rem;
+    font-size: 2rem;
     overflow: hidden;
     height: 3em;
     transition: height 0.3s ease;
@@ -2121,7 +2161,7 @@ html {
   .dev-process p {
     width: 100%;
     text-align: center;
-    padding: 4em 25%;
+    padding: 4em 15%;
     background-color: #000000;
     color: #efefef;
   }
@@ -2130,7 +2170,6 @@ html {
   footer {
     background-color: #16181a;
     color: #efefef;
-    padding: 0em 1.5em;
     font-size: 1rem;
   }
   footer .footer-container {
@@ -2139,8 +2178,9 @@ html {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 70%;
     margin: auto;
+    font-size: 1.3rem;
   }
   footer .footer-container .sitemap {
     display: none;
@@ -2154,7 +2194,7 @@ html {
     margin: 0em;
   }
   footer .footer-container address:is(.legal-regulations), footer .footer-container .legal-regulations:is(.legal-regulations) {
-    margin: 0em 8% 0em 0em;
+    margin: 0em 5% 0em 0em;
   }
   footer .footer-container address strong, footer .footer-container .legal-regulations strong {
     color: #FBBF00;
@@ -2170,11 +2210,12 @@ html {
   footer .footer-container .hire {
     display: flex;
     color: #FBBF00;
-    text-decoration: underline;
+    font-weight: 600;
   }
   footer .footer-container .hire:hover {
     cursor: pointer;
     color: #efefef;
+    text-decoration: underline;
   }
   /* End of Footer */
 }
@@ -2204,8 +2245,9 @@ html {
     justify-content: center;
   }
   header .nav-section #logo img {
-    max-width: 80%;
+    max-width: 33px;
     height: auto;
+    min-width: 33px;
     transition: transform 0.3s ease;
   }
   header .nav-section #logo:hover img {
@@ -2500,6 +2542,17 @@ html {
   #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project:hover {
     background-color: #ffaa00;
     cursor: pointer;
+  }
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project #live-site {
+    display: none;
   }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a button,
   #projects.projects-section .featured-projects .carousel .project-a .buttons-b button,
@@ -4040,8 +4093,9 @@ html {
     justify-content: center;
   }
   header .nav-section #logo img {
-    max-width: 80%;
+    max-width: 32px;
     height: auto;
+    min-width: 32px;
     transition: transform 0.3s ease;
   }
   header .nav-section #logo:hover img {
@@ -4336,6 +4390,17 @@ html {
   #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project:hover {
     background-color: #ffaa00;
     cursor: pointer;
+  }
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project #live-site,
+  #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project #live-site {
+    display: none;
   }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a button,
   #projects.projects-section .featured-projects .carousel .project-a .buttons-b button,

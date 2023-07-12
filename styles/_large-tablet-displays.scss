@@ -18,16 +18,17 @@
             color: $font-color1;
             display: flex;
             justify-content: space-between;
-            width: 80%;
+            width: 70%;
             margin: auto;
             z-index: 2;
 
             a {
                 align-items: center;
                 display: flex;
+                max-width: 33px;
                 height: auto;
                 justify-content: center;
-                width: 30px;
+                min-width: 33px;
                 z-index: 2;
             }
 
@@ -83,7 +84,8 @@
 
                     li {
                         padding: 0.5em;
-                        margin-left: 1.5em;
+                        margin-left: 2.5em;
+
                         a {
                             width: 100%;
                         }
@@ -121,7 +123,7 @@
             margin: auto;
             padding-top: 5em;
             text-align: center;
-            width: 80%;
+            width: $mobile-width;
 
             .hero-details {
                 width: 100%;
@@ -131,10 +133,11 @@
                 p, h2 {
                     line-height: 1.7em;
                     margin-bottom: 0.5em;
+                    font-size: 2rem;
     
                     &:is(h2) {
-                        font-size: 1.5rem;
-                        width: 50%;
+                        font-size: 2rem;
+                        width: 80%;
                         align-self: center;
                     }
                 }
@@ -201,14 +204,14 @@
         }
     
         h4 {
-        font-size: 2rem;
-        margin-bottom: 4em;
+        font-size: 2.5rem;
+        margin-bottom: 2em;
         }
     
         .featured-projects {
         position: relative;
         overflow: hidden;
-        width:80%;
+        width: 100%;
     
             .carousel {
                 display: flex;
@@ -241,8 +244,8 @@
                     }
             
                     p {
-                        font-size: 1.5rem;
-                        margin-bottom: 4em;
+                        font-size: 2rem;
+                        margin-bottom: 2em;
                         margin-top: 2em;
                         width: 50%;
                     }
@@ -263,6 +266,10 @@
                             @each $property, $value in $btn {
                                 #{$property}: $value;
                                 font-size: 2rem;
+                            }
+
+                            #live-site {
+                                display: none;
                             }
                         }
             
@@ -285,7 +292,7 @@
             .indicators {
                 display: flex;
                 justify-content: center;
-                margin-top: 5em;
+                margin-top: 7em;
         
                 .indicator {
                     width: 10px;
@@ -336,8 +343,6 @@
         }
 
         .about-me-container {
-            width: 80%;
-            margin: auto;
 
             .image-container {
 
@@ -353,14 +358,14 @@
                     .about {
 
                         p {
-                            font-size: 1.5rem;
-                            width: 90%;
+                            font-size: 2rem;
+                            width: 70%;
                             margin: auto;
                             margin-bottom: 2em;
-                            line-height: 2;text-align: justify;
+                            line-height: 2;text-align: center;
                         }
                         .dogs {
-
+                            display: none;
                         }
                     }
                 }
@@ -370,12 +375,12 @@
                     .somewhat-long {
 
                         p {
-                            font-size: 1.5rem;
-                            width: 90%;
+                            font-size: 2rem;
+                            width: 70%;
                             margin: auto;
                             margin-bottom: 5em;
                             line-height: 2;
-                            text-align: justify;
+                            text-align: center;
                         }
             
                         .read-more {
@@ -388,7 +393,7 @@
                         }
 
                         .notion {
-                            
+                            display: none;
                         }
                     }
                 }
@@ -397,7 +402,7 @@
         
     
                 .skills {
-                    padding: 5em 5%;
+                    padding: 8em 0;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
@@ -410,11 +415,12 @@
                         position: absolute;
                         left: 50%;
                         transform: translate(-50%, -50%);
-                        margin-bottom: 6em;
+                        margin-bottom: 10em;
                     }
 
                     .tech-skills-a {
-
+                        width: 50%;
+                        
                         .group-a, .group-b {
                             width: 80%;
                             display: flex;
@@ -422,13 +428,15 @@
                             margin-right: 0em;
 
                             img {
-                                width: 50%;
+                                width: 100%;
                                 height: auto;
+                                padding: 1em;
                             }
                         }
                     }
 
                     .tech-skills-b {
+                        width: 50%;
 
                         .group-c, .group-d {
                             width: 80%;
@@ -437,8 +445,9 @@
                             margin-left: 0em;
 
                             img {
-                                width: 50%;
+                                width: 100%;
                                 height: auto;
+                                padding: 1em;
                             }
                         }
                     }
@@ -449,7 +458,7 @@
                 margin-top: 8em;
 
                 a {
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                     color: #FBBF00;
                     font-weight: 600;
         
@@ -488,9 +497,9 @@
         }
 
         h4 {
-            width: 90%;
+            width: 100%;
             text-align: center;
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin: auto;
             padding-bottom: 4em;
         }
@@ -501,7 +510,6 @@
             justify-content: center;
             width: 100%;
             align-items: center;
-            margin: auto;
 
             .contact-me {
                 color: $font-color1;
@@ -539,8 +547,8 @@
                 .business-email, .business-phone {
                     display: flex;
                     align-items: center;
-                    font-size: 1.6rem;
-                    padding: 1em 1em 1em 3em;
+                    font-size: 2rem;
+                    padding: 1em 1em 1em 1em;
                     width: 360px;
                     margin: auto;
 
@@ -593,9 +601,9 @@
 
                 .address2 {
                     display: flex;
-                    font-size: 1.6rem;
+                    font-size: 2rem;
                     font-weight: 100;
-                    padding: 0em 1em 1em 3em;
+                    padding: 0em 1em 1em 1em;
                     width: 360px;
                     margin: auto;
 
@@ -628,8 +636,8 @@
                 
                 .social-links2 {
                     display: flex;
-                    font-size: 1.6rem;
-                    padding: 0em 1em 1em 3em;
+                    font-size: 2rem;
+                    padding: 0em 1em 1em 1em;
                     width: 360px;
                     margin: auto;
 
@@ -684,6 +692,7 @@
                     margin: auto;
                     margin-bottom: 0em;
                     padding-bottom: 3em;
+                    font-size: 2.5rem;
                 }
 
                 form {
@@ -700,7 +709,7 @@
                     label {
                         padding-top: 1em;
                         padding-bottom: 0.5em;
-                        font-size: 1.6rem;
+                        font-size: 2rem;
                         color: $font-color1;
                     }
 
@@ -713,7 +722,7 @@
                         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
                         color: #000000;
                         font-weight: 600;
-                        font-size: 1.6rem;
+                        font-size: 2rem;
                         padding: 0.6em 1em;
                         transition: background-color 0.3s ease;
 
@@ -732,7 +741,7 @@
         justify-content: center;
         width: 100%;
         padding: 0em 0%;
-        font-size: 1.5rem;
+        font-size: 2rem;
         overflow: hidden;
         height: 3em; 
         transition: height 0.3s ease;
@@ -775,7 +784,7 @@
         p   {
             width: 100%;
             text-align: center;
-            padding: 4em 25%;
+            padding: 4em 15%;
             background-color: #000000;
             color: $font-color1;
         }
@@ -790,7 +799,6 @@
     footer {
         background-color: #16181a;
         color: #efefef;
-        padding: 0em 1.5em;
         font-size: 1rem;
 
         .footer-container {
@@ -799,8 +807,9 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            width: 80%;
+            width: 70%;
             margin: auto;
+            font-size: 1.3rem;
 
             .sitemap {
                 display: none;
@@ -816,7 +825,7 @@
                 }
 
                 &:is(.legal-regulations) {
-                    margin: 0em 8% 0em 0em;
+                    margin: 0em 5% 0em 0em;
                 }
 
                 strong {
@@ -837,11 +846,12 @@
             .hire {
                 display: flex;
                 color: #FBBF00;
-                text-decoration: underline;
+                font-weight: 600;
 
                 &:hover {
                     cursor: pointer;
                     color: #efefef;
+                    text-decoration: underline;
                 }
             }
         }

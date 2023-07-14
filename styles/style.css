@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css");
 html {
   font-size: 62.5%;
   font-family: "Poppins", sans-serif;
@@ -7,18 +6,41 @@ html {
 
 /* Start of header */
 @media screen and (max-width: 450px) {
-  header {
-    align-items: center;
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    /* End of header */
+    /* Start of Hero Section */
+    /* End of Hero Section */
+    /* Start of Project Section */
+    /* End of Project Section */
+    /* Start of About Section */
+    /* End of About Section */
+    /* Start of Contact Section */
+    /* End of Contact Section */
+    /* Start of Dropdown portion */
+    /* End of Dropdown portion */
+    /* Start of Footer */
+    /* End of Footer */
+  }
+  .container h3 {
+    font-size: 3rem;
+  }
+  .container h4 {
+    font-size: 2.5rem;
+  }
+  .container header {
     background-color: #16181a;
     box-shadow: 0px 2px 4px rgba(87, 87, 87, 0.4);
-    padding: 1em 0 1em 0;
+    padding: 0.75em 0em;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
   }
-  header .nav-section {
-    align-items: center;
+  .container header .nav-section {
     color: #efefef;
     display: flex;
     justify-content: space-between;
@@ -26,7 +48,7 @@ html {
     width: 90%;
     z-index: 2;
   }
-  header .nav-section a {
+  .container header .nav-section a {
     align-items: center;
     display: flex;
     height: auto;
@@ -34,42 +56,42 @@ html {
     width: 33px;
     z-index: 2;
   }
-  header .nav-section #menu-toggle {
+  .container header .nav-section #menu-toggle {
     display: none;
     z-index: 1;
   }
-  header .nav-section #menu-toggle:checked ~ .slide-menu {
+  .container header .nav-section #menu-toggle:checked ~ .slide-menu {
     left: 0;
-    top: 2.5em;
+    top: 3.15em;
     transition: 0.4s ease-in-out;
     z-index: -1;
   }
-  header .nav-section #menu-toggle:not(:checked) ~ .slide-menu {
+  .container header .nav-section #menu-toggle:not(:checked) ~ .slide-menu {
     background-color: transparent;
     left: 0;
     top: -100%;
     transition: 0.5s ease-in-out;
     z-index: -1;
   }
-  header .nav-section .hamburger {
+  .container header .nav-section .hamburger {
     align-self: center;
     display: flex;
     flex-direction: column;
-    height: 28px;
+    height: 25px;
     justify-content: space-between;
     width: 33px;
     z-index: 2;
   }
-  header .nav-section .hamburger span {
+  .container header .nav-section .hamburger span {
     background-color: #FBBF00;
     color: #efefef;
-    height: 5.5px;
+    height: 5px;
     width: 100%;
+    border-radius: 0.5em;
   }
-  header .nav-section .slide-menu {
+  .container header .nav-section .slide-menu {
     background-color: rgb(66, 70, 75);
     display: flex;
-    font-size: 2rem;
     height: calc(100vh - 50px);
     justify-content: center;
     position: fixed;
@@ -77,87 +99,94 @@ html {
     width: 100%;
     z-index: -1;
   }
-  header .nav-section .slide-menu .nav-bar-links {
+  .container header .nav-section .slide-menu .nav-bar-links {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 5em;
+    width: 100%;
     z-index: -1;
   }
-  header .nav-section .slide-menu .nav-bar-links li {
+  .container header .nav-section .slide-menu .nav-bar-links li {
     padding: 0.5em;
     z-index: -1;
   }
-  header .nav-section .slide-menu .nav-bar-links li a {
+  .container header .nav-section .slide-menu .nav-bar-links li a {
     width: 100%;
   }
-  header .nav-section .slide-menu .nav-bar-links .menu-send-message {
+  .container header .nav-section .slide-menu .nav-bar-links .menu-send-message {
     margin-top: 5em;
     align-self: center;
+    width: 10.5em;
     text-align: center;
+    width: 10.5em;
     background-color: #FBBF00;
+    width: 10.5em;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    width: 10.5em;
     color: #000000;
+    width: 10.5em;
     font-weight: 600;
+    width: 10.5em;
     padding: 0.6em 1em;
+    width: 10.5em;
     transition: background-color 0.3s ease;
+    width: 10.5em;
+    width: 10em;
+    width: 10.5em;
+    border-radius: 2em;
+    width: 10.5em;
+    font-size: 2rem;
+    width: 10.5em;
   }
-  /* End of header */
-  /* Start of Hero Section */
-  .hero-section {
+  .container .hero-section {
     background: linear-gradient(to right, #42464B, #16181a);
-    padding-bottom: 8em;
+    padding-bottom: 5em;
   }
-  .hero-section .hero-container {
+  .container .hero-section .hero-container {
     color: white;
     display: flex;
     flex-direction: column;
     font-size: 2rem;
     font-weight: 300;
     margin: auto;
-    padding-top: 5em;
+    padding-top: 7em;
     text-align: center;
     width: 90%;
   }
-  .hero-section .hero-container .hero-details {
+  .container .hero-section .hero-container .hero-details {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
-  .hero-section .hero-container .hero-details p, .hero-section .hero-container .hero-details h2 {
-    line-height: 1.7em;
+  .container .hero-section .hero-container .hero-details p, .container .hero-section .hero-container .hero-details h2 {
     margin-bottom: 0.5em;
   }
-  .hero-section .hero-container .hero-details p:is(h2), .hero-section .hero-container .hero-details h2:is(h2) {
-    font-size: 1.7rem;
-    width: 90%;
+  .container .hero-section .hero-container .hero-details p:is(h2), .container .hero-section .hero-container .hero-details h2:is(h2) {
+    width: 100%;
     text-align: center;
-    margin: auto;
   }
-  .hero-section .hero-container .hero-details h1 {
+  .container .hero-section .hero-container .hero-details h1 {
     font-size: 4rem;
     font-weight: 600;
     margin-bottom: 0.3em;
   }
-  .hero-section .hero-container .hero-details .buttons {
+  .container .hero-section .hero-container .hero-details .buttons {
     display: none;
   }
-  .hero-section .hero-container .hero-img {
+  .container .hero-section .hero-container .hero-img {
     margin-top: 1em;
     margin-bottom: 2em;
     width: 100%;
     height: auto;
   }
-  .hero-section #buttons2 {
+  .container .hero-section #buttons2 {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 90%;
+    flex-direction: column;
+    width: 100%;
     margin: auto;
   }
-  .hero-section #buttons2 .view-work, .hero-section #buttons2 .about-me {
-    min-width: 5em;
-    font-size: 1.7rem;
+  .container .hero-section #buttons2 .view-work, .container .hero-section #buttons2 .about-me {
     align-self: center;
     text-align: center;
     background-color: #FBBF00;
@@ -166,77 +195,81 @@ html {
     font-weight: 600;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
+    width: 10em;
+    border-radius: 2em;
+    font-size: 2rem;
   }
-  .hero-section #buttons2 .view-work:is(.about-me), .hero-section #buttons2 .about-me:is(.about-me) {
+  .container .hero-section #buttons2 .view-work:is(.about-me), .container .hero-section #buttons2 .about-me:is(.about-me) {
+    align-self: center;
     background-color: transparent;
-    color: #FBBF00;
     box-shadow: none;
+    color: #FBBF00;
+    font-weight: 100;
+    padding: 0.6em 1em;
+    width: 10em;
+    border-radius: 2em;
+    font-size: 2rem;
+    margin-top: 1em;
   }
-  /* End of Hero Section */
-  /* Start of Project Section */
-  #projects.projects-section {
+  .container #projects.projects-section {
     background-color: #eaeaea;
-    padding: 8em 0em;
+    padding: 5em 0em;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  #projects.projects-section h3 {
-    font-size: 3rem;
+  .container #projects.projects-section h3 {
+    word-break: break-all;
   }
-  #projects.projects-section h4 {
-    font-size: 2rem;
+  .container #projects.projects-section h4 {
     margin-bottom: 4em;
     text-align: center;
   }
-  #projects.projects-section .featured-projects {
+  .container #projects.projects-section .featured-projects {
     margin: auto;
     width: 100%;
+    font-size: 2rem;
   }
-  #projects.projects-section .featured-projects .carousel {
+  .container #projects.projects-section .featured-projects .carousel {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  #projects.projects-section .featured-projects .carousel .project-a, #projects.projects-section .featured-projects .carousel .project-c, #projects.projects-section .featured-projects .carousel .project-b {
+  .container #projects.projects-section .featured-projects .carousel .project-a, .container #projects.projects-section .featured-projects .carousel .project-c, .container #projects.projects-section .featured-projects .carousel .project-b {
     width: 90%;
     margin: auto;
     margin-bottom: 8em;
     text-align: center;
     margin: auto;
   }
-  #projects.projects-section .featured-projects .carousel .project-a p, #projects.projects-section .featured-projects .carousel .project-c p, #projects.projects-section .featured-projects .carousel .project-b p {
-    font-size: 1.5em;
-    text-align: center;
-    width: 70%;
+  .container #projects.projects-section .featured-projects .carousel .project-a p, .container #projects.projects-section .featured-projects .carousel .project-c p, .container #projects.projects-section .featured-projects .carousel .project-b p {
+    width: 90%;
     text-align: center;
     margin: auto;
     margin-bottom: 3em;
   }
-  #projects.projects-section .featured-projects .carousel .project-a:is(.project-a), #projects.projects-section .featured-projects .carousel .project-c:is(.project-a), #projects.projects-section .featured-projects .carousel .project-b:is(.project-a) {
-    padding-bottom: 8em;
+  .container #projects.projects-section .featured-projects .carousel .project-a:is(.project-a), .container #projects.projects-section .featured-projects .carousel .project-c:is(.project-a), .container #projects.projects-section .featured-projects .carousel .project-b:is(.project-a) {
+    padding-bottom: 5em;
     width: 100%;
   }
-  #projects.projects-section .featured-projects .carousel .project-a:is(.project-c), #projects.projects-section .featured-projects .carousel .project-c:is(.project-c), #projects.projects-section .featured-projects .carousel .project-b:is(.project-c) {
-    padding-top: 8em;
+  .container #projects.projects-section .featured-projects .carousel .project-a:is(.project-c), .container #projects.projects-section .featured-projects .carousel .project-c:is(.project-c), .container #projects.projects-section .featured-projects .carousel .project-b:is(.project-c) {
+    padding-top: 5em;
     width: 100%;
   }
-  #projects.projects-section .featured-projects .carousel .project-a img, #projects.projects-section .featured-projects .carousel .project-c img, #projects.projects-section .featured-projects .carousel .project-b img {
+  .container #projects.projects-section .featured-projects .carousel .project-a img, .container #projects.projects-section .featured-projects .carousel .project-c img, .container #projects.projects-section .featured-projects .carousel .project-b img {
     margin-bottom: 2em;
   }
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-a, #projects.projects-section .featured-projects .carousel .project-a .buttons-c, #projects.projects-section .featured-projects .carousel .project-a .buttons-b, #projects.projects-section .featured-projects .carousel .project-c .buttons-a, #projects.projects-section .featured-projects .carousel .project-c .buttons-c, #projects.projects-section .featured-projects .carousel .project-c .buttons-b, #projects.projects-section .featured-projects .carousel .project-b .buttons-a, #projects.projects-section .featured-projects .carousel .project-b .buttons-c, #projects.projects-section .featured-projects .carousel .project-b .buttons-b {
+  .container #projects.projects-section .featured-projects .carousel .project-a .buttons-a, .container #projects.projects-section .featured-projects .carousel .project-a .buttons-c, .container #projects.projects-section .featured-projects .carousel .project-a .buttons-b, .container #projects.projects-section .featured-projects .carousel .project-c .buttons-a, .container #projects.projects-section .featured-projects .carousel .project-c .buttons-c, .container #projects.projects-section .featured-projects .carousel .project-c .buttons-b, .container #projects.projects-section .featured-projects .carousel .project-b .buttons-a, .container #projects.projects-section .featured-projects .carousel .project-b .buttons-c, .container #projects.projects-section .featured-projects .carousel .project-b .buttons-b {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     margin: auto;
     padding: 0em 5%;
   }
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project, #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code, #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project, #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code, #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project, #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code, #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project, #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code, #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project, #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code, #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project, #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code, #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project, #projects.projects-section .featured-projects .carousel .project-b .buttons-a .source-code, #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project, #projects.projects-section .featured-projects .carousel .project-b .buttons-c .source-code, #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project, #projects.projects-section .featured-projects .carousel .project-b .buttons-b .source-code {
+  .container #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project, .container #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code, .container #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project, .container #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code, .container #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project, .container #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code, .container #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project, .container #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code, .container #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project, .container #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code, .container #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project, .container #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code, .container #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project, .container #projects.projects-section .featured-projects .carousel .project-b .buttons-a .source-code, .container #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project, .container #projects.projects-section .featured-projects .carousel .project-b .buttons-c .source-code, .container #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project, .container #projects.projects-section .featured-projects .carousel .project-b .buttons-b .source-code {
     display: flex;
     justify-content: center;
-    font-size: 1.5rem;
-    width: 8.5em;
-    padding: 0.5em;
     align-self: center;
     text-align: center;
     background-color: #FBBF00;
@@ -245,381 +278,405 @@ html {
     font-weight: 600;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
+    width: 10em;
+    border-radius: 2em;
+    font-size: 2rem;
   }
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project:is(.source-code), #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code:is(.source-code), #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project:is(.source-code), #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code:is(.source-code), #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project:is(.source-code), #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code:is(.source-code), #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project:is(.source-code), #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code:is(.source-code), #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project:is(.source-code), #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code:is(.source-code), #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project:is(.source-code), #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code:is(.source-code), #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project:is(.source-code), #projects.projects-section .featured-projects .carousel .project-b .buttons-a .source-code:is(.source-code), #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project:is(.source-code), #projects.projects-section .featured-projects .carousel .project-b .buttons-c .source-code:is(.source-code), #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project:is(.source-code), #projects.projects-section .featured-projects .carousel .project-b .buttons-b .source-code:is(.source-code) {
+  .container #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-b .buttons-a .source-code:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-b .buttons-c .source-code:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project:is(.source-code), .container #projects.projects-section .featured-projects .carousel .project-b .buttons-b .source-code:is(.source-code) {
     align-self: center;
     background-color: transparent;
     box-shadow: none;
-    color: black;
-    font-weight: 600;
+    color: #FBBF00;
+    font-weight: 100;
     padding: 0.6em 1em;
-    margin-left: 0.5em;
+    width: 10em;
+    border-radius: 2em;
+    font-size: 2rem;
+    color: #000000;
+    margin-top: 1em;
   }
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-b .buttons-a .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-b .buttons-c .source-code:is(.view-project), #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project:is(.view-project), #projects.projects-section .featured-projects .carousel .project-b .buttons-b .source-code:is(.view-project) {
-    margin-right: 0.5em;
-  }
-  #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-a .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-c .source-code:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project:is(.view-project) #view-live-site, #projects.projects-section .featured-projects .carousel .project-b .buttons-b .source-code:is(.view-project) #view-live-site {
+  .container #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-a .buttons-a .source-code:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-a .buttons-c .view-project:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-a .buttons-c .source-code:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-a .buttons-b .source-code:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-c .buttons-a .view-project:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-b .buttons-a .view-project:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-b .buttons-a .source-code:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-b .buttons-c .view-project:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-b .buttons-c .source-code:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-b .buttons-b .view-project:is(.view-project) #view-live-site, .container #projects.projects-section .featured-projects .carousel .project-b .buttons-b .source-code:is(.view-project) #view-live-site {
     display: none;
   }
-  #projects.projects-section .featured-projects .carousel .project-a .doc-options, #projects.projects-section .featured-projects .carousel .project-c .doc-options, #projects.projects-section .featured-projects .carousel .project-b .doc-options {
+  .container #projects.projects-section .featured-projects .carousel .project-a .doc-options, .container #projects.projects-section .featured-projects .carousel .project-c .doc-options, .container #projects.projects-section .featured-projects .carousel .project-b .doc-options {
     display: none;
   }
-  #projects.projects-section .featured-projects .carousel .project-a .doc-options a, #projects.projects-section .featured-projects .carousel .project-c .doc-options a, #projects.projects-section .featured-projects .carousel .project-b .doc-options a {
+  .container #projects.projects-section .featured-projects .carousel .project-a .doc-options a, .container #projects.projects-section .featured-projects .carousel .project-c .doc-options a, .container #projects.projects-section .featured-projects .carousel .project-b .doc-options a {
     display: none;
   }
-  #projects.projects-section .featured-projects .carousel .project-b {
-    padding: 8em 0em;
+  .container #projects.projects-section .featured-projects .carousel .project-b {
+    padding: 5em 0em;
     background-color: #ffffff;
     width: 100%;
   }
-  #projects.projects-section h4:nth-of-type(2), #projects.projects-section h4:last-of-type {
+  .container #projects.projects-section .featured-projects .indicators {
     display: none;
   }
-  #projects.projects-section .personal-projects {
+  .container #projects.projects-section h4:nth-of-type(2), .container #projects.projects-section h4:last-of-type {
     display: none;
   }
-  /* End of Project Section */
-  /* Start of About Section */
-  #aboutmyself.aboutmyself {
+  .container #projects.projects-section .personal-projects {
+    display: none;
+  }
+  .container #aboutmyself.aboutmyself {
     text-align: center;
     background-color: #303030;
     color: #efefef;
-    padding-top: 8em;
-    padding-bottom: 8em;
+    padding: 5em 0em;
     background: linear-gradient(to bottom, #42464B, #16181a);
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
   }
-  #aboutmyself.aboutmyself h3 {
-    font-size: 3rem;
+  .container #aboutmyself.aboutmyself h3 {
     margin-bottom: 2em;
   }
-  #aboutmyself.aboutmyself .about-me-container .image-container {
-    margin-bottom: 5em;
+  .container #aboutmyself.aboutmyself .about-me-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details {
+  .container #aboutmyself.aboutmyself .about-me-container .image-container {
+    margin-bottom: 2.5em;
+  }
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     /* Start of Skills Section */
     /* End of Skills Section */
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version .about p {
-    font-size: 1.7rem;
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version .about p {
     width: 90%;
     margin: auto;
     margin-bottom: 2em;
     line-height: 1.5;
     text-align: center;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version .about .dogs {
-    display: none;
-  }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions p {
-    font-size: 1.7rem;
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long p {
     width: 90%;
     margin: auto;
     margin-bottom: 5em;
     line-height: 1.5;
     text-align: center;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .read-more {
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long p span {
+    word-break: break-all;
+  }
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long .read-more {
     color: #FBBF00;
     font-weight: 600;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions img {
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long img {
     display: none;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills {
-    padding: 0em 0em 8em;
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .skills {
+    padding: 0em 0em 5em;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills p {
-    font-size: 2rem;
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .skills p {
     margin-bottom: 3em;
+    font-size: 2.5rem;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b {
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a {
+    display: flex;
+  }
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a, .container #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b {
     width: 80%;
     display: flex;
+    flex-direction: column;
     margin: auto;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b img {
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a img, .container #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b img {
     width: 100%;
     height: auto;
     padding: 1em;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d {
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b {
+    display: flex;
+  }
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c, .container #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d {
     width: 80%;
     display: flex;
+    flex-direction: column;
     margin: auto;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d img {
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c img, .container #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d img {
     width: 100%;
     height: auto;
     padding: 1em;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version .cv-icon {
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version .cv-icon {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version .cv-icon a {
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version .cv-icon a {
     margin-right: 0.5em;
-    font-size: 1.7rem;
     color: #FBBF00;
     font-weight: 600;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version .cv-icon img {
+  .container #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version .cv-icon img {
     max-width: 3.5%;
   }
-  /* End of About Section */
-  /* Start of Contact Section */
-  #contact.contact {
+  .container #contact.contact {
     background-color: #efefef;
     align-self: center;
-    padding: 8em 0em 0em 0em;
+    padding: 5em 0em 0em 0em;
   }
-  #contact.contact h3 {
-    font-size: 3rem;
+  .container #contact.contact h3 {
     margin-bottom: 0.5em;
     font-weight: 600;
     text-align: Center;
   }
-  #contact.contact h4 {
+}
+@media screen and (max-width: 450px) and (max-width: 210px) {
+  .container #contact.contact h3 {
+    word-break: break-all;
+  }
+}
+@media screen and (max-width: 450px) {
+  .container #contact.contact h4 {
     width: 90%;
     text-align: center;
-    font-size: 2rem;
     margin: auto;
     padding-bottom: 4em;
   }
-  #contact.contact .contact-container {
+}
+@media screen and (max-width: 450px) {
+  .container #contact.contact .contact-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
   }
-  #contact.contact .contact-container .contact-me {
+  .container #contact.contact .contact-container .contact-form {
+    width: 100%;
+    padding: 5em 10% 2.5em 10%;
+    background-color: #000000;
+    color: #efefef;
+  }
+  .container #contact.contact .contact-container .contact-form h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    text-align: center;
+  }
+  .container #contact.contact .contact-container .contact-form h4 {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 3em;
+  }
+  .container #contact.contact .contact-container .contact-form form {
+    display: flex;
+    flex-direction: column;
+    color: #efefef;
+  }
+  .container #contact.contact .contact-container .contact-form form textarea, .container #contact.contact .contact-container .contact-form form input {
+    background-color: #3d3d3d;
+    border: 2px solid #efefef;
+    border-radius: 0.3em;
+  }
+  .container #contact.contact .contact-container .contact-form form label {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    color: #efefef;
+  }
+  .container #contact.contact .contact-container .contact-form form button {
+    align-self: center;
+    text-align: center;
+    background-color: #FBBF00;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    color: #000000;
+    font-weight: 600;
+    padding: 0.6em 1em;
+    transition: background-color 0.3s ease;
+    width: 10em;
+    border-radius: 2em;
+    font-size: 2rem;
+    margin-top: 2em;
+  }
+  .container #contact.contact .contact-container .contact-me {
     color: #efefef;
     width: 100%;
     text-align: left;
     background-color: #000000;
-    padding: 8em 0%;
+    padding: 2.5em 0% 5em;
   }
-  #contact.contact .contact-container .contact-me h3:first-of-type {
+  .container #contact.contact .contact-container .contact-me h3:first-of-type {
     display: none;
-    font-size: 3rem;
+  }
+  .container #contact.contact .contact-container .contact-me h4:first-of-type {
+    display: none;
+  }
+  .container #contact.contact .contact-container .contact-me h3:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 0.5em;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
   }
-  #contact.contact .contact-container .contact-me h4:first-of-type {
-    width: 90%;
-    text-align: left;
-    font-size: 2rem;
-    margin: auto;
-    margin-bottom: 3em;
-    display: none;
-  }
-  #contact.contact .contact-container .contact-me h4:last-of-type {
+  .container #contact.contact .contact-container .contact-me h4:last-of-type {
     margin: auto;
     padding-bottom: 3em;
   }
-  #contact.contact .contact-container .contact-me .send-message {
-    display: none;
-  }
-  #contact.contact .contact-container .contact-me .contact-links {
+  .container #contact.contact .contact-container .contact-me .contact-links {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0% 7%;
-  }
-  #contact.contact .contact-container .contact-me .contact-links .business-phone {
-    display: flex;
     align-items: center;
-    padding: 1em 1em 1em 3em;
-    width: -moz-fit-content;
-    width: fit-content;
+    padding: 0em 3em;
   }
-  #contact.contact .contact-container .contact-me .contact-links .business-phone .phone-icon {
+  .container #contact.contact .contact-container .contact-me .contact-links .business-phone {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 0em 1.5em 0em 0em;
+    padding: 1em 1em;
+    width: 100%;
+    margin: auto;
+    border: 2px solid rgba(251, 192, 0, 0.2470588235);
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 4em;
   }
-  #contact.contact .contact-container .contact-me .contact-links .business-phone .phone-icon img {
+  .container #contact.contact .contact-container .contact-me .contact-links .business-phone .phone-icon {
+    display: flex;
+    justify-content: center;
+    padding: 0em 1em;
+    position: absolute;
+    top: -2em;
+    background-color: #000000;
+  }
+  .container #contact.contact .contact-container .contact-me .contact-links .business-phone .phone-icon img {
     max-width: 100%;
     height: auto;
-    min-width: 50px;
+    min-width: 40px;
   }
-  #contact.contact .contact-container .contact-me .contact-links .business-phone .phone-number-details {
+  .container #contact.contact .contact-container .contact-me .contact-links .business-phone .phone-number-details {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-  }
-  #contact.contact .contact-container .contact-me .contact-links .business-phone .phone-number-details a {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     text-align: left;
-    font-size: 1.7rem;
   }
-  #contact.contact .contact-container .contact-me .contact-links .business-email {
+  .container #contact.contact .contact-container .contact-me .contact-links .business-email {
     display: flex;
     align-items: center;
-    padding: 1em 1em 1em 3em;
-    width: -moz-fit-content;
-    width: fit-content;
+    flex-direction: column;
+    padding: 1em 1em;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    border: 2px solid rgba(251, 192, 0, 0.2470588235);
+    border-radius: 10px;
+    margin-bottom: 4em;
   }
-  #contact.contact .contact-container .contact-me .contact-links .business-email .email-icon {
+  .container #contact.contact .contact-container .contact-me .contact-links .business-email .email-icon {
     display: flex;
     align-items: center;
-    padding: 0em 1.5em 0em 0em;
+    padding: 0em 1em;
+    position: absolute;
+    top: -2em;
+    background-color: #000000;
   }
-  #contact.contact .contact-container .contact-me .contact-links .business-email .email-icon img {
+  .container #contact.contact .contact-container .contact-me .contact-links .business-email .email-icon img {
+    display: flex;
+    align-items: center;
     max-width: 100%;
     height: auto;
-    min-width: 50px;
+    min-width: 40px;
   }
-  #contact.contact .contact-container .contact-me .contact-links .business-email .my-email a {
+  .container #contact.contact .contact-container .contact-me .contact-links .address2 {
     display: flex;
-    justify-content: flex-start;
-    align-items: left;
-    font-size: 1.7rem;
-    word-break: break-all;
-  }
-  #contact.contact .contact-container .contact-me .contact-links .address2 {
-    display: flex;
+    flex-direction: column;
     font-weight: 100;
-    padding: 0em 1em 1em 3em;
-    width: -moz-fit-content;
-    width: fit-content;
+    padding: 1.5em 1em;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    border: 2px solid rgba(251, 192, 0, 0.2470588235);
+    border-radius: 10px;
+    margin-bottom: 4em;
   }
-  #contact.contact .contact-container .contact-me .contact-links .address2 strong {
+  .container #contact.contact .contact-container .contact-me .contact-links .address2 .address-icon {
+    display: flex;
+    align-items: center;
+    padding: 0em 1em;
+    position: absolute;
+    top: -2em;
+    background-color: #000000;
+  }
+  .container #contact.contact .contact-container .contact-me .contact-links .address2 .address-icon img {
+    max-width: 100%;
+    height: auto;
+    min-width: 40px;
+  }
+  .container #contact.contact .contact-container .contact-me .contact-links .address2 strong {
     transition: margin-left 0.3s ease-in-out;
   }
-  #contact.contact .contact-container .contact-me .contact-links .address2 strong:hover {
+  .container #contact.contact .contact-container .contact-me .contact-links .address2 strong:hover {
     cursor: pointer;
     margin-left: 1em;
   }
-  #contact.contact .contact-container .contact-me .contact-links .address2 .address-icon {
+  .container #contact.contact .contact-container .contact-me .contact-links .social-links2 {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 1em;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    border: 2px solid rgba(251, 192, 0, 0.2470588235);
+    border-radius: 10px;
+  }
+  .container #contact.contact .contact-container .contact-me .contact-links .social-links2 .chat-icon {
     display: flex;
     align-items: center;
-    padding: 0em 1.5em 0em 0em;
+    padding: 0em 1em;
+    position: absolute;
+    top: -2em;
+    background-color: #000000;
   }
-  #contact.contact .contact-container .contact-me .contact-links .address2 .address-icon img {
+  .container #contact.contact .contact-container .contact-me .contact-links .social-links2 .chat-icon img {
     max-width: 100%;
     height: auto;
-    min-width: 50px;
+    min-width: 40px;
   }
-  #contact.contact .contact-container .contact-me .contact-links .address2 .local-address p {
-    width: 100%;
-    font-size: 1.7rem;
-    word-break: break-all;
-  }
-  #contact.contact .contact-container .contact-me .contact-links .address2 .local-address a {
-    font-size: 1.7rem;
-    word-break: break-all;
-  }
-  #contact.contact .contact-container .contact-me .contact-links .social-links2 {
-    display: flex;
-    padding: 0em 1em 1em 3em;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon {
+  .container #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon {
     display: flex;
     align-items: center;
   }
-  #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:first-of-type, #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:last-of-type {
-    margin-right: 0.5em;
+  .container #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:first-of-type, .container #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:last-of-type {
     display: flex;
     align-items: center;
     justify-content: center;
     transition: scale 0.2s ease-in-out;
   }
-  #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:first-of-type:hover, #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:last-of-type:hover {
+  .container #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:first-of-type:hover, .container #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:last-of-type:hover {
     cursor: pointer;
     scale: 1.15;
   }
-  #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:first-of-type img, #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:last-of-type img {
+  .container #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:first-of-type img, .container #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:last-of-type img {
     width: 60%;
     height: auto;
-    min-width: 30px;
   }
-  #contact.contact .contact-container .contact-me .contact-links .social-links2 .chat-icon {
-    display: flex;
-    align-items: center;
-    padding: 0em 0.9em 0em 0em;
-  }
-  #contact.contact .contact-container .contact-me .contact-links .social-links2 .chat-icon img {
-    max-width: 100%;
-    height: auto;
-    min-width: 50px;
-  }
-  #contact.contact .contact-container .contact-details2 {
-    display: none;
-  }
-  #contact.contact .contact-container .contact-form {
-    width: 100%;
-    padding: 8em 10% 5em 10%;
-    background-color: #000000;
-    color: #efefef;
-  }
-  #contact.contact .contact-container .contact-form h4 {
-    margin: auto;
-    margin-bottom: 0em;
-    padding-bottom: 3em;
-  }
-  #contact.contact .contact-container .contact-form form {
-    font-size: 2rem;
-    display: flex;
-    flex-direction: column;
-    color: #efefef;
-  }
-  #contact.contact .contact-container .contact-form form textarea, #contact.contact .contact-container .contact-form form input {
-    background-color: #3d3d3d;
-    border: 2px solid #efefef;
-  }
-  #contact.contact .contact-container .contact-form form label {
-    padding-top: 1em;
-    padding-bottom: 0.5em;
-    font-size: 1.7rem;
-    color: #efefef;
-  }
-  #contact.contact .contact-container .contact-form form button {
-    margin-top: 2em;
-    text-align: center;
-    height: 41px;
-    max-width: 150px;
-    background-color: #FBBF00;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-    color: #000000;
-    font-weight: 600;
-    font-size: 1.7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.6em 1em;
-    transition: background-color 0.3s ease;
-  }
-  #contact.contact .contact-container .contact-form form button:hover {
-    background-color: #ffaa00;
-    cursor: pointer;
-  }
-  .dev-process {
+}
+@media screen and (max-width: 450px) {
+  .container .dev-process {
     display: flex;
     justify-content: center;
     width: 100%;
     padding: 0em 0%;
-    font-size: 1.5rem;
     overflow: hidden;
     height: 3em;
     transition: height 0.3s ease;
   }
-  .dev-process.open {
-    height: 22em;
-  }
-  .dev-process.open i {
-    transform: rotate(180deg);
-  }
-  .dev-process .icon {
+  .container .dev-process .icon {
     width: -moz-fit-content;
     width: fit-content;
     display: flex;
@@ -627,91 +684,80 @@ html {
     position: absolute;
     transition: scale 0.1s ease;
     margin: auto;
-    color: #FBBF00;
   }
-  .dev-process .icon i {
+  .container .dev-process .icon img {
+    width: 60%;
+    height: auto;
     padding: 0.3em 0em;
     text-align: center;
-    font-size: 2.5rem;
-    color: #FBBF00;
-    transition: color 0.3s ease;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
   }
-  .dev-process .icon i:hover {
-    cursor: pointer;
-    color: #efefef;
-  }
-  .dev-process .icon i:focus {
+  .container .dev-process .icon img:focus {
     outline: solid 2px blue;
   }
-  .dev-process p {
+  .container .dev-process.open {
+    height: 20em;
+    transition: height 0.3s ease;
+  }
+  .container .dev-process.open .icon img {
+    transform: rotate(180deg);
+    transition-delay: 0.1s; /* Add a delay to ensure completion of the image rotation */
+  }
+  .container .dev-process p {
     width: 100%;
     text-align: center;
     padding: 4em 5%;
     background-color: #000000;
     color: #efefef;
-    font-size: 1.7rem;
   }
-  /* End of Contact Section */
-  /* Start of Footer */
-  footer {
+}
+@media screen and (max-width: 450px) {
+  .container footer {
     background-color: #16181a;
     color: #efefef;
     padding: 0em 1.5em;
   }
-  footer .footer-container {
+  .container footer .footer-container {
     padding: 2em 0em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    margin: auto;
     font-size: 1.7rem;
   }
-  footer .footer-container .sitemap {
+  .container footer .footer-container .sitemap {
     display: none;
   }
-  footer .footer-container address, footer .footer-container .legal-regulations {
+  .container footer .footer-container address, .container footer .footer-container .legal-regulations {
     text-align: center;
     margin-bottom: 1.5em;
   }
-  footer .footer-container address:is(address), footer .footer-container .legal-regulations:is(address) {
+  .container footer .footer-container address:is(address), .container footer .footer-container .legal-regulations:is(address) {
     text-align: center;
     margin-bottom: 2em;
   }
-  footer .footer-container address:is(.legal-regulations), footer .footer-container .legal-regulations:is(.legal-regulations) {
+  .container footer .footer-container address:is(.legal-regulations), .container footer .footer-container .legal-regulations:is(.legal-regulations) {
     text-align: center;
     margin-bottom: 2em;
   }
-  footer .footer-container address strong, footer .footer-container .legal-regulations strong {
+  .container footer .footer-container address strong, .container footer .footer-container .legal-regulations strong {
     color: #FBBF00;
     font-weight: 600;
   }
-  footer .footer-container address strong:hover, footer .footer-container .legal-regulations strong:hover {
-    cursor: pointer;
-    color: #efefef;
-  }
-  footer .footer-container address #zip, footer .footer-container .legal-regulations #zip {
+  .container footer .footer-container address #zip, .container footer .footer-container .legal-regulations #zip {
     color: #efefef;
     font-weight: 300;
   }
-  footer .footer-container address #zip:hover, footer .footer-container .legal-regulations #zip:hover {
-    cursor: auto;
-  }
-  footer .footer-container .social-links {
+  .container footer .footer-container .social-links {
     display: none;
   }
-  footer .footer-container .hire {
+  .container footer .footer-container .hire {
     display: flex;
     color: #FBBF00;
     text-align: center;
     font-weight: 600;
   }
-  footer .footer-container .hire:hover {
-    cursor: pointer;
-    color: #efefef;
-  }
-  /* End of Footer */
 }
 /* Start of header */
 @media screen and (min-width: 451px) and (max-width: 800px) {
@@ -806,6 +852,9 @@ html {
     font-weight: 600;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
+    width: 10em;
+    border-radius: 2em;
+    font-size: 2rem;
   }
   /* End of Header Section */
   /* Start of Hero Section */
@@ -817,7 +866,7 @@ html {
     color: white;
     display: flex;
     flex-direction: column;
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 300;
     margin: auto;
     padding-top: 5em;
@@ -870,6 +919,9 @@ html {
     font-weight: 600;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
+    width: 10em;
+    border-radius: 2em;
+    font-size: 2rem;
   }
   .hero-section #buttons2 .view-work:is(.about-me), .hero-section #buttons2 .about-me:is(.about-me) {
     background-color: transparent;
@@ -887,7 +939,7 @@ html {
     align-items: center;
   }
   #projects.projects-section h3 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   #projects.projects-section h4 {
     font-size: 2.5rem;
@@ -987,6 +1039,12 @@ html {
     font-size: 2rem;
     transition: background-color 0.3s ease;
     font-size: 2rem;
+    width: 10em;
+    font-size: 2rem;
+    border-radius: 2em;
+    font-size: 2rem;
+    font-size: 2rem;
+    font-size: 2rem;
   }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project #live-site,
   #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project #live-site,
@@ -1056,7 +1114,7 @@ html {
     background: linear-gradient(to bottom, #42464B, #16181a);
   }
   #aboutmyself.aboutmyself h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 2.6666em;
   }
   #aboutmyself.aboutmyself .about-me-container .image-container img {
@@ -1105,7 +1163,7 @@ html {
     top: 5em;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills p {
-    font-size: 3rem;
+    font-size: 2rem;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1159,7 +1217,7 @@ html {
     padding: 8em 0em 0em 0em;
   }
   #contact.contact h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 0.5em;
     font-weight: 600;
     text-align: Center;
@@ -1187,7 +1245,7 @@ html {
   }
   #contact.contact .contact-container .contact-me h3:first-of-type {
     display: none;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 0.5em;
     font-weight: 600;
     text-align: left;
@@ -1463,184 +1521,216 @@ html {
   }
   /* End of Footer */
 }
-/* Start of header */
 @media screen and (min-width: 801px) and (max-width: 1080px) {
+  /* Start of header */
   header {
-    align-items: center;
     background-color: #16181a;
     box-shadow: 0px 2px 4px rgba(87, 87, 87, 0.4);
     padding: 1em 0 1em 0;
+    position: fixed;
     top: 0;
     width: 100%;
-    position: fixed;
-    z-index: 2;
+    z-index: 3;
   }
   header .nav-section {
     align-items: center;
     color: #efefef;
     display: flex;
     justify-content: space-between;
-    width: 70%;
     margin: auto;
-    z-index: 2;
+    width: 80%;
   }
-  header .nav-section a {
-    align-items: center;
+  header .nav-section #logo {
+    z-index: 2;
     display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header .nav-section #logo img {
     max-width: 33px;
     height: auto;
-    justify-content: center;
     min-width: 33px;
-    z-index: 2;
+    transition: transform 0.3s ease;
+  }
+  header .nav-section #logo:hover img {
+    cursor: pointer;
+    transform: rotate(90deg);
   }
   header .nav-section #menu-toggle {
     display: none;
   }
-  header .nav-section #menu-toggle:checked ~ .slide-menu {
-    left: 0;
-    top: 2.5em;
-    transition: 0s;
-  }
-  header .nav-section #menu-toggle:not(:checked) ~ .slide-menu {
-    background-color: transparent;
-    left: 0;
-    top: -100%;
-    transition: 0s;
-  }
   header .nav-section .hamburger {
-    align-self: center;
     display: none;
-    flex-direction: column;
-    height: 20px;
-    justify-content: space-between;
-    width: 25px;
-  }
-  header .nav-section .hamburger span {
-    background-color: #FBBF00;
-    color: #efefef;
-    height: 4px;
-    width: 100%;
   }
   header .nav-section .slide-menu {
-    background-color: transparent;
     display: flex;
-    font-size: 2rem;
-    height: 0;
     justify-content: flex-end;
-    position: relative;
-    text-align: center;
+    font-size: 2rem;
     width: 100%;
   }
   header .nav-section .slide-menu .nav-bar-links {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-top: 0em;
-  }
-  header .nav-section .slide-menu .nav-bar-links li {
-    padding: 0.5em;
-    margin-left: 2.5em;
   }
   header .nav-section .slide-menu .nav-bar-links li a {
-    width: 100%;
+    padding: 0.5em;
+    margin-left: 1.5em;
+    color: #efefef;
+    transition: color 0.3s ease;
+  }
+  header .nav-section .slide-menu .nav-bar-links li a:hover {
+    cursor: pointer;
+    color: #FBBF00;
   }
   header .nav-section .slide-menu .nav-bar-links .menu-send-message {
     display: none;
-    margin-top: 5em;
-    align-self: center;
-    text-align: center;
-    background-color: #FBBF00;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-    color: #000000;
-    font-weight: 600;
-    padding: 0.6em 1em;
-    transition: background-color 0.3s ease;
   }
   /* End of Header Section */
   /* Start of Hero Section */
   .hero-section {
     background: linear-gradient(to right, #42464B, #16181a);
-    padding: 5em 0em 8em;
+    padding-bottom: 10em;
   }
   .hero-section .hero-container {
-    color: white;
+    color: #efefef;
     display: flex;
-    flex-direction: column;
-    font-size: 1.6rem;
-    font-weight: 300;
+    flex-direction: row;
+    font-size: 2rem;
     margin: auto;
-    padding-top: 5em;
+    padding-top: 8em;
     text-align: center;
-    width: 90%;
+    width: 80%;
   }
   .hero-section .hero-container .hero-details {
-    width: 100%;
+    width: 60%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin-right: 2em;
   }
   .hero-section .hero-container .hero-details p, .hero-section .hero-container .hero-details h2 {
     line-height: 1.7em;
     margin-bottom: 0.5em;
-    font-size: 2rem;
+    text-align: left;
+    font-size: 1.6rem;
   }
-  .hero-section .hero-container .hero-details p:is(h2), .hero-section .hero-container .hero-details h2:is(h2) {
+  .hero-section .hero-container .hero-details p {
     font-size: 2rem;
-    width: 80%;
-    align-self: center;
   }
   .hero-section .hero-container .hero-details h1 {
     font-size: 4rem;
     font-weight: 600;
     margin-bottom: 0.3em;
+    text-align: left;
   }
   .hero-section .hero-container .hero-details .buttons {
-    display: none;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .hero-section .hero-container .hero-details .buttons button {
+    width: 10em;
+    font-size: 1.6rem;
+    align-self: center;
+    height: 45px;
+    text-align: center;
+    height: 45px;
+    background-color: #FBBF00;
+    height: 45px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    height: 45px;
+    color: #000000;
+    height: 45px;
+    font-weight: 600;
+    height: 45px;
+    padding: 0.6em 1em;
+    height: 45px;
+    transition: background-color 0.3s ease;
+    height: 45px;
+    width: 10em;
+    height: 45px;
+    border-radius: 2em;
+    height: 45px;
+    font-size: 2rem;
+    height: 45px;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:is(.about-me) {
+    background-color: transparent;
+    color: #FBBF00;
+    box-shadow: none;
+  }
+  .hero-section .hero-container .hero-details .buttons button:is(.about-me):hover {
+    color: #eaeaea;
   }
   .hero-section .hero-container .hero-img {
     margin-top: 2em;
     margin-bottom: 4em;
-    width: 100%;
+    max-width: 100%;
     height: auto;
   }
   .hero-section #buttons2 {
-    margin-top: 2em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .hero-section #buttons2 .view-work, .hero-section #buttons2 .about-me {
-    width: 10em;
-    font-size: 2rem;
-    align-self: center;
-    text-align: center;
-    background-color: #FBBF00;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-    color: #000000;
-    font-weight: 600;
-    padding: 0.6em 1em;
-    transition: background-color 0.3s ease;
-  }
-  .hero-section #buttons2 .view-work:is(.about-me), .hero-section #buttons2 .about-me:is(.about-me) {
-    background-color: transparent;
-    color: #FBBF00;
-    box-shadow: none;
+    display: none;
   }
   /* End of Hero Section */
   /* Start of Project Section */
   #projects.projects-section {
     background-color: #eaeaea;
     padding-top: 8em;
-    padding-bottom: 8em;
+    padding-bottom: 10em;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   #projects.projects-section h3 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   #projects.projects-section h4 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 2em;
   }
   #projects.projects-section .featured-projects {
@@ -1682,7 +1772,7 @@ html {
   #projects.projects-section .featured-projects .carousel .project-a p,
   #projects.projects-section .featured-projects .carousel .project-b p,
   #projects.projects-section .featured-projects .carousel .project-c p {
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-bottom: 2em;
     margin-top: 2em;
     width: 50%;
@@ -1709,7 +1799,6 @@ html {
   #projects.projects-section .featured-projects .carousel .project-c .buttons-b button,
   #projects.projects-section .featured-projects .carousel .project-c .buttons-c button {
     margin: 0 0.5em;
-    font-size: 1rem;
     padding: 0.5em 1em;
   }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project,
@@ -1722,21 +1811,27 @@ html {
   #projects.projects-section .featured-projects .carousel .project-c .buttons-b .view-project,
   #projects.projects-section .featured-projects .carousel .project-c .buttons-c .view-project {
     align-self: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
     background-color: #FBBF00;
-    font-size: 2rem;
+    font-size: 1.6rem;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: #000000;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding: 0.6em 1em;
-    font-size: 2rem;
+    font-size: 1.6rem;
     transition: background-color 0.3s ease;
+    font-size: 1.6rem;
+    width: 10em;
+    font-size: 1.6rem;
+    border-radius: 2em;
+    font-size: 1.6rem;
     font-size: 2rem;
+    font-size: 1.6rem;
   }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project #live-site,
   #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project #live-site,
@@ -1758,7 +1853,7 @@ html {
   #projects.projects-section .featured-projects .carousel .project-c .buttons-a .source-code,
   #projects.projects-section .featured-projects .carousel .project-c .buttons-b .source-code,
   #projects.projects-section .featured-projects .carousel .project-c .buttons-c .source-code {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 600;
   }
   #projects.projects-section .featured-projects .carousel .project-a .doc-options,
@@ -1798,114 +1893,147 @@ html {
   /* End of Project Section */
   /* Start of About Section */
   #aboutmyself.aboutmyself {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     background-color: #303030;
     color: #efefef;
     padding-top: 8em;
     padding-bottom: 8em;
-    background: linear-gradient(to bottom, #42464B, #16181a);
+    padding-right: 10%;
+    padding-left: 10%;
+    background: linear-gradient(to bottom, #42464B, #000000);
+    width: 100%;
+    margin: auto;
   }
   #aboutmyself.aboutmyself h3 {
-    font-size: 3rem;
-    margin-bottom: 2.6666em;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2.5em;
   }
-  #aboutmyself.aboutmyself .about-me-container .image-container img {
-    margin-bottom: 8em;
+  #aboutmyself.aboutmyself .about-me-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  #aboutmyself.aboutmyself .about-me-container .image-container {
+    max-width: 50%;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    padding-left: 3em;
     /* Start of Skills Section */
     /* End of Skills Section */
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version .about p {
-    font-size: 2rem;
-    width: 70%;
-    margin: auto;
-    margin-bottom: 2em;
-    line-height: 2;
-    text-align: center;
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version {
+    display: flex;
+    width: 100%;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version .about .dogs {
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .short-version p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+    text-align: justify;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions {
+    width: 100%;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions p {
+    font-size: 1.6rem;
+    padding-bottom: 1.5em;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .read-more {
+    color: #FBBF00;
+    font-size: 1.6rem;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .read-more:hover {
+    color: #eaeaea;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions img {
     display: none;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long p {
-    font-size: 2rem;
-    width: 70%;
-    margin: auto;
-    margin-bottom: 5em;
-    line-height: 2;
-    text-align: center;
-  }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long .read-more {
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions a {
+    font-size: 1.6rem;
     color: #FBBF00;
     font-weight: 600;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long img {
-    display: none;
-  }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions .somewhat-long .notion {
-    display: none;
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .other-versions a:hover {
+    cursor: pointer;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills {
-    padding: 8em 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    position: relative;
-    margin: 0% 5%;
-    top: 5em;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills p {
-    font-size: 3rem;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-bottom: 10em;
+    font-size: 2rem;
+    margin-top: 3em;
+    margin-bottom: 1em;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a {
-    width: 50%;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: auto;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b {
     width: 80%;
     display: flex;
     margin: auto;
-    margin-right: 0em;
-  }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-a img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-a .group-b img {
-    width: 100%;
-    height: auto;
     padding: 1em;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b {
-    width: 50%;
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
   }
   #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d {
     width: 80%;
     display: flex;
     margin: auto;
-    margin-left: 0em;
+    padding: 1em;
+    margin-bottom: 3em;
   }
-  #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-c img, #aboutmyself.aboutmyself .about-me-container .about-me-details .skills .tech-skills-b .group-d img {
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    height: auto;
+    align-items: center;
+    margin-top: 3em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version .cv-icon {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #efefef;
+    width: 50%;
     padding: 1em;
   }
-  #aboutmyself.aboutmyself .about-me-container .cv-icon {
-    margin-top: 8em;
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version .cv-icon a {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5em;
+    color: #efefef;
+    transition: color 0.3s ease;
   }
-  #aboutmyself.aboutmyself .about-me-container .cv-icon a {
-    font-size: 2rem;
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version .cv-icon a:hover {
+    cursor: pointer;
     color: #FBBF00;
-    font-weight: 600;
   }
-  #aboutmyself.aboutmyself .about-me-container .cv-icon a:is(.resume-link) {
-    font-size: 3rem;
-    text-decoration: underline;
-  }
-  #aboutmyself.aboutmyself .about-me-container .cv-icon img {
-    width: 2%;
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version .cv-icon img {
+    max-width: 4%;
     height: auto;
-    margin-left: 1em;
-    margin-top: 0.5em;
+    padding: 0.5em 0em;
+  }
+  #aboutmyself.aboutmyself .about-me-container .about-me-details .downloadable-version .cv-icon img:hover {
+    cursor: pointer;
   }
   /* End of About Section */
   /* Start of Contact Section */
@@ -1915,35 +2043,36 @@ html {
     padding: 8em 0em 0em 0em;
   }
   #contact.contact h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 0.5em;
     font-weight: 600;
     text-align: Center;
   }
   #contact.contact h4 {
-    width: 100%;
+    width: 90%;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: auto;
     padding-bottom: 4em;
   }
   #contact.contact .contact-container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     width: 100%;
-    align-items: center;
+    margin: auto;
   }
   #contact.contact .contact-container .contact-me {
     color: #efefef;
-    width: 100%;
+    width: 50%;
     text-align: left;
     background-color: #000000;
-    padding: 8em 0%;
+    padding: 8em 0em;
+    padding-right: 10%;
+    padding-left: 5em;
   }
   #contact.contact .contact-container .contact-me h3:first-of-type {
     display: none;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 0.5em;
     font-weight: 600;
     text-align: left;
@@ -1958,132 +2087,132 @@ html {
   }
   #contact.contact .contact-container .contact-me h4:last-of-type {
     margin: auto;
-    padding-bottom: 3em;
+    padding-bottom: 6em;
   }
   #contact.contact .contact-container .contact-me .send-message {
     display: none;
   }
-  #contact.contact .contact-container .contact-me .business-email, #contact.contact .contact-container .contact-me .business-phone {
+  #contact.contact .contact-container .contact-me .contact-links {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .business-phone {
     display: flex;
     align-items: center;
-    font-size: 2rem;
-    padding: 1em 1em 1em 1em;
-    width: 360px;
-    margin: auto;
+    padding: 1em;
   }
-  #contact.contact .contact-container .contact-me .business-email .email-icon, #contact.contact .contact-container .contact-me .business-phone .email-icon {
-    max-width: 80%;
-    height: auto;
-    padding: 0em 1.5em 0em 0em;
-  }
-  #contact.contact .contact-container .contact-me .business-email .email-icon img, #contact.contact .contact-container .contact-me .business-phone .email-icon img {
-    display: flex;
-    align-items: center;
-    max-width: 80%;
-    height: auto;
-    min-width: 40px;
-  }
-  #contact.contact .contact-container .contact-me .business-email p, #contact.contact .contact-container .contact-me .business-phone p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 100;
-    transition: margin-left 0.3s ease;
-  }
-  #contact.contact .contact-container .contact-me .business-email p:hover, #contact.contact .contact-container .contact-me .business-phone p:hover {
-    cursor: pointer;
-    margin-left: 1em;
-  }
-  #contact.contact .contact-container .contact-me .business-email .phone-icon, #contact.contact .contact-container .contact-me .business-phone .phone-icon {
+  #contact.contact .contact-container .contact-me .contact-links .business-phone .phone-icon {
     display: flex;
     padding: 0em 1.5em 0em 0em;
   }
-  #contact.contact .contact-container .contact-me .business-email .phone-icon img, #contact.contact .contact-container .contact-me .business-phone .phone-icon img {
+  #contact.contact .contact-container .contact-me .contact-links .business-phone .phone-icon img {
     max-width: 80%;
     height: auto;
-    min-width: 40px;
   }
-  #contact.contact .contact-container .contact-me .business-email .phone-number-details, #contact.contact .contact-container .contact-me .business-phone .phone-number-details {
+  #contact.contact .contact-container .contact-me .contact-links .business-phone .phone-number-details {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-size: 1.6rem;
   }
-  #contact.contact .contact-container .contact-me .address2 {
-    display: flex;
-    font-size: 2rem;
-    font-weight: 100;
-    padding: 0em 1em 1em 1em;
-    width: 360px;
-    margin: auto;
-  }
-  #contact.contact .contact-container .contact-me .address2 .address-icon img {
-    max-width: 80%;
-    height: auto;
-    min-width: 40px;
-  }
-  #contact.contact .contact-container .contact-me .address2 strong {
-    transition: margin-left 0.3s ease-in-out;
-  }
-  #contact.contact .contact-container .contact-me .address2 strong:hover {
+  #contact.contact .contact-container .contact-me .contact-links .business-phone .phone-number-details a:hover {
     cursor: pointer;
-    margin-left: 1em;
+    color: #FBBF00;
   }
-  #contact.contact .contact-container .contact-me .address2 .address-icon {
+  #contact.contact .contact-container .contact-me .contact-links .business-email {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .business-email .email-icon {
+    display: flex;
+    padding: 0em 1.5em 0em 0em;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .business-email .email-icon img {
+    width: 80%;
+    height: auto;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .business-email .my-email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .business-email .my-email a:hover {
+    cursor: pointer;
+    color: #FBBF00;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .address2 {
+    display: flex;
+    padding: 0em 1em 1em 1em;
+    font-weight: 100;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .address2 .address-icon {
     display: flex;
     align-items: center;
     padding: 0em 1.5em 0em 0em;
   }
-  #contact.contact .contact-container .contact-me .social-links2 {
-    display: flex;
-    font-size: 2rem;
-    padding: 0em 1em 1em 1em;
-    width: 360px;
-    margin: auto;
+  #contact.contact .contact-container .contact-me .contact-links .address2 .address-icon img {
+    max-width: 80%;
+    height: auto;
   }
-  #contact.contact .contact-container .contact-me .social-links2 .social-icon {
+  #contact.contact .contact-container .contact-me .contact-links .address2 .local-address {
+    font-size: 1.6rem;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .address2 .local-address strong {
+    color: #eaeaea;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .address2 .local-address strong:hover {
+    cursor: pointer;
+    color: #FBBF00;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .social-links2 {
+    display: flex;
+    margin-bottom: 3em;
+    padding: 0em 1em 1em 1em;
+  }
+  #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon {
     display: flex;
     align-items: center;
   }
-  #contact.contact .contact-container .contact-me .social-links2 .social-icon a:first-of-type, #contact.contact .contact-container .contact-me .social-links2 .social-icon a:last-of-type {
+  #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:first-of-type, #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:last-of-type {
     margin-right: 0.5em;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: scale 0.2s ease-in-out;
   }
-  #contact.contact .contact-container .contact-me .social-links2 .social-icon a:first-of-type:hover, #contact.contact .contact-container .contact-me .social-links2 .social-icon a:last-of-type:hover {
+  #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:first-of-type:hover, #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:last-of-type:hover {
     cursor: pointer;
     scale: 1.15;
   }
-  #contact.contact .contact-container .contact-me .social-links2 .social-icon a:first-of-type img, #contact.contact .contact-container .contact-me .social-links2 .social-icon a:last-of-type img {
+  #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:first-of-type img, #contact.contact .contact-container .contact-me .contact-links .social-links2 .social-icon a:last-of-type img {
     width: 60%;
     height: auto;
   }
-  #contact.contact .contact-container .contact-me .social-links2 .chat-icon {
+  #contact.contact .contact-container .contact-me .contact-links .social-links2 .chat-icon {
     display: flex;
     align-items: center;
     padding: 0em 0.9em 0em 0em;
   }
-  #contact.contact .contact-container .contact-me .social-links2 .chat-icon img {
+  #contact.contact .contact-container .contact-me .contact-links .social-links2 .chat-icon img {
     max-width: 80%;
     height: auto;
-    min-width: 40px;
   }
   #contact.contact .contact-container .contact-details2 {
     display: none;
   }
   #contact.contact .contact-container .contact-form {
-    width: 100%;
-    padding: 8em 15% 5em 15%;
+    width: 50%;
+    padding: 8em 5em 5em 10%;
     background-color: #000000;
     color: #efefef;
   }
   #contact.contact .contact-container .contact-form h4 {
     margin: auto;
     margin-bottom: 0em;
-    padding-bottom: 3em;
-    font-size: 2.5rem;
   }
   #contact.contact .contact-container .contact-form form {
     font-size: 2rem;
@@ -2098,19 +2227,20 @@ html {
   #contact.contact .contact-container .contact-form form label {
     padding-top: 1em;
     padding-bottom: 0.5em;
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: #efefef;
   }
   #contact.contact .contact-container .contact-form form button {
+    width: 10em;
     margin-top: 2em;
     text-align: center;
-    height: 54px;
+    height: 45px;
     max-width: 200px;
     background-color: #FBBF00;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
     color: #000000;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
   }
@@ -2123,13 +2253,13 @@ html {
     justify-content: center;
     width: 100%;
     padding: 0em 0%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     overflow: hidden;
     height: 3em;
     transition: height 0.3s ease;
   }
   .dev-process.open {
-    height: 15em;
+    height: 13em;
   }
   .dev-process.open i {
     transform: rotate(180deg);
@@ -2155,9 +2285,6 @@ html {
     cursor: pointer;
     color: #efefef;
   }
-  .dev-process .icon i:focus {
-    outline: solid 2px blue;
-  }
   .dev-process p {
     width: 100%;
     text-align: center;
@@ -2170,52 +2297,71 @@ html {
   footer {
     background-color: #16181a;
     color: #efefef;
-    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: position 0.3s ease;
+    z-index: 1;
   }
   footer .footer-container {
     padding: 2em 0em;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
+    width: 90%;
     margin: auto;
-    font-size: 1.3rem;
+    justify-content: space-between;
   }
-  footer .footer-container .sitemap {
+  footer .footer-container address {
     display: none;
   }
-  footer .footer-container address, footer .footer-container .legal-regulations {
-    text-align: center;
-    margin-bottom: 1.5em;
-  }
-  footer .footer-container address:is(address), footer .footer-container .legal-regulations:is(address) {
-    text-align: left;
-    margin: 0em;
-  }
-  footer .footer-container address:is(.legal-regulations), footer .footer-container .legal-regulations:is(.legal-regulations) {
-    margin: 0em 5% 0em 0em;
-  }
-  footer .footer-container address strong, footer .footer-container .legal-regulations strong {
-    color: #FBBF00;
-    font-weight: 600;
-  }
-  footer .footer-container address strong:hover, footer .footer-container .legal-regulations strong:hover {
-    cursor: pointer;
+  footer .footer-container .sitemap {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    align-items: center;
     color: #efefef;
+    transition: color 0.3s ease;
+  }
+  footer .footer-container .sitemap:hover {
+    cursor: pointer;
+    color: #FBBF00;
+  }
+  footer .footer-container .legal-regulations {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-left: 2.8%;
+  }
+  footer .footer-container .legal-regulations strong {
+    color: #efefef;
+    transition: color 0.3s ease;
+  }
+  footer .footer-container .legal-regulations strong:hover {
+    cursor: pointer;
+    color: #FBBF00;
   }
   footer .footer-container .social-links {
     display: none;
   }
   footer .footer-container .hire {
     display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    align-items: center;
+  }
+  footer .footer-container .hire strong {
     color: #FBBF00;
     font-weight: 600;
+    transition: color 0.3s ease;
   }
-  footer .footer-container .hire:hover {
+  footer .footer-container .hire strong:hover {
     cursor: pointer;
-    color: #efefef;
-    text-decoration: underline;
+    color: #ffaa00;
+  }
+  footer.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }
   /* End of Footer */
 }
@@ -2293,7 +2439,7 @@ html {
     color: #efefef;
     display: flex;
     flex-direction: row;
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: auto;
     padding-top: 8em;
     text-align: center;
@@ -2335,6 +2481,21 @@ html {
     font-weight: 600;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
+    width: 10em;
+    border-radius: 2em;
+    font-size: 2rem;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
   }
   .hero-section .hero-container .hero-details .buttons button:hover {
     cursor: pointer;
@@ -2397,7 +2558,7 @@ html {
     align-items: center;
   }
   #projects.projects-section h3 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   #projects.projects-section h4 {
     font-size: 2rem;
@@ -2530,6 +2691,12 @@ html {
     font-size: 1.6rem;
     transition: background-color 0.3s ease;
     font-size: 1.6rem;
+    width: 10em;
+    font-size: 1.6rem;
+    border-radius: 2em;
+    font-size: 1.6rem;
+    font-size: 2rem;
+    font-size: 1.6rem;
   }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project:hover,
   #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project:hover,
@@ -2651,7 +2818,7 @@ html {
     margin: auto;
   }
   #aboutmyself.aboutmyself h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 2.5em;
   }
@@ -2789,7 +2956,7 @@ html {
     padding: 8em 0em 0em 0em;
   }
   #contact.contact h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 0.5em;
     font-weight: 600;
     text-align: Center;
@@ -2818,7 +2985,7 @@ html {
   }
   #contact.contact .contact-container .contact-me h3:first-of-type {
     display: none;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 0.5em;
     font-weight: 600;
     text-align: left;
@@ -2848,6 +3015,21 @@ html {
     font-weight: 600;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
+    width: 10em;
+    border-radius: 2em;
+    font-size: 2rem;
+  }
+  #contact.contact .contact-container .contact-me .send-message:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  #contact.contact .contact-container .contact-me .send-message:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  #contact.contact .contact-container .contact-me .send-message:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
   }
   #contact.contact .contact-container .contact-me .send-message:hover {
     cursor: pointer;
@@ -3215,7 +3397,7 @@ html {
     color: #efefef;
     display: flex;
     flex-direction: row;
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: auto;
     padding-top: 8em;
     text-align: center;
@@ -3257,6 +3439,21 @@ html {
     font-weight: 600;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
+    width: 10em;
+    border-radius: 2em;
+    font-size: 2rem;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
   }
   .hero-section .hero-container .hero-details .buttons button:hover {
     cursor: pointer;
@@ -3319,7 +3516,7 @@ html {
     align-items: center;
   }
   #projects.projects-section h3 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   #projects.projects-section h4 {
     font-size: 2rem;
@@ -3452,6 +3649,12 @@ html {
     font-size: 1.6rem;
     transition: background-color 0.3s ease;
     font-size: 1.6rem;
+    width: 10em;
+    font-size: 1.6rem;
+    border-radius: 2em;
+    font-size: 1.6rem;
+    font-size: 2rem;
+    font-size: 1.6rem;
   }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project:hover,
   #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project:hover,
@@ -3573,7 +3776,7 @@ html {
     margin: auto;
   }
   #aboutmyself.aboutmyself h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 2.5em;
   }
@@ -3711,7 +3914,7 @@ html {
     padding: 8em 0em 0em 0em;
   }
   #contact.contact h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 0.5em;
     font-weight: 600;
     text-align: Center;
@@ -3740,7 +3943,7 @@ html {
   }
   #contact.contact .contact-container .contact-me h3:first-of-type {
     display: none;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 0.5em;
     font-weight: 600;
     text-align: left;
@@ -3770,6 +3973,21 @@ html {
     font-weight: 600;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
+    width: 10em;
+    border-radius: 2em;
+    font-size: 2rem;
+  }
+  #contact.contact .contact-container .contact-me .send-message:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  #contact.contact .contact-container .contact-me .send-message:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  #contact.contact .contact-container .contact-me .send-message:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
   }
   #contact.contact .contact-container .contact-me .send-message:hover {
     cursor: pointer;
@@ -4141,7 +4359,7 @@ html {
     color: #efefef;
     display: flex;
     flex-direction: row;
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: auto;
     padding-top: 8em;
     text-align: center;
@@ -4183,6 +4401,21 @@ html {
     font-weight: 600;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
+    width: 10em;
+    border-radius: 2em;
+    font-size: 2rem;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  .hero-section .hero-container .hero-details .buttons button:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
   }
   .hero-section .hero-container .hero-details .buttons button:hover {
     cursor: pointer;
@@ -4245,7 +4478,7 @@ html {
     align-items: center;
   }
   #projects.projects-section h3 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   #projects.projects-section h4 {
     font-size: 2rem;
@@ -4378,6 +4611,12 @@ html {
     font-size: 1.6rem;
     transition: background-color 0.3s ease;
     font-size: 1.6rem;
+    width: 10em;
+    font-size: 1.6rem;
+    border-radius: 2em;
+    font-size: 1.6rem;
+    font-size: 2rem;
+    font-size: 1.6rem;
   }
   #projects.projects-section .featured-projects .carousel .project-a .buttons-a .view-project:hover,
   #projects.projects-section .featured-projects .carousel .project-a .buttons-b .view-project:hover,
@@ -4499,7 +4738,7 @@ html {
     margin: auto;
   }
   #aboutmyself.aboutmyself h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 2.5em;
   }
@@ -4637,7 +4876,7 @@ html {
     padding: 8em 0em 0em 0em;
   }
   #contact.contact h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 0.5em;
     font-weight: 600;
     text-align: Center;
@@ -4666,7 +4905,7 @@ html {
   }
   #contact.contact .contact-container .contact-me h3:first-of-type {
     display: none;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 0.5em;
     font-weight: 600;
     text-align: left;
@@ -4696,6 +4935,21 @@ html {
     font-weight: 600;
     padding: 0.6em 1em;
     transition: background-color 0.3s ease;
+    width: 10em;
+    border-radius: 2em;
+    font-size: 2rem;
+  }
+  #contact.contact .contact-container .contact-me .send-message:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  #contact.contact .contact-container .contact-me .send-message:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
+  }
+  #contact.contact .contact-container .contact-me .send-message:hover {
+    cursor: pointer;
+    background-color: #ffaa00;
   }
   #contact.contact .contact-container .contact-me .send-message:hover {
     cursor: pointer;
